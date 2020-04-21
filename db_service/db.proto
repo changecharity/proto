@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+//option go_package = "github.com/chezky/changeproto/db_service";
+
+package proto;
+
+message GlobalSuccessReply {
+    bool success = 1;
+}
+
+message ReadUserEmail {
+    string email = 1;
+    string id = 2;
+}
+
+message ReadUserEmailReply {
+    bool success = 1;
+}
+
+service ReadUserEmailService {
+    rpc Send (ReadUserEmail) returns (ReadUserEmailReply) {}
+}
+
+message UserSignUp {
+    string email = 1;
+    string password = 2;
+    int64 dob = 3;
+    string usertoken = 4;
+    string plaidpublictoken = 5;
+    string plaidaccountid = 6;
+    string plaidaccesstoken = 7;
+    int32 key = 8;
+}
+
+service UserSignUpService {
+    rpc Send (UserSignUp) returns (GlobalSuccessReply) {}
+}
