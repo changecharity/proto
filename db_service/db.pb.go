@@ -317,13 +317,13 @@ var file_db_proto_rawDesc = []byte{
 	0x69, 0x63, 0x65, 0x12, 0x39, 0x0a, 0x04, 0x53, 0x65, 0x6e, 0x64, 0x12, 0x14, 0x2e, 0x70, 0x72,
 	0x6f, 0x74, 0x6f, 0x2e, 0x52, 0x65, 0x61, 0x64, 0x55, 0x73, 0x65, 0x72, 0x45, 0x6d, 0x61, 0x69,
 	0x6c, 0x1a, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x52, 0x65, 0x61, 0x64, 0x55, 0x73,
-	0x65, 0x72, 0x45, 0x6d, 0x61, 0x69, 0x6c, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x22, 0x00, 0x32, 0x4b,
+	0x65, 0x72, 0x45, 0x6d, 0x61, 0x69, 0x6c, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x22, 0x00, 0x32, 0x55,
 	0x0a, 0x11, 0x55, 0x73, 0x65, 0x72, 0x53, 0x69, 0x67, 0x6e, 0x55, 0x70, 0x53, 0x65, 0x72, 0x76,
-	0x69, 0x63, 0x65, 0x12, 0x36, 0x0a, 0x04, 0x53, 0x65, 0x6e, 0x64, 0x12, 0x11, 0x2e, 0x70, 0x72,
-	0x6f, 0x74, 0x6f, 0x2e, 0x55, 0x73, 0x65, 0x72, 0x53, 0x69, 0x67, 0x6e, 0x55, 0x70, 0x1a, 0x19,
-	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x6c, 0x6f, 0x62, 0x61, 0x6c, 0x53, 0x75, 0x63,
-	0x63, 0x65, 0x73, 0x73, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x22, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x33,
+	0x69, 0x63, 0x65, 0x12, 0x40, 0x0a, 0x0e, 0x53, 0x65, 0x6e, 0x64, 0x55, 0x73, 0x65, 0x72, 0x53,
+	0x69, 0x67, 0x6e, 0x55, 0x70, 0x12, 0x11, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x55, 0x73,
+	0x65, 0x72, 0x53, 0x69, 0x67, 0x6e, 0x55, 0x70, 0x1a, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x2e, 0x47, 0x6c, 0x6f, 0x62, 0x61, 0x6c, 0x53, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x52, 0x65,
+	0x70, 0x6c, 0x79, 0x22, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -347,9 +347,9 @@ var file_db_proto_goTypes = []interface{}{
 }
 var file_db_proto_depIdxs = []int32{
 	1, // 0: proto.ReadUserEmailService.Send:input_type -> proto.ReadUserEmail
-	3, // 1: proto.UserSignUpService.Send:input_type -> proto.UserSignUp
+	3, // 1: proto.UserSignUpService.SendUserSignUp:input_type -> proto.UserSignUp
 	2, // 2: proto.ReadUserEmailService.Send:output_type -> proto.ReadUserEmailReply
-	0, // 3: proto.UserSignUpService.Send:output_type -> proto.GlobalSuccessReply
+	0, // 3: proto.UserSignUpService.SendUserSignUp:output_type -> proto.GlobalSuccessReply
 	2, // [2:4] is the sub-list for method output_type
 	0, // [0:2] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -516,7 +516,7 @@ var _ReadUserEmailService_serviceDesc = grpc.ServiceDesc{
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type UserSignUpServiceClient interface {
-	Send(ctx context.Context, in *UserSignUp, opts ...grpc.CallOption) (*GlobalSuccessReply, error)
+	SendUserSignUp(ctx context.Context, in *UserSignUp, opts ...grpc.CallOption) (*GlobalSuccessReply, error)
 }
 
 type userSignUpServiceClient struct {
@@ -527,9 +527,9 @@ func NewUserSignUpServiceClient(cc grpc.ClientConnInterface) UserSignUpServiceCl
 	return &userSignUpServiceClient{cc}
 }
 
-func (c *userSignUpServiceClient) Send(ctx context.Context, in *UserSignUp, opts ...grpc.CallOption) (*GlobalSuccessReply, error) {
+func (c *userSignUpServiceClient) SendUserSignUp(ctx context.Context, in *UserSignUp, opts ...grpc.CallOption) (*GlobalSuccessReply, error) {
 	out := new(GlobalSuccessReply)
-	err := c.cc.Invoke(ctx, "/proto.UserSignUpService/Send", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/proto.UserSignUpService/SendUserSignUp", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -538,35 +538,35 @@ func (c *userSignUpServiceClient) Send(ctx context.Context, in *UserSignUp, opts
 
 // UserSignUpServiceServer is the server API for UserSignUpService service.
 type UserSignUpServiceServer interface {
-	Send(context.Context, *UserSignUp) (*GlobalSuccessReply, error)
+	SendUserSignUp(context.Context, *UserSignUp) (*GlobalSuccessReply, error)
 }
 
 // UnimplementedUserSignUpServiceServer can be embedded to have forward compatible implementations.
 type UnimplementedUserSignUpServiceServer struct {
 }
 
-func (*UnimplementedUserSignUpServiceServer) Send(context.Context, *UserSignUp) (*GlobalSuccessReply, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Send not implemented")
+func (*UnimplementedUserSignUpServiceServer) SendUserSignUp(context.Context, *UserSignUp) (*GlobalSuccessReply, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method SendUserSignUp not implemented")
 }
 
 func RegisterUserSignUpServiceServer(s *grpc.Server, srv UserSignUpServiceServer) {
 	s.RegisterService(&_UserSignUpService_serviceDesc, srv)
 }
 
-func _UserSignUpService_Send_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _UserSignUpService_SendUserSignUp_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UserSignUp)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserSignUpServiceServer).Send(ctx, in)
+		return srv.(UserSignUpServiceServer).SendUserSignUp(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/proto.UserSignUpService/Send",
+		FullMethod: "/proto.UserSignUpService/SendUserSignUp",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserSignUpServiceServer).Send(ctx, req.(*UserSignUp))
+		return srv.(UserSignUpServiceServer).SendUserSignUp(ctx, req.(*UserSignUp))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -576,8 +576,8 @@ var _UserSignUpService_serviceDesc = grpc.ServiceDesc{
 	HandlerType: (*UserSignUpServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "Send",
-			Handler:    _UserSignUpService_Send_Handler,
+			MethodName: "SendUserSignUp",
+			Handler:    _UserSignUpService_SendUserSignUp_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
