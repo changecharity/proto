@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+//option go_package = ".;proto";
+
+package proto;
+
+message Auth {
+  string email = 1;
+  int32 key = 2;
+}
+
+message AuthReply {
+  bool success = 1;
+}
+
+service Mail {
+  rpc Send (Auth) returns (AuthReply) {}
+}
+
+message HealthCheckRequest {
+  string service = 1;
+}
+
+message HealthCheckResponse {
+  enum ServingStatus {
+    UNKNOWN = 0;
+    SERVING = 1;
+    NOT_SERVING = 2;
+  }
+  ServingStatus status = 1;
+}
+
+service Health {
+  rpc Check(HealthCheckRequest) returns (HealthCheckResponse);
+}

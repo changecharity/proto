@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+//option go_package = ".;proto";
+
+package proto;
+
+message ReadUserEmail {
+  string email = 1;
+  string id = 2;
+}
+
+message ReadUserEmailReply {
+  bool success = 1;
+}
+
+service ReadUserEmailService {
+  rpc Send (ReadUserEmail) returns (ReadUserEmailReply) {}
+}
