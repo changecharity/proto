@@ -33,5 +33,5 @@ message UserSignUp {
 }
 
 service UserSignUpService {
-    rpc Send (UserSignUp) returns (GlobalSuccessReply) {}
+    rpc SendUserSignUp (UserSignUp) returns (GlobalSuccessReply) {}
 }
