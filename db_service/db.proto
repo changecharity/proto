@@ -38,6 +38,7 @@ service UserSignUpService {
 message CheckUserSignUpReply {
     string plaidpublictoken = 2;
     string email = 3;
+    string plaidaccountid = 4;
 }
 
 service CheckUserSignUpService {
