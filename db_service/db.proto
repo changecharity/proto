@@ -50,5 +50,15 @@ message CheckEmailExists {
 }
 
 service CheckEmailExistsService {
-    rpc CheckUserSignUp (UserSignUp) returns (GlobalSuccessReply) {}
+    rpc CheckEmailExists (UserSignUp) returns (GlobalSuccessReply) {}
+}
+
+message UserLogin {
+    string email = 1;
+    string password = 2;
+    string usertoken = 3;
+}
+
+service AuthUserLogin {
+    rpc AuthUserLoginService (UserLogin) returns (GlobalSuccessReply) {}
 }
