@@ -28,10 +28,13 @@ message UserSignUp {
     string usertoken = 4;
     string plaidpublictoken = 5;
     string plaidaccountid = 6;
-    string plaidaccesstoken = 7;
     int32 key = 8;
 }
 
 service UserSignUpService {
+    rpc SendUserSignUp (UserSignUp) returns (GlobalSuccessReply) {}
+}
+
+service CheckUserSignUpService {
     rpc SendUserSignUp (UserSignUp) returns (GlobalSuccessReply) {}
 }
