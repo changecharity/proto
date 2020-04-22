@@ -505,9 +505,9 @@ var file_db_proto_rawDesc = []byte{
 	0x78, 0x69, 0x73, 0x74, 0x73, 0x12, 0x11, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x55, 0x73,
 	0x65, 0x72, 0x53, 0x69, 0x67, 0x6e, 0x55, 0x70, 0x1a, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
 	0x2e, 0x47, 0x6c, 0x6f, 0x62, 0x61, 0x6c, 0x53, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x52, 0x65,
-	0x70, 0x6c, 0x79, 0x22, 0x00, 0x32, 0x56, 0x0a, 0x0d, 0x41, 0x75, 0x74, 0x68, 0x55, 0x73, 0x65,
-	0x72, 0x4c, 0x6f, 0x67, 0x69, 0x6e, 0x12, 0x45, 0x0a, 0x14, 0x41, 0x75, 0x74, 0x68, 0x55, 0x73,
-	0x65, 0x72, 0x4c, 0x6f, 0x67, 0x69, 0x6e, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x10,
+	0x70, 0x6c, 0x79, 0x22, 0x00, 0x32, 0x56, 0x0a, 0x14, 0x41, 0x75, 0x74, 0x68, 0x55, 0x73, 0x65,
+	0x72, 0x4c, 0x6f, 0x67, 0x69, 0x6e, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x3e, 0x0a,
+	0x0d, 0x41, 0x75, 0x74, 0x68, 0x55, 0x73, 0x65, 0x72, 0x4c, 0x6f, 0x67, 0x69, 0x6e, 0x12, 0x10,
 	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x55, 0x73, 0x65, 0x72, 0x4c, 0x6f, 0x67, 0x69, 0x6e,
 	0x1a, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x6c, 0x6f, 0x62, 0x61, 0x6c, 0x53,
 	0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x22, 0x00, 0x62, 0x06, 0x70,
@@ -540,12 +540,12 @@ var file_db_proto_depIdxs = []int32{
 	1, // 1: proto.CheckUserSignUpService.CheckUserSignUp:input_type -> proto.UserSignUp
 	3, // 2: proto.UpdateUserSignUpService.UpdateUserSignUp:input_type -> proto.UpUserSignUp
 	1, // 3: proto.CheckEmailExistsService.CheckEmailExists:input_type -> proto.UserSignUp
-	5, // 4: proto.AuthUserLogin.AuthUserLoginService:input_type -> proto.UserLogin
+	5, // 4: proto.AuthUserLoginService.AuthUserLogin:input_type -> proto.UserLogin
 	0, // 5: proto.UserSignUpService.SendUserSignUp:output_type -> proto.GlobalSuccessReply
 	2, // 6: proto.CheckUserSignUpService.CheckUserSignUp:output_type -> proto.CheckUserSignUpReply
 	0, // 7: proto.UpdateUserSignUpService.UpdateUserSignUp:output_type -> proto.GlobalSuccessReply
 	0, // 8: proto.CheckEmailExistsService.CheckEmailExists:output_type -> proto.GlobalSuccessReply
-	0, // 9: proto.AuthUserLogin.AuthUserLoginService:output_type -> proto.GlobalSuccessReply
+	0, // 9: proto.AuthUserLoginService.AuthUserLogin:output_type -> proto.GlobalSuccessReply
 	5, // [5:10] is the sub-list for method output_type
 	0, // [0:5] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -948,72 +948,72 @@ var _CheckEmailExistsService_serviceDesc = grpc.ServiceDesc{
 	Metadata: "db.proto",
 }
 
-// AuthUserLoginClient is the client API for AuthUserLogin service.
+// AuthUserLoginServiceClient is the client API for AuthUserLoginService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
-type AuthUserLoginClient interface {
-	AuthUserLoginService(ctx context.Context, in *UserLogin, opts ...grpc.CallOption) (*GlobalSuccessReply, error)
+type AuthUserLoginServiceClient interface {
+	AuthUserLogin(ctx context.Context, in *UserLogin, opts ...grpc.CallOption) (*GlobalSuccessReply, error)
 }
 
-type authUserLoginClient struct {
+type authUserLoginServiceClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewAuthUserLoginClient(cc grpc.ClientConnInterface) AuthUserLoginClient {
-	return &authUserLoginClient{cc}
+func NewAuthUserLoginServiceClient(cc grpc.ClientConnInterface) AuthUserLoginServiceClient {
+	return &authUserLoginServiceClient{cc}
 }
 
-func (c *authUserLoginClient) AuthUserLoginService(ctx context.Context, in *UserLogin, opts ...grpc.CallOption) (*GlobalSuccessReply, error) {
+func (c *authUserLoginServiceClient) AuthUserLogin(ctx context.Context, in *UserLogin, opts ...grpc.CallOption) (*GlobalSuccessReply, error) {
 	out := new(GlobalSuccessReply)
-	err := c.cc.Invoke(ctx, "/proto.AuthUserLogin/AuthUserLoginService", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/proto.AuthUserLoginService/AuthUserLogin", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// AuthUserLoginServer is the server API for AuthUserLogin service.
-type AuthUserLoginServer interface {
-	AuthUserLoginService(context.Context, *UserLogin) (*GlobalSuccessReply, error)
+// AuthUserLoginServiceServer is the server API for AuthUserLoginService service.
+type AuthUserLoginServiceServer interface {
+	AuthUserLogin(context.Context, *UserLogin) (*GlobalSuccessReply, error)
 }
 
-// UnimplementedAuthUserLoginServer can be embedded to have forward compatible implementations.
-type UnimplementedAuthUserLoginServer struct {
+// UnimplementedAuthUserLoginServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedAuthUserLoginServiceServer struct {
 }
 
-func (*UnimplementedAuthUserLoginServer) AuthUserLoginService(context.Context, *UserLogin) (*GlobalSuccessReply, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method AuthUserLoginService not implemented")
+func (*UnimplementedAuthUserLoginServiceServer) AuthUserLogin(context.Context, *UserLogin) (*GlobalSuccessReply, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method AuthUserLogin not implemented")
 }
 
-func RegisterAuthUserLoginServer(s *grpc.Server, srv AuthUserLoginServer) {
-	s.RegisterService(&_AuthUserLogin_serviceDesc, srv)
+func RegisterAuthUserLoginServiceServer(s *grpc.Server, srv AuthUserLoginServiceServer) {
+	s.RegisterService(&_AuthUserLoginService_serviceDesc, srv)
 }
 
-func _AuthUserLogin_AuthUserLoginService_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _AuthUserLoginService_AuthUserLogin_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UserLogin)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AuthUserLoginServer).AuthUserLoginService(ctx, in)
+		return srv.(AuthUserLoginServiceServer).AuthUserLogin(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/proto.AuthUserLogin/AuthUserLoginService",
+		FullMethod: "/proto.AuthUserLoginService/AuthUserLogin",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AuthUserLoginServer).AuthUserLoginService(ctx, req.(*UserLogin))
+		return srv.(AuthUserLoginServiceServer).AuthUserLogin(ctx, req.(*UserLogin))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-var _AuthUserLogin_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "proto.AuthUserLogin",
-	HandlerType: (*AuthUserLoginServer)(nil),
+var _AuthUserLoginService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "proto.AuthUserLoginService",
+	HandlerType: (*AuthUserLoginServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "AuthUserLoginService",
-			Handler:    _AuthUserLogin_AuthUserLoginService_Handler,
+			MethodName: "AuthUserLogin",
+			Handler:    _AuthUserLoginService_AuthUserLogin_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

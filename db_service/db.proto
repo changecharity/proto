@@ -59,6 +59,6 @@ message UserLogin {
     string usertoken = 3;
 }
 
-service AuthUserLogin {
-    rpc AuthUserLoginService (UserLogin) returns (GlobalSuccessReply) {}
+service AuthUserLoginService{
+    rpc AuthUserLogin (UserLogin) returns (GlobalSuccessReply) {}
 }
