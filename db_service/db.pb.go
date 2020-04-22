@@ -312,13 +312,13 @@ var file_db_proto_rawDesc = []byte{
 	0x73, 0x65, 0x72, 0x53, 0x69, 0x67, 0x6e, 0x55, 0x70, 0x12, 0x11, 0x2e, 0x70, 0x72, 0x6f, 0x74,
 	0x6f, 0x2e, 0x55, 0x73, 0x65, 0x72, 0x53, 0x69, 0x67, 0x6e, 0x55, 0x70, 0x1a, 0x19, 0x2e, 0x70,
 	0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x6c, 0x6f, 0x62, 0x61, 0x6c, 0x53, 0x75, 0x63, 0x63, 0x65,
-	0x73, 0x73, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x22, 0x00, 0x32, 0x5a, 0x0a, 0x16, 0x43, 0x68, 0x65,
+	0x73, 0x73, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x22, 0x00, 0x32, 0x5b, 0x0a, 0x16, 0x43, 0x68, 0x65,
 	0x63, 0x6b, 0x55, 0x73, 0x65, 0x72, 0x53, 0x69, 0x67, 0x6e, 0x55, 0x70, 0x53, 0x65, 0x72, 0x76,
-	0x69, 0x63, 0x65, 0x12, 0x40, 0x0a, 0x0e, 0x53, 0x65, 0x6e, 0x64, 0x55, 0x73, 0x65, 0x72, 0x53,
-	0x69, 0x67, 0x6e, 0x55, 0x70, 0x12, 0x11, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x55, 0x73,
-	0x65, 0x72, 0x53, 0x69, 0x67, 0x6e, 0x55, 0x70, 0x1a, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
-	0x2e, 0x47, 0x6c, 0x6f, 0x62, 0x61, 0x6c, 0x53, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x52, 0x65,
-	0x70, 0x6c, 0x79, 0x22, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x69, 0x63, 0x65, 0x12, 0x41, 0x0a, 0x0f, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x55, 0x73, 0x65, 0x72,
+	0x53, 0x69, 0x67, 0x6e, 0x55, 0x70, 0x12, 0x11, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x55,
+	0x73, 0x65, 0x72, 0x53, 0x69, 0x67, 0x6e, 0x55, 0x70, 0x1a, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x2e, 0x47, 0x6c, 0x6f, 0x62, 0x61, 0x6c, 0x53, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x52,
+	0x65, 0x70, 0x6c, 0x79, 0x22, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -343,10 +343,10 @@ var file_db_proto_goTypes = []interface{}{
 var file_db_proto_depIdxs = []int32{
 	1, // 0: proto.ReadUserEmailService.Send:input_type -> proto.ReadUserEmail
 	3, // 1: proto.UserSignUpService.SendUserSignUp:input_type -> proto.UserSignUp
-	3, // 2: proto.CheckUserSignUpService.SendUserSignUp:input_type -> proto.UserSignUp
+	3, // 2: proto.CheckUserSignUpService.CheckUserSignUp:input_type -> proto.UserSignUp
 	2, // 3: proto.ReadUserEmailService.Send:output_type -> proto.ReadUserEmailReply
 	0, // 4: proto.UserSignUpService.SendUserSignUp:output_type -> proto.GlobalSuccessReply
-	0, // 5: proto.CheckUserSignUpService.SendUserSignUp:output_type -> proto.GlobalSuccessReply
+	0, // 5: proto.CheckUserSignUpService.CheckUserSignUp:output_type -> proto.GlobalSuccessReply
 	3, // [3:6] is the sub-list for method output_type
 	0, // [0:3] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -585,7 +585,7 @@ var _UserSignUpService_serviceDesc = grpc.ServiceDesc{
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type CheckUserSignUpServiceClient interface {
-	SendUserSignUp(ctx context.Context, in *UserSignUp, opts ...grpc.CallOption) (*GlobalSuccessReply, error)
+	CheckUserSignUp(ctx context.Context, in *UserSignUp, opts ...grpc.CallOption) (*GlobalSuccessReply, error)
 }
 
 type checkUserSignUpServiceClient struct {
@@ -596,9 +596,9 @@ func NewCheckUserSignUpServiceClient(cc grpc.ClientConnInterface) CheckUserSignU
 	return &checkUserSignUpServiceClient{cc}
 }
 
-func (c *checkUserSignUpServiceClient) SendUserSignUp(ctx context.Context, in *UserSignUp, opts ...grpc.CallOption) (*GlobalSuccessReply, error) {
+func (c *checkUserSignUpServiceClient) CheckUserSignUp(ctx context.Context, in *UserSignUp, opts ...grpc.CallOption) (*GlobalSuccessReply, error) {
 	out := new(GlobalSuccessReply)
-	err := c.cc.Invoke(ctx, "/proto.CheckUserSignUpService/SendUserSignUp", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/proto.CheckUserSignUpService/CheckUserSignUp", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -607,35 +607,35 @@ func (c *checkUserSignUpServiceClient) SendUserSignUp(ctx context.Context, in *U
 
 // CheckUserSignUpServiceServer is the server API for CheckUserSignUpService service.
 type CheckUserSignUpServiceServer interface {
-	SendUserSignUp(context.Context, *UserSignUp) (*GlobalSuccessReply, error)
+	CheckUserSignUp(context.Context, *UserSignUp) (*GlobalSuccessReply, error)
 }
 
 // UnimplementedCheckUserSignUpServiceServer can be embedded to have forward compatible implementations.
 type UnimplementedCheckUserSignUpServiceServer struct {
 }
 
-func (*UnimplementedCheckUserSignUpServiceServer) SendUserSignUp(context.Context, *UserSignUp) (*GlobalSuccessReply, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method SendUserSignUp not implemented")
+func (*UnimplementedCheckUserSignUpServiceServer) CheckUserSignUp(context.Context, *UserSignUp) (*GlobalSuccessReply, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CheckUserSignUp not implemented")
 }
 
 func RegisterCheckUserSignUpServiceServer(s *grpc.Server, srv CheckUserSignUpServiceServer) {
 	s.RegisterService(&_CheckUserSignUpService_serviceDesc, srv)
 }
 
-func _CheckUserSignUpService_SendUserSignUp_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _CheckUserSignUpService_CheckUserSignUp_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UserSignUp)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(CheckUserSignUpServiceServer).SendUserSignUp(ctx, in)
+		return srv.(CheckUserSignUpServiceServer).CheckUserSignUp(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/proto.CheckUserSignUpService/SendUserSignUp",
+		FullMethod: "/proto.CheckUserSignUpService/CheckUserSignUp",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(CheckUserSignUpServiceServer).SendUserSignUp(ctx, req.(*UserSignUp))
+		return srv.(CheckUserSignUpServiceServer).CheckUserSignUp(ctx, req.(*UserSignUp))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -645,8 +645,8 @@ var _CheckUserSignUpService_serviceDesc = grpc.ServiceDesc{
 	HandlerType: (*CheckUserSignUpServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "SendUserSignUp",
-			Handler:    _CheckUserSignUpService_SendUserSignUp_Handler,
+			MethodName: "CheckUserSignUp",
+			Handler:    _CheckUserSignUpService_CheckUserSignUp_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

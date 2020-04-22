@@ -36,5 +36,5 @@ service UserSignUpService {
 }
 
 service CheckUserSignUpService {
-    rpc SendUserSignUp (UserSignUp) returns (GlobalSuccessReply) {}
+    rpc CheckUserSignUp (UserSignUp) returns (GlobalSuccessReply) {}
 }
