@@ -44,6 +44,17 @@ service CheckUserSignUpService {
     rpc CheckUserSignUp (UserSignUp) returns (CheckUserSignUpReply) {}
 }
 
+message UpUserSignUp {
+    int32 id = 1;
+    string plaidaccesstoken = 2;
+    string itemid = 3;
+    string stripetoken = 4;
+    string customerid = 5;
+}
+
+service UpdateUserSignUpService {
+    rpc UpdateUserSignUp (UpUserSignUp) returns (GlobalSuccessReply) {}
+}
 
 message CheckEmailExists {
     string email = 1;
