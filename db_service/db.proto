@@ -8,19 +8,6 @@ message GlobalSuccessReply {
     bool success = 1;
 }
 
-message ReadUserEmail {
-    string email = 1;
-    string id = 2;
-}
-
-message ReadUserEmailReply {
-    bool success = 1;
-}
-
-service ReadUserEmailService {
-    rpc Send (ReadUserEmail) returns (ReadUserEmailReply) {}
-}
-
 message UserSignUp {
     string email = 1;
     string password = 2;
