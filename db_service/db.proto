@@ -36,8 +36,8 @@ service UserSignUpService {
 }
 
 message CheckUserSignUpReply {
-    int32 id = 1;
     string plaidpublictoken = 2;
+    string email = 3;
 }
 
 service CheckUserSignUpService {
