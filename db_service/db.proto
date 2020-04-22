@@ -35,6 +35,11 @@ service UserSignUpService {
     rpc SendUserSignUp (UserSignUp) returns (GlobalSuccessReply) {}
 }
 
+message CheckUserSignUpReply {
+    int32 id = 1;
+    string plaidpublictoken = 2;
+}
+
 service CheckUserSignUpService {
-    rpc CheckUserSignUp (UserSignUp) returns (GlobalSuccessReply) {}
+    rpc CheckUserSignUp (UserSignUp) returns (CheckUserSignUpReply) {}
 }
