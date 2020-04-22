@@ -43,3 +43,13 @@ message CheckUserSignUpReply {
 service CheckUserSignUpService {
     rpc CheckUserSignUp (UserSignUp) returns (CheckUserSignUpReply) {}
 }
+
+
+message CheckEmailExists {
+    string email = 1;
+    string db = 2;
+}
+
+service CheckEmailExistsService {
+    rpc CheckUserSignUp (UserSignUp) returns (GlobalSuccessReply) {}
+}
