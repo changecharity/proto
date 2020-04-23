@@ -22,6 +22,21 @@ service UserSignUpService {
     rpc SendUserSignUp (UserSignUp) returns (GlobalSuccessReply) {}
 }
 
+message OrgSignUp {
+    string name = 1;
+    string email = 2;
+    string password = 3;
+    int32 ein = 4;
+    string orgtoken = 5;
+    string plaidpublictoken = 6;
+    string plaidaccountid = 7;
+    int32 key = 8;
+}
+
+service OrgSignUpService {
+    rpc SendOrgSignUp (OrgSignUp) returns (GlobalSuccessReply) {}
+}
+
 message CheckUserSignUpReply {
     string plaidpublictoken = 2;
     string email = 3;
