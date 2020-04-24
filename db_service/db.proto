@@ -47,6 +47,10 @@ service CheckUserSignUpService {
     rpc CheckUserSignUp (UserSignUp) returns (CheckUserSignUpReply) {}
 }
 
+service CheckOrgSignUpService {
+    rpc CheckOrgSignUp (OrgSignUp) returns (CheckUserSignUpReply) {}
+}
+
 message UpUserSignUp {
     string plaidaccesstoken = 2;
     string itemid = 3;
