@@ -53,6 +53,7 @@ message UpUserSignUp {
     string stripetoken = 4;
     string customerid = 5;
     string email = 6;
+    string table = 7;
 }
 
 service UpdateUserSignUpService {
@@ -72,6 +73,7 @@ message UserLogin {
     string email = 1;
     string password = 2;
     string usertoken = 3;
+    string table = 4;
 }
 
 service AuthUserLoginService{
