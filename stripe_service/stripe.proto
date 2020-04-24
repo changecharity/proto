@@ -2,7 +2,7 @@ syntax = "proto3";
 
 //option go_package = "github.com/chezky/changeproto/db_service";
 
-package stripeproto;
+package proto;
 
 message CreateCusOrAcc {
     string stripetoken = 1;

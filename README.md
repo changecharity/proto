@@ -17,3 +17,8 @@ Stripe
 ``` bash
 protoc.exe -I stripe_service\ stripe_service\stripe.proto --go_out=plugins=grpc:stripe_service
 ```  
+
+Mail
+``` bash
+protoc.exe -I mail_service\ mail_service\mail.proto --go_out=plugins=grpc:mail_service
+```  

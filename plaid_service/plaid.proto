@@ -2,7 +2,7 @@ syntax = "proto3";
 
 //option go_package = "github.com/chezky/changeproto/db_service";
 
-package plaidproto;
+package proto;
 
 message ExchangePlaid {
     string publictoken = 1;
