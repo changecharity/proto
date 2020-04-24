@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+//option go_package = "github.com/chezky/changeproto/db_service";
+
+package proto;
+
+message GlobalSuccessReply {
+    bool success = 1;
+}
+
+message ExchangePlaid {
+    string publictoken = 1;
+    string plaidaccountid = 2;
+}
+
+message ExchangePlaidReply {
+    string plaidaccesstoken = 1;
+    string itemid = 2;
+    string stripetoken = 3;
+}
+
+service CreateExchangePlaidService {
+    rpc CreateExchangePlaid (ExchangePlaid) returns (ExchangePlaidReply) {}
+}
