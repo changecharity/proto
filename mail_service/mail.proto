@@ -2,7 +2,7 @@ syntax = "proto3";
 
 //option go_package = ".;proto";
 
-package proto;
+package mailproto;
 
 message Auth {
   string email = 1;

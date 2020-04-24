@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+//option go_package = "github.com/chezky/changeproto/db_service";
+
+package stripeproto;
+
+message CreateCusOrAcc {
+    string stripetoken = 1;
+    string email = 2;
+}
+
+message CreateCusReply {
+    string customerid = 1;
+}
+
+service CreateCusService {
+    rpc CreateCus (CreateCusOrAcc) returns (CreateCusReply) {}
+}
+
+message CreateAccReply {
+    string accountid = 1;
+}
+
+service CreateAccService {
+    rpc CreateAcc (CreateCusOrAcc) returns (CreateAccReply) {}
+}
