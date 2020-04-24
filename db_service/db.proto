@@ -51,7 +51,7 @@ service CheckOrgSignUpService {
     rpc CheckOrgSignUp (OrgSignUp) returns (CheckUserSignUpReply) {}
 }
 
-message UpUserSignUp {
+message UpSignUp {
     string plaidaccesstoken = 2;
     string itemid = 3;
     string stripetoken = 4;
@@ -61,26 +61,17 @@ message UpUserSignUp {
     string accountid = 8;
 }
 
-service UpdateUserSignUpService {
-    rpc UpdateUserSignUp (UpUserSignUp) returns (GlobalSuccessReply) {}
+service UpdateSignUpService {
+    rpc UpdateSignUp (UpSignUp) returns (GlobalSuccessReply) {}
 }
 
-message CheckEmailExists {
-    string email = 1;
-    string db = 2;
-}
-
-service CheckEmailExistsService {
-    rpc CheckEmailExists (UserSignUp) returns (GlobalSuccessReply) {}
-}
-
-message UserLogin {
+message Login {
     string email = 1;
     string password = 2;
     string usertoken = 3;
     string table = 4;
 }
 
-service AuthUserLoginService{
-    rpc AuthUserLogin (UserLogin) returns (GlobalSuccessReply) {}
+service AuthLoginService{
+    rpc AuthLogin (Login) returns (GlobalSuccessReply) {}
 }
