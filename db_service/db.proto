@@ -58,6 +58,7 @@ message UpUserSignUp {
     string customerid = 5;
     string email = 6;
     string table = 7;
+    string accountid = 8;
 }
 
 service UpdateUserSignUpService {
