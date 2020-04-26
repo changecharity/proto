@@ -44,25 +44,11 @@ message CheckUserSignUpReply {
 }
 
 service CheckUserSignUpService {
-    rpc CheckUserSignUp (UserSignUp) returns (CheckUserSignUpReply) {}
+    rpc CheckUserSignUp (UserSignUp) returns (GlobalSuccessReply) {}
 }
 
 service CheckOrgSignUpService {
-    rpc CheckOrgSignUp (OrgSignUp) returns (CheckUserSignUpReply) {}
-}
-
-message UpSignUp {
-    string plaidaccesstoken = 2;
-    string itemid = 3;
-    string stripetoken = 4;
-    string customerid = 5;
-    string email = 6;
-    string table = 7;
-    string accountid = 8;
-}
-
-service UpdateSignUpService {
-    rpc UpdateSignUp (UpSignUp) returns (GlobalSuccessReply) {}
+    rpc CheckOrgSignUp (OrgSignUp) returns (GlobalSuccessReply) {}
 }
 
 message Login {
