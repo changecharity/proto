@@ -55,3 +55,11 @@ message Login {
 service AuthLoginService{
     rpc AuthLogin (Login) returns (GlobalSuccessReply) {}
 }
+
+message TransactionItemID {
+    string itemid = 1;
+}
+
+service BeginTransactionWHService{
+    rpc BeginTransactionWH (TransactionItemID) returns (GlobalSuccessReply) {}
+}

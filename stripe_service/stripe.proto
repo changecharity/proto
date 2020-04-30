@@ -24,3 +24,18 @@ message CreateAccReply {
 service CreateAccService {
     rpc CreateAcc (CreateCusOrAcc) returns (CreateAccReply) {}
 }
+
+message WHCreateTransferData {
+    string customerid = 1;
+    string accountid = 2;
+    int32 amount = 3;
+}
+
+message WHCreateTransferDataReply {
+    string chargeid = 1;
+    string transferid = 2;
+}
+
+service FinalTransactionWHService {
+    rpc FinalTransactionWH (WHCreateTransferData) returns (WHCreateTransferDataReply) {}
+}

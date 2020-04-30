@@ -18,3 +18,29 @@ message ExchangePlaidReply {
 service CreateExchangePlaidService {
     rpc CreateExchangePlaid (ExchangePlaid) returns (ExchangePlaidReply) {}
 }
+
+message TransactionWHData {
+    string plaidtoken = 1;
+    int32 selectedorg = 2;
+    //this is the id of the user(customer)
+    string customerid = 3;
+    //this is the id of the org(account)
+    string accountid = 4;
+}
+
+message Transaction {
+    string id = 1;
+    string name = 2;
+    // float 64
+    double amount = 3;
+    string dot = 4;
+    int32 change = 5;
+}
+
+message TransactionWHDataReply {
+    repeated Transaction transactions = 1;
+}
+
+service SecondTransactionWHService {
+    rpc SecondTransactionWH (TransactionWHData) returns (TransactionWHDataReply) {}
+}
