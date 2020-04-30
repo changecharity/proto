@@ -21,11 +21,6 @@ service CreateExchangePlaidService {
 
 message TransactionWHData {
     string plaidtoken = 1;
-    int32 selectedorg = 2;
-    //this is the id of the user(customer)
-    string customerid = 3;
-    //this is the id of the org(account)
-    string accountid = 4;
 }
 
 message Transaction {
