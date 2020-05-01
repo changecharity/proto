@@ -63,3 +63,11 @@ message TransactionItemID {
 service BeginTransactionWHService{
     rpc BeginTransactionWH (TransactionItemID) returns (GlobalSuccessReply) {}
 }
+
+message StripeChargeID {
+    string chargeid = 1;
+}
+
+service ConfirmTransferService{
+    rpc ConfirmTransfer (StripeChargeID) returns (GlobalSuccessReply) {}
+}
