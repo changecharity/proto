@@ -71,3 +71,15 @@ message StripeChargeID {
 service ConfirmTransferService{
     rpc ConfirmTransfer (StripeChargeID) returns (GlobalSuccessReply) {}
 }
+
+message OrgName {
+    string name = 1;
+}
+
+message OrgNameReply {
+    repeated string names = 1;
+}
+
+service SearchOrgNameService {
+    rpc SearchOrgName (OrgName) returns (OrgNameReply) {}
+}
