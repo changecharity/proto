@@ -4,6 +4,8 @@ syntax = "proto3";
 
 package proto;
 
+message Empty {}
+
 message Auth {
   string email = 1;
   int32 key = 2;
@@ -17,19 +19,11 @@ service Mail {
   rpc Send (Auth) returns (AuthReply) {}
 }
 
-message HealthCheckRequest {
-  string service = 1;
+message ToSURL {
+  string URL = 1;
+  string email = 2;
 }
 
-message HealthCheckResponse {
-  enum ServingStatus {
-    UNKNOWN = 0;
-    SERVING = 1;
-    NOT_SERVING = 2;
-  }
-  ServingStatus status = 1;
-}
-
-service Health {
-  rpc Check(HealthCheckRequest) returns (HealthCheckResponse);
+service SendToSUrlService {
+  rpc SendToSUrl (ToSURL) returns (Empty) {}
 }
