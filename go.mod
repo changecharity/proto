@@ -1,4 +1,4 @@
-module github.com/chezky/changeproto
+module github.com/changecharity/proto
 
 go 1.13
 
