@@ -39,3 +39,7 @@ message TransfersPDF {
     int32 ein = 3;
     string name = 4;
 }
+
+service MailTransfersPDFService {
+  rpc  MailTransfersPDF (TransfersPDFArray) returns (Empty) {}
+}

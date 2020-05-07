@@ -385,7 +385,13 @@ var file_mail_proto_rawDesc = []byte{
 	0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x2b, 0x0a, 0x0a, 0x53, 0x65, 0x6e, 0x64, 0x54, 0x6f, 0x53,
 	0x55, 0x72, 0x6c, 0x12, 0x0d, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x54, 0x6f, 0x53, 0x55,
 	0x52, 0x4c, 0x1a, 0x0c, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79,
-	0x22, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x22, 0x00, 0x32, 0x57, 0x0a, 0x17, 0x4d, 0x61, 0x69, 0x6c, 0x54, 0x72, 0x61, 0x6e, 0x73, 0x66,
+	0x65, 0x72, 0x73, 0x50, 0x44, 0x46, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x3c, 0x0a,
+	0x10, 0x4d, 0x61, 0x69, 0x6c, 0x54, 0x72, 0x61, 0x6e, 0x73, 0x66, 0x65, 0x72, 0x73, 0x50, 0x44,
+	0x46, 0x12, 0x18, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x54, 0x72, 0x61, 0x6e, 0x73, 0x66,
+	0x65, 0x72, 0x73, 0x50, 0x44, 0x46, 0x41, 0x72, 0x72, 0x61, 0x79, 0x1a, 0x0c, 0x2e, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x2e, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f,
+	0x74, 0x6f, 0x33,
 }
 
 var (
@@ -413,10 +419,12 @@ var file_mail_proto_depIdxs = []int32{
 	5, // 0: proto.TransfersPDFArray.transfers:type_name -> proto.TransfersPDF
 	1, // 1: proto.Mail.Send:input_type -> proto.Auth
 	3, // 2: proto.SendToSUrlService.SendToSUrl:input_type -> proto.ToSURL
-	2, // 3: proto.Mail.Send:output_type -> proto.AuthReply
-	0, // 4: proto.SendToSUrlService.SendToSUrl:output_type -> proto.Empty
-	3, // [3:5] is the sub-list for method output_type
-	1, // [1:3] is the sub-list for method input_type
+	4, // 3: proto.MailTransfersPDFService.MailTransfersPDF:input_type -> proto.TransfersPDFArray
+	2, // 4: proto.Mail.Send:output_type -> proto.AuthReply
+	0, // 5: proto.SendToSUrlService.SendToSUrl:output_type -> proto.Empty
+	0, // 6: proto.MailTransfersPDFService.MailTransfersPDF:output_type -> proto.Empty
+	4, // [4:7] is the sub-list for method output_type
+	1, // [1:4] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name
 	1, // [1:1] is the sub-list for extension extendee
 	0, // [0:1] is the sub-list for field type_name
@@ -509,7 +517,7 @@ func file_mail_proto_init() {
 			NumEnums:      0,
 			NumMessages:   6,
 			NumExtensions: 0,
-			NumServices:   2,
+			NumServices:   3,
 		},
 		GoTypes:           file_mail_proto_goTypes,
 		DependencyIndexes: file_mail_proto_depIdxs,
@@ -667,6 +675,78 @@ var _SendToSUrlService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "SendToSUrl",
 			Handler:    _SendToSUrlService_SendToSUrl_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "mail.proto",
+}
+
+// MailTransfersPDFServiceClient is the client API for MailTransfersPDFService service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+type MailTransfersPDFServiceClient interface {
+	MailTransfersPDF(ctx context.Context, in *TransfersPDFArray, opts ...grpc.CallOption) (*Empty, error)
+}
+
+type mailTransfersPDFServiceClient struct {
+	cc grpc.ClientConnInterface
+}
+
+func NewMailTransfersPDFServiceClient(cc grpc.ClientConnInterface) MailTransfersPDFServiceClient {
+	return &mailTransfersPDFServiceClient{cc}
+}
+
+func (c *mailTransfersPDFServiceClient) MailTransfersPDF(ctx context.Context, in *TransfersPDFArray, opts ...grpc.CallOption) (*Empty, error) {
+	out := new(Empty)
+	err := c.cc.Invoke(ctx, "/proto.MailTransfersPDFService/MailTransfersPDF", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// MailTransfersPDFServiceServer is the server API for MailTransfersPDFService service.
+type MailTransfersPDFServiceServer interface {
+	MailTransfersPDF(context.Context, *TransfersPDFArray) (*Empty, error)
+}
+
+// UnimplementedMailTransfersPDFServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedMailTransfersPDFServiceServer struct {
+}
+
+func (*UnimplementedMailTransfersPDFServiceServer) MailTransfersPDF(context.Context, *TransfersPDFArray) (*Empty, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method MailTransfersPDF not implemented")
+}
+
+func RegisterMailTransfersPDFServiceServer(s *grpc.Server, srv MailTransfersPDFServiceServer) {
+	s.RegisterService(&_MailTransfersPDFService_serviceDesc, srv)
+}
+
+func _MailTransfersPDFService_MailTransfersPDF_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(TransfersPDFArray)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(MailTransfersPDFServiceServer).MailTransfersPDF(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/proto.MailTransfersPDFService/MailTransfersPDF",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(MailTransfersPDFServiceServer).MailTransfersPDF(ctx, req.(*TransfersPDFArray))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+var _MailTransfersPDFService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "proto.MailTransfersPDFService",
+	HandlerType: (*MailTransfersPDFServiceServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "MailTransfersPDF",
+			Handler:    _MailTransfersPDFService_MailTransfersPDF_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
