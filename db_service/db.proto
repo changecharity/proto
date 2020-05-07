@@ -84,3 +84,12 @@ message OrgNameReply {
 service SearchOrgNameService {
     rpc SearchOrgName (OrgName) returns (OrgNameReply) {}
 }
+
+message TransferPDFParams {
+    // add start and end date
+    string usertoken = 1;
+}
+
+service TransferPDFService {
+    rpc TransferPDF (TransferPDFParams) returns (GlobalSuccessReply) {}
+}

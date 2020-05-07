@@ -7,7 +7,9 @@ require (
 	github.com/golang/protobuf v1.4.0
 	github.com/kisielk/errcheck v1.2.0 // indirect
 	github.com/kisielk/gotool v1.0.0 // indirect
+	github.com/mibk/dupl v1.0.0 // indirect
 	github.com/securego/gosec v0.0.0-20200401082031-e946c8c39989 // indirect
+	github.com/walle/lll v1.0.1 // indirect
 	google.golang.org/grpc v1.29.1
 	google.golang.org/protobuf v1.21.0
 	mvdan.cc/interfacer v0.0.0-20180901003855-c20040233aed // indirect
