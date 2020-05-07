@@ -27,3 +27,15 @@ message ToSURL {
 service SendToSUrlService {
   rpc SendToSUrl (ToSURL) returns (Empty) {}
 }
+
+message TransfersPDFArray {
+    string email = 1;
+    repeated TransfersPDF transfers = 2;
+}
+
+message TransfersPDF {
+    int32 totalcharged = 1;
+    string dop = 2;
+    int32 ein = 3;
+    string name = 4;
+}
