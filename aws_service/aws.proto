@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+//option go_package = ".;proto";
+
+package proto;
+
+message QRData {
+    string URL = 1;
+}
+
+message QRDataReply {
+    string fileName = 1;
+}
+
+service CreateQRCodeService {
+  rpc CreateQRCode (QRData) returns (QRDataReply) {}
+}
