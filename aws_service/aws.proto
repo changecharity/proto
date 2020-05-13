@@ -17,7 +17,10 @@ service CreateQRCodeService {
 }
 
 message LogoData {
-    bytes imageData = 1;
+    oneof data {
+        string orgToken = 1;
+        bytes imageData = 2;
+    };
 }
 
 message LogoDataReply {
