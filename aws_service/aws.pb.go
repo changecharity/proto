@@ -125,6 +125,100 @@ func (x *QRDataReply) GetFileName() string {
 	return ""
 }
 
+type LogoData struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	ImageData []byte `protobuf:"bytes,1,opt,name=imageData,proto3" json:"imageData,omitempty"`
+}
+
+func (x *LogoData) Reset() {
+	*x = LogoData{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_aws_proto_msgTypes[2]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *LogoData) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*LogoData) ProtoMessage() {}
+
+func (x *LogoData) ProtoReflect() protoreflect.Message {
+	mi := &file_aws_proto_msgTypes[2]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use LogoData.ProtoReflect.Descriptor instead.
+func (*LogoData) Descriptor() ([]byte, []int) {
+	return file_aws_proto_rawDescGZIP(), []int{2}
+}
+
+func (x *LogoData) GetImageData() []byte {
+	if x != nil {
+		return x.ImageData
+	}
+	return nil
+}
+
+type LogoDataReply struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	FileLocation string `protobuf:"bytes,1,opt,name=fileLocation,proto3" json:"fileLocation,omitempty"`
+}
+
+func (x *LogoDataReply) Reset() {
+	*x = LogoDataReply{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_aws_proto_msgTypes[3]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *LogoDataReply) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*LogoDataReply) ProtoMessage() {}
+
+func (x *LogoDataReply) ProtoReflect() protoreflect.Message {
+	mi := &file_aws_proto_msgTypes[3]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use LogoDataReply.ProtoReflect.Descriptor instead.
+func (*LogoDataReply) Descriptor() ([]byte, []int) {
+	return file_aws_proto_rawDescGZIP(), []int{3}
+}
+
+func (x *LogoDataReply) GetFileLocation() string {
+	if x != nil {
+		return x.FileLocation
+	}
+	return ""
+}
+
 var File_aws_proto protoreflect.FileDescriptor
 
 var file_aws_proto_rawDesc = []byte{
@@ -133,12 +227,23 @@ var file_aws_proto_rawDesc = []byte{
 	0x55, 0x52, 0x4c, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x55, 0x52, 0x4c, 0x22, 0x29,
 	0x0a, 0x0b, 0x51, 0x52, 0x44, 0x61, 0x74, 0x61, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x12, 0x1a, 0x0a,
 	0x08, 0x66, 0x69, 0x6c, 0x65, 0x4e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
-	0x08, 0x66, 0x69, 0x6c, 0x65, 0x4e, 0x61, 0x6d, 0x65, 0x32, 0x4a, 0x0a, 0x13, 0x43, 0x72, 0x65,
-	0x61, 0x74, 0x65, 0x51, 0x52, 0x43, 0x6f, 0x64, 0x65, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65,
-	0x12, 0x33, 0x0a, 0x0c, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x51, 0x52, 0x43, 0x6f, 0x64, 0x65,
-	0x12, 0x0d, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x51, 0x52, 0x44, 0x61, 0x74, 0x61, 0x1a,
-	0x12, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x51, 0x52, 0x44, 0x61, 0x74, 0x61, 0x52, 0x65,
-	0x70, 0x6c, 0x79, 0x22, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x08, 0x66, 0x69, 0x6c, 0x65, 0x4e, 0x61, 0x6d, 0x65, 0x22, 0x28, 0x0a, 0x08, 0x4c, 0x6f, 0x67,
+	0x6f, 0x44, 0x61, 0x74, 0x61, 0x12, 0x1c, 0x0a, 0x09, 0x69, 0x6d, 0x61, 0x67, 0x65, 0x44, 0x61,
+	0x74, 0x61, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0c, 0x52, 0x09, 0x69, 0x6d, 0x61, 0x67, 0x65, 0x44,
+	0x61, 0x74, 0x61, 0x22, 0x33, 0x0a, 0x0d, 0x4c, 0x6f, 0x67, 0x6f, 0x44, 0x61, 0x74, 0x61, 0x52,
+	0x65, 0x70, 0x6c, 0x79, 0x12, 0x22, 0x0a, 0x0c, 0x66, 0x69, 0x6c, 0x65, 0x4c, 0x6f, 0x63, 0x61,
+	0x74, 0x69, 0x6f, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0c, 0x66, 0x69, 0x6c, 0x65,
+	0x4c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x32, 0x4a, 0x0a, 0x13, 0x43, 0x72, 0x65, 0x61,
+	0x74, 0x65, 0x51, 0x52, 0x43, 0x6f, 0x64, 0x65, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12,
+	0x33, 0x0a, 0x0c, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x51, 0x52, 0x43, 0x6f, 0x64, 0x65, 0x12,
+	0x0d, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x51, 0x52, 0x44, 0x61, 0x74, 0x61, 0x1a, 0x12,
+	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x51, 0x52, 0x44, 0x61, 0x74, 0x61, 0x52, 0x65, 0x70,
+	0x6c, 0x79, 0x22, 0x00, 0x32, 0x4c, 0x0a, 0x11, 0x55, 0x70, 0x6c, 0x6f, 0x61, 0x64, 0x4c, 0x6f,
+	0x67, 0x6f, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x37, 0x0a, 0x0a, 0x55, 0x70, 0x6c,
+	0x6f, 0x61, 0x64, 0x4c, 0x6f, 0x67, 0x6f, 0x12, 0x0f, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e,
+	0x4c, 0x6f, 0x67, 0x6f, 0x44, 0x61, 0x74, 0x61, 0x1a, 0x14, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x2e, 0x4c, 0x6f, 0x67, 0x6f, 0x44, 0x61, 0x74, 0x61, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x22, 0x00,
+	0x28, 0x01, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -153,16 +258,20 @@ func file_aws_proto_rawDescGZIP() []byte {
 	return file_aws_proto_rawDescData
 }
 
-var file_aws_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_aws_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
 var file_aws_proto_goTypes = []interface{}{
-	(*QRData)(nil),      // 0: proto.QRData
-	(*QRDataReply)(nil), // 1: proto.QRDataReply
+	(*QRData)(nil),        // 0: proto.QRData
+	(*QRDataReply)(nil),   // 1: proto.QRDataReply
+	(*LogoData)(nil),      // 2: proto.LogoData
+	(*LogoDataReply)(nil), // 3: proto.LogoDataReply
 }
 var file_aws_proto_depIdxs = []int32{
 	0, // 0: proto.CreateQRCodeService.CreateQRCode:input_type -> proto.QRData
-	1, // 1: proto.CreateQRCodeService.CreateQRCode:output_type -> proto.QRDataReply
-	1, // [1:2] is the sub-list for method output_type
-	0, // [0:1] is the sub-list for method input_type
+	2, // 1: proto.UploadLogoService.UploadLogo:input_type -> proto.LogoData
+	1, // 2: proto.CreateQRCodeService.CreateQRCode:output_type -> proto.QRDataReply
+	3, // 3: proto.UploadLogoService.UploadLogo:output_type -> proto.LogoDataReply
+	2, // [2:4] is the sub-list for method output_type
+	0, // [0:2] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
 	0, // [0:0] is the sub-list for extension extendee
 	0, // [0:0] is the sub-list for field type_name
@@ -198,6 +307,30 @@ func file_aws_proto_init() {
 				return nil
 			}
 		}
+		file_aws_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*LogoData); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_aws_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*LogoDataReply); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -205,9 +338,9 @@ func file_aws_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_aws_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   2,
+			NumMessages:   4,
 			NumExtensions: 0,
-			NumServices:   1,
+			NumServices:   2,
 		},
 		GoTypes:           file_aws_proto_goTypes,
 		DependencyIndexes: file_aws_proto_depIdxs,
@@ -296,5 +429,111 @@ var _CreateQRCodeService_serviceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
+	Metadata: "aws.proto",
+}
+
+// UploadLogoServiceClient is the client API for UploadLogoService service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+type UploadLogoServiceClient interface {
+	UploadLogo(ctx context.Context, opts ...grpc.CallOption) (UploadLogoService_UploadLogoClient, error)
+}
+
+type uploadLogoServiceClient struct {
+	cc grpc.ClientConnInterface
+}
+
+func NewUploadLogoServiceClient(cc grpc.ClientConnInterface) UploadLogoServiceClient {
+	return &uploadLogoServiceClient{cc}
+}
+
+func (c *uploadLogoServiceClient) UploadLogo(ctx context.Context, opts ...grpc.CallOption) (UploadLogoService_UploadLogoClient, error) {
+	stream, err := c.cc.NewStream(ctx, &_UploadLogoService_serviceDesc.Streams[0], "/proto.UploadLogoService/UploadLogo", opts...)
+	if err != nil {
+		return nil, err
+	}
+	x := &uploadLogoServiceUploadLogoClient{stream}
+	return x, nil
+}
+
+type UploadLogoService_UploadLogoClient interface {
+	Send(*LogoData) error
+	CloseAndRecv() (*LogoDataReply, error)
+	grpc.ClientStream
+}
+
+type uploadLogoServiceUploadLogoClient struct {
+	grpc.ClientStream
+}
+
+func (x *uploadLogoServiceUploadLogoClient) Send(m *LogoData) error {
+	return x.ClientStream.SendMsg(m)
+}
+
+func (x *uploadLogoServiceUploadLogoClient) CloseAndRecv() (*LogoDataReply, error) {
+	if err := x.ClientStream.CloseSend(); err != nil {
+		return nil, err
+	}
+	m := new(LogoDataReply)
+	if err := x.ClientStream.RecvMsg(m); err != nil {
+		return nil, err
+	}
+	return m, nil
+}
+
+// UploadLogoServiceServer is the server API for UploadLogoService service.
+type UploadLogoServiceServer interface {
+	UploadLogo(UploadLogoService_UploadLogoServer) error
+}
+
+// UnimplementedUploadLogoServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedUploadLogoServiceServer struct {
+}
+
+func (*UnimplementedUploadLogoServiceServer) UploadLogo(UploadLogoService_UploadLogoServer) error {
+	return status.Errorf(codes.Unimplemented, "method UploadLogo not implemented")
+}
+
+func RegisterUploadLogoServiceServer(s *grpc.Server, srv UploadLogoServiceServer) {
+	s.RegisterService(&_UploadLogoService_serviceDesc, srv)
+}
+
+func _UploadLogoService_UploadLogo_Handler(srv interface{}, stream grpc.ServerStream) error {
+	return srv.(UploadLogoServiceServer).UploadLogo(&uploadLogoServiceUploadLogoServer{stream})
+}
+
+type UploadLogoService_UploadLogoServer interface {
+	SendAndClose(*LogoDataReply) error
+	Recv() (*LogoData, error)
+	grpc.ServerStream
+}
+
+type uploadLogoServiceUploadLogoServer struct {
+	grpc.ServerStream
+}
+
+func (x *uploadLogoServiceUploadLogoServer) SendAndClose(m *LogoDataReply) error {
+	return x.ServerStream.SendMsg(m)
+}
+
+func (x *uploadLogoServiceUploadLogoServer) Recv() (*LogoData, error) {
+	m := new(LogoData)
+	if err := x.ServerStream.RecvMsg(m); err != nil {
+		return nil, err
+	}
+	return m, nil
+}
+
+var _UploadLogoService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "proto.UploadLogoService",
+	HandlerType: (*UploadLogoServiceServer)(nil),
+	Methods:     []grpc.MethodDesc{},
+	Streams: []grpc.StreamDesc{
+		{
+			StreamName:    "UploadLogo",
+			Handler:       _UploadLogoService_UploadLogo_Handler,
+			ClientStreams: true,
+		},
+	},
 	Metadata: "aws.proto",
 }

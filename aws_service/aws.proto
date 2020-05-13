@@ -15,3 +15,15 @@ message QRDataReply {
 service CreateQRCodeService {
   rpc CreateQRCode (QRData) returns (QRDataReply) {}
 }
+
+message LogoData {
+    bytes imageData = 1;
+}
+
+message LogoDataReply {
+    string fileLocation = 1;
+}
+
+service UploadLogoService {
+  rpc UploadLogo (stream LogoData) returns (LogoDataReply) {}
+}
