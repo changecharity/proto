@@ -11,7 +11,6 @@ message GlobalSuccessReply {
 message UserSignUp {
     string email = 1;
     string password = 2;
-    int64 dob = 3;
     string usertoken = 4;
     string plaidpublictoken = 5;
     string plaidaccountid = 6;
