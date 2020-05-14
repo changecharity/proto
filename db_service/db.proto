@@ -94,11 +94,11 @@ service TransferPDFService {
     rpc TransferPDF (TransferPDFParams) returns (GlobalSuccessReply) {}
 }
 
-message saveLogoMsg {
+message SaveLogoMsg {
     string orgToken = 1;
     string fileLocation = 2;
 }
 
 service SaveLogoService {
-    rpc SaveLogo (saveLogoMsg) returns (GlobalSuccessReply) {}
+    rpc SaveLogo (SaveLogoMsg) returns (GlobalSuccessReply) {}
 }
