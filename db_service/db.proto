@@ -101,3 +101,23 @@ message SaveLogoMsg {
 service SaveLogoService {
     rpc SaveLogo (SaveLogoMsg) returns (GlobalSuccessReply) {}
 }
+
+message GetTransactionsMsg {
+    string userToken = 1;
+    string offset = 2;
+}
+
+message GetTransactionsMsgReply {
+    repeated TransactionData transactions = 1;
+}
+
+message TransactionData {
+    string name = 1;
+    string dot = 2;
+    double amount = 3;
+    int32 change = 4;
+}
+
+service GetTransactionsService {
+    rpc GetTransactions (GetTransactionsMsg) returns (GetTransactionsMsgReply) {}
+}
