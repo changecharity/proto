@@ -121,3 +121,13 @@ message TransactionData {
 service GetTransactionsService {
     rpc GetTransactions (GetTransactionsMsg) returns (GetTransactionsMsgReply) {}
 }
+
+
+message UpdateThresholdMsg {
+    string usertoken = 1;
+    int32 threshold = 2;
+}
+
+service UpdateThresholdService {
+    rpc UpdateThreshold (UpdateThresholdMsg) returns (GlobalSuccessReply) {}
+}
