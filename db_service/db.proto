@@ -103,7 +103,7 @@ service SaveLogoService {
 }
 
 message GetTransactionsMsg {
-    string usertoken = 1;
+    string user_token = 1;
     int32 offset = 2;
 }
 
@@ -124,7 +124,7 @@ service GetTransactionsService {
 
 
 message UpdateThresholdMsg {
-    string usertoken = 1;
+    string user_token = 1;
     int32 threshold = 2;
 }
 
