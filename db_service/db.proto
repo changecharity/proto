@@ -56,7 +56,7 @@ service AuthLoginService{
 }
 
 message TransactionItemID {
-    string itemid = 1;
+    string item_id = 1;
 }
 
 service BeginTransactionWHService{
@@ -64,7 +64,7 @@ service BeginTransactionWHService{
 }
 
 message StripeChargeID {
-    string chargeid = 1;
+    string charge_id = 1;
 }
 
 service ConfirmTransferService{
@@ -86,7 +86,7 @@ service SearchOrgNameService {
 
 message TransferPDFParams {
     // add start and end date
-    string usertoken = 1;
+    string user_token = 1;
 }
 
 service TransferPDFService {
@@ -94,8 +94,8 @@ service TransferPDFService {
 }
 
 message SaveLogoMsg {
-    string orgToken = 1;
-    string fileLocation = 2;
+    string org_token = 1;
+    string file_location = 2;
 }
 
 service SaveLogoService {
