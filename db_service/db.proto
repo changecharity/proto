@@ -131,3 +131,16 @@ message UpdateThresholdMsg {
 service UpdateThresholdService {
     rpc UpdateThreshold (UpdateThresholdMsg) returns (GlobalSuccessReply) {}
 }
+
+message UserToken {
+    string user_token = 1;
+}
+
+message UsersOrgInfoReply {
+    string name = 1;
+    string logo_location = 2;
+}
+
+service GetUsersOrgInfoService {
+    rpc GetUsersOrgInfo (UserToken) returns (UsersOrgInfoReply) {}
+}
