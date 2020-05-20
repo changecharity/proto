@@ -7,6 +7,8 @@ require (
 	4d63.com/gochecknoinits v0.0.0-20200108094044-eb73b47b9fc4 // indirect
 	github.com/alexkohler/nakedret v1.0.0 // indirect
 	github.com/golang/protobuf v1.4.0
+	github.com/gordonklaus/ineffassign v0.0.0-20200309095847-7953dde2c7bf // indirect
+	github.com/jgautheron/goconst v0.0.0-20200227150835-cda7ea3bf591 // indirect
 	github.com/kisielk/errcheck v1.2.0 // indirect
 	github.com/kisielk/gotool v1.0.0 // indirect
 	github.com/mdempsky/maligned v0.0.0-20180708014732-6e39bd26a8c8 // indirect
