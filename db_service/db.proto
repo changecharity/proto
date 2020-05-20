@@ -11,9 +11,9 @@ message GlobalSuccessReply {
 message UserSignUp {
     string email = 1;
     string password = 2;
-    string usertoken = 4;
-    string plaidpublictoken = 5;
-    string plaidaccountid = 6;
+    string user_token = 4;
+    string plaid_public_token = 5;
+    string plaid_account_id = 6;
     int32 key = 8;
 }
 
@@ -26,9 +26,9 @@ message OrgSignUp {
     string email = 2;
     string password = 3;
     int32 ein = 4;
-    string orgtoken = 5;
-    string plaidpublictoken = 6;
-    string plaidaccountid = 7;
+    string org_token = 5;
+    string plaid_public_token = 6;
+    string plaid_account_id = 7;
     int32 key = 8;
 }
 
@@ -47,7 +47,7 @@ service CheckOrgSignUpService {
 message Login {
     string email = 1;
     string password = 2;
-    string usertoken = 3;
+    string user_token = 3;
     string table = 4;
 }
 
