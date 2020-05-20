@@ -144,3 +144,12 @@ message UsersOrgInfoReply {
 service GetUsersOrgInfoService {
     rpc GetUsersOrgInfo (UserToken) returns (UsersOrgInfoReply) {}
 }
+
+message UsersTotalsReply {
+    int64 monthly_total = 1;
+    int64 weekly_total = 2;
+}
+
+service GetUsersTotalsService {
+    rpc GetUsersTotals (UserToken) returns (UsersTotalsReply) {}
+}
