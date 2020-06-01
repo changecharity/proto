@@ -162,3 +162,11 @@ message UsersTotalsReply {
 service GetUsersTotalsService {
     rpc GetUsersTotals (UserToken) returns (UsersTotalsReply) {}
 }
+
+message UsersProfileReply {
+    int32 threshold = 1;
+}
+
+service GetUsersProfileService {
+    rpc GetUsersProfile (UserToken) returns (UsersProfileReply) {}
+}
