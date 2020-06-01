@@ -15,6 +15,8 @@ message UserSignUp {
     string plaid_public_token = 5;
     string plaid_account_id = 6;
     int32 key = 8;
+    int32 mask = 9;
+    string bank_name = 10;
 }
 
 service UserSignUpService {
