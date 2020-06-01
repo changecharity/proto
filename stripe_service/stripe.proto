@@ -4,7 +4,7 @@ syntax = "proto3";
 
 package proto;
 
-message stripeEmpty {}
+message StripeEmpty {}
 
 message CreateCusOrAcc {
     string stripe_token = 1;
@@ -48,5 +48,5 @@ message DeleteCusBAMsg {
 }
 
 service DeleteCusBAService {
-    rpc DeleteCusBA (DeleteCusBAMsg) returns (stripeEmpty) {}
+    rpc DeleteCusBA (DeleteCusBAMsg) returns (StripeEmpty) {}
 }
