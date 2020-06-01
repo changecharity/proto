@@ -167,6 +167,8 @@ service GetUsersTotalsService {
 
 message UsersProfileReply {
     int32 threshold = 1;
+    int32 mask = 2;
+    string bank_name = 3;
 }
 
 service GetUsersProfileService {
