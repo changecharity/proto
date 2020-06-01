@@ -447,8 +447,12 @@ var file_stripe_proto_rawDesc = []byte{
 	0x12, 0x3a, 0x0a, 0x0b, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x43, 0x75, 0x73, 0x42, 0x41, 0x12,
 	0x15, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x43, 0x75,
 	0x73, 0x42, 0x41, 0x4d, 0x73, 0x67, 0x1a, 0x12, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x53,
-	0x74, 0x72, 0x69, 0x70, 0x65, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x00, 0x62, 0x06, 0x70, 0x72,
-	0x6f, 0x74, 0x6f, 0x33,
+	0x74, 0x72, 0x69, 0x70, 0x65, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x00, 0x32, 0x4a, 0x0a, 0x0f,
+	0x41, 0x64, 0x64, 0x43, 0x75, 0x73, 0x42, 0x41, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12,
+	0x37, 0x0a, 0x08, 0x41, 0x64, 0x64, 0x43, 0x75, 0x73, 0x42, 0x41, 0x12, 0x15, 0x2e, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x2e, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x43, 0x75, 0x73, 0x42, 0x41, 0x4d,
+	0x73, 0x67, 0x1a, 0x12, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x53, 0x74, 0x72, 0x69, 0x70,
+	0x65, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -478,12 +482,14 @@ var file_stripe_proto_depIdxs = []int32{
 	1, // 1: proto.CreateAccService.CreateAcc:input_type -> proto.CreateCusOrAcc
 	4, // 2: proto.FinalTransactionWHService.FinalTransactionWH:input_type -> proto.WHCreateTransferData
 	6, // 3: proto.DeleteCusBAService.DeleteCusBA:input_type -> proto.DeleteCusBAMsg
-	2, // 4: proto.CreateCusService.CreateCus:output_type -> proto.CreateCusReply
-	3, // 5: proto.CreateAccService.CreateAcc:output_type -> proto.CreateAccReply
-	5, // 6: proto.FinalTransactionWHService.FinalTransactionWH:output_type -> proto.WHCreateTransferDataReply
-	0, // 7: proto.DeleteCusBAService.DeleteCusBA:output_type -> proto.StripeEmpty
-	4, // [4:8] is the sub-list for method output_type
-	0, // [0:4] is the sub-list for method input_type
+	6, // 4: proto.AddCusBAService.AddCusBA:input_type -> proto.DeleteCusBAMsg
+	2, // 5: proto.CreateCusService.CreateCus:output_type -> proto.CreateCusReply
+	3, // 6: proto.CreateAccService.CreateAcc:output_type -> proto.CreateAccReply
+	5, // 7: proto.FinalTransactionWHService.FinalTransactionWH:output_type -> proto.WHCreateTransferDataReply
+	0, // 8: proto.DeleteCusBAService.DeleteCusBA:output_type -> proto.StripeEmpty
+	0, // 9: proto.AddCusBAService.AddCusBA:output_type -> proto.StripeEmpty
+	5, // [5:10] is the sub-list for method output_type
+	0, // [0:5] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
 	0, // [0:0] is the sub-list for extension extendee
 	0, // [0:0] is the sub-list for field type_name
@@ -588,7 +594,7 @@ func file_stripe_proto_init() {
 			NumEnums:      0,
 			NumMessages:   7,
 			NumExtensions: 0,
-			NumServices:   4,
+			NumServices:   5,
 		},
 		GoTypes:           file_stripe_proto_goTypes,
 		DependencyIndexes: file_stripe_proto_depIdxs,
@@ -890,6 +896,78 @@ var _DeleteCusBAService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "DeleteCusBA",
 			Handler:    _DeleteCusBAService_DeleteCusBA_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "stripe.proto",
+}
+
+// AddCusBAServiceClient is the client API for AddCusBAService service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+type AddCusBAServiceClient interface {
+	AddCusBA(ctx context.Context, in *DeleteCusBAMsg, opts ...grpc.CallOption) (*StripeEmpty, error)
+}
+
+type addCusBAServiceClient struct {
+	cc grpc.ClientConnInterface
+}
+
+func NewAddCusBAServiceClient(cc grpc.ClientConnInterface) AddCusBAServiceClient {
+	return &addCusBAServiceClient{cc}
+}
+
+func (c *addCusBAServiceClient) AddCusBA(ctx context.Context, in *DeleteCusBAMsg, opts ...grpc.CallOption) (*StripeEmpty, error) {
+	out := new(StripeEmpty)
+	err := c.cc.Invoke(ctx, "/proto.AddCusBAService/AddCusBA", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// AddCusBAServiceServer is the server API for AddCusBAService service.
+type AddCusBAServiceServer interface {
+	AddCusBA(context.Context, *DeleteCusBAMsg) (*StripeEmpty, error)
+}
+
+// UnimplementedAddCusBAServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedAddCusBAServiceServer struct {
+}
+
+func (*UnimplementedAddCusBAServiceServer) AddCusBA(context.Context, *DeleteCusBAMsg) (*StripeEmpty, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method AddCusBA not implemented")
+}
+
+func RegisterAddCusBAServiceServer(s *grpc.Server, srv AddCusBAServiceServer) {
+	s.RegisterService(&_AddCusBAService_serviceDesc, srv)
+}
+
+func _AddCusBAService_AddCusBA_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(DeleteCusBAMsg)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AddCusBAServiceServer).AddCusBA(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/proto.AddCusBAService/AddCusBA",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AddCusBAServiceServer).AddCusBA(ctx, req.(*DeleteCusBAMsg))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+var _AddCusBAService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "proto.AddCusBAService",
+	HandlerType: (*AddCusBAServiceServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "AddCusBA",
+			Handler:    _AddCusBAService_AddCusBA_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

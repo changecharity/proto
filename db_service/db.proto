@@ -183,3 +183,7 @@ message DeleteUsersBAMsg {
 service DeleteUsersBAService {
     rpc DeleteUsersBA (DeleteUsersBAMsg) returns (GlobalSuccessReply) {}
 }
+
+service UpdateUsersBAService {
+    rpc UpdateUsersBA (UserSignUp) returns (GlobalSuccessReply) {}
+}

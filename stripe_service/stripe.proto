@@ -50,3 +50,7 @@ message DeleteCusBAMsg {
 service DeleteCusBAService {
     rpc DeleteCusBA (DeleteCusBAMsg) returns (StripeEmpty) {}
 }
+
+service AddCusBAService {
+    rpc AddCusBA (DeleteCusBAMsg) returns (StripeEmpty) {}
+}

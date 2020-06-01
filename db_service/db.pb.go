@@ -1424,8 +1424,13 @@ var file_db_proto_rawDesc = []byte{
 	0x73, 0x42, 0x41, 0x12, 0x17, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x44, 0x65, 0x6c, 0x65,
 	0x74, 0x65, 0x55, 0x73, 0x65, 0x72, 0x73, 0x42, 0x41, 0x4d, 0x73, 0x67, 0x1a, 0x19, 0x2e, 0x70,
 	0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x6c, 0x6f, 0x62, 0x61, 0x6c, 0x53, 0x75, 0x63, 0x63, 0x65,
-	0x73, 0x73, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x22, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f,
-	0x33,
+	0x73, 0x73, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x22, 0x00, 0x32, 0x57, 0x0a, 0x14, 0x55, 0x70, 0x64,
+	0x61, 0x74, 0x65, 0x55, 0x73, 0x65, 0x72, 0x73, 0x42, 0x41, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63,
+	0x65, 0x12, 0x3f, 0x0a, 0x0d, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x55, 0x73, 0x65, 0x72, 0x73,
+	0x42, 0x41, 0x12, 0x11, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x55, 0x73, 0x65, 0x72, 0x53,
+	0x69, 0x67, 0x6e, 0x55, 0x70, 0x1a, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x6c,
+	0x6f, 0x62, 0x61, 0x6c, 0x53, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x52, 0x65, 0x70, 0x6c, 0x79,
+	0x22, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -1482,25 +1487,27 @@ var file_db_proto_depIdxs = []int32{
 	15, // 15: proto.GetUsersTotalsService.GetUsersTotals:input_type -> proto.UserToken
 	15, // 16: proto.GetUsersProfileService.GetUsersProfile:input_type -> proto.UserToken
 	19, // 17: proto.DeleteUsersBAService.DeleteUsersBA:input_type -> proto.DeleteUsersBAMsg
-	0,  // 18: proto.UserSignUpService.SendUserSignUp:output_type -> proto.GlobalSuccessReply
-	0,  // 19: proto.OrgSignUpService.SendOrgSignUp:output_type -> proto.GlobalSuccessReply
-	0,  // 20: proto.CheckUserSignUpService.CheckUserSignUp:output_type -> proto.GlobalSuccessReply
-	0,  // 21: proto.CheckOrgSignUpService.CheckOrgSignUp:output_type -> proto.GlobalSuccessReply
-	0,  // 22: proto.ResendEmailAuthService.ResendEmailAuth:output_type -> proto.GlobalSuccessReply
-	0,  // 23: proto.AuthLoginService.AuthLogin:output_type -> proto.GlobalSuccessReply
-	0,  // 24: proto.BeginTransactionWHService.BeginTransactionWH:output_type -> proto.GlobalSuccessReply
-	0,  // 25: proto.ConfirmTransferService.ConfirmTransfer:output_type -> proto.GlobalSuccessReply
-	8,  // 26: proto.SearchOrgNameService.SearchOrgName:output_type -> proto.OrgNameReply
-	0,  // 27: proto.TransferPDFService.TransferPDF:output_type -> proto.GlobalSuccessReply
-	0,  // 28: proto.SaveLogoService.SaveLogo:output_type -> proto.GlobalSuccessReply
-	12, // 29: proto.GetTransactionsService.GetTransactions:output_type -> proto.GetTransactionsMsgReply
-	0,  // 30: proto.UpdateThresholdService.UpdateThreshold:output_type -> proto.GlobalSuccessReply
-	16, // 31: proto.GetUsersOrgInfoService.GetUsersOrgInfo:output_type -> proto.UsersOrgInfoReply
-	17, // 32: proto.GetUsersTotalsService.GetUsersTotals:output_type -> proto.UsersTotalsReply
-	18, // 33: proto.GetUsersProfileService.GetUsersProfile:output_type -> proto.UsersProfileReply
-	0,  // 34: proto.DeleteUsersBAService.DeleteUsersBA:output_type -> proto.GlobalSuccessReply
-	18, // [18:35] is the sub-list for method output_type
-	1,  // [1:18] is the sub-list for method input_type
+	1,  // 18: proto.UpdateUsersBAService.UpdateUsersBA:input_type -> proto.UserSignUp
+	0,  // 19: proto.UserSignUpService.SendUserSignUp:output_type -> proto.GlobalSuccessReply
+	0,  // 20: proto.OrgSignUpService.SendOrgSignUp:output_type -> proto.GlobalSuccessReply
+	0,  // 21: proto.CheckUserSignUpService.CheckUserSignUp:output_type -> proto.GlobalSuccessReply
+	0,  // 22: proto.CheckOrgSignUpService.CheckOrgSignUp:output_type -> proto.GlobalSuccessReply
+	0,  // 23: proto.ResendEmailAuthService.ResendEmailAuth:output_type -> proto.GlobalSuccessReply
+	0,  // 24: proto.AuthLoginService.AuthLogin:output_type -> proto.GlobalSuccessReply
+	0,  // 25: proto.BeginTransactionWHService.BeginTransactionWH:output_type -> proto.GlobalSuccessReply
+	0,  // 26: proto.ConfirmTransferService.ConfirmTransfer:output_type -> proto.GlobalSuccessReply
+	8,  // 27: proto.SearchOrgNameService.SearchOrgName:output_type -> proto.OrgNameReply
+	0,  // 28: proto.TransferPDFService.TransferPDF:output_type -> proto.GlobalSuccessReply
+	0,  // 29: proto.SaveLogoService.SaveLogo:output_type -> proto.GlobalSuccessReply
+	12, // 30: proto.GetTransactionsService.GetTransactions:output_type -> proto.GetTransactionsMsgReply
+	0,  // 31: proto.UpdateThresholdService.UpdateThreshold:output_type -> proto.GlobalSuccessReply
+	16, // 32: proto.GetUsersOrgInfoService.GetUsersOrgInfo:output_type -> proto.UsersOrgInfoReply
+	17, // 33: proto.GetUsersTotalsService.GetUsersTotals:output_type -> proto.UsersTotalsReply
+	18, // 34: proto.GetUsersProfileService.GetUsersProfile:output_type -> proto.UsersProfileReply
+	0,  // 35: proto.DeleteUsersBAService.DeleteUsersBA:output_type -> proto.GlobalSuccessReply
+	0,  // 36: proto.UpdateUsersBAService.UpdateUsersBA:output_type -> proto.GlobalSuccessReply
+	19, // [19:37] is the sub-list for method output_type
+	1,  // [1:19] is the sub-list for method input_type
 	1,  // [1:1] is the sub-list for extension type_name
 	1,  // [1:1] is the sub-list for extension extendee
 	0,  // [0:1] is the sub-list for field type_name
@@ -1761,7 +1768,7 @@ func file_db_proto_init() {
 			NumEnums:      0,
 			NumMessages:   20,
 			NumExtensions: 0,
-			NumServices:   17,
+			NumServices:   18,
 		},
 		GoTypes:           file_db_proto_goTypes,
 		DependencyIndexes: file_db_proto_depIdxs,
@@ -2999,6 +3006,78 @@ var _DeleteUsersBAService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "DeleteUsersBA",
 			Handler:    _DeleteUsersBAService_DeleteUsersBA_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "db.proto",
+}
+
+// UpdateUsersBAServiceClient is the client API for UpdateUsersBAService service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+type UpdateUsersBAServiceClient interface {
+	UpdateUsersBA(ctx context.Context, in *UserSignUp, opts ...grpc.CallOption) (*GlobalSuccessReply, error)
+}
+
+type updateUsersBAServiceClient struct {
+	cc grpc.ClientConnInterface
+}
+
+func NewUpdateUsersBAServiceClient(cc grpc.ClientConnInterface) UpdateUsersBAServiceClient {
+	return &updateUsersBAServiceClient{cc}
+}
+
+func (c *updateUsersBAServiceClient) UpdateUsersBA(ctx context.Context, in *UserSignUp, opts ...grpc.CallOption) (*GlobalSuccessReply, error) {
+	out := new(GlobalSuccessReply)
+	err := c.cc.Invoke(ctx, "/proto.UpdateUsersBAService/UpdateUsersBA", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// UpdateUsersBAServiceServer is the server API for UpdateUsersBAService service.
+type UpdateUsersBAServiceServer interface {
+	UpdateUsersBA(context.Context, *UserSignUp) (*GlobalSuccessReply, error)
+}
+
+// UnimplementedUpdateUsersBAServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedUpdateUsersBAServiceServer struct {
+}
+
+func (*UnimplementedUpdateUsersBAServiceServer) UpdateUsersBA(context.Context, *UserSignUp) (*GlobalSuccessReply, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateUsersBA not implemented")
+}
+
+func RegisterUpdateUsersBAServiceServer(s *grpc.Server, srv UpdateUsersBAServiceServer) {
+	s.RegisterService(&_UpdateUsersBAService_serviceDesc, srv)
+}
+
+func _UpdateUsersBAService_UpdateUsersBA_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UserSignUp)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UpdateUsersBAServiceServer).UpdateUsersBA(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/proto.UpdateUsersBAService/UpdateUsersBA",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UpdateUsersBAServiceServer).UpdateUsersBA(ctx, req.(*UserSignUp))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+var _UpdateUsersBAService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "proto.UpdateUsersBAService",
+	HandlerType: (*UpdateUsersBAServiceServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "UpdateUsersBA",
+			Handler:    _UpdateUsersBAService_UpdateUsersBA_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
