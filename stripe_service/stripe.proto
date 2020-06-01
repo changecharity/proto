@@ -4,6 +4,8 @@ syntax = "proto3";
 
 package proto;
 
+message stripeEmpty {}
+
 message CreateCusOrAcc {
     string stripe_token = 1;
     string email = 2;
@@ -38,4 +40,13 @@ message WHCreateTransferDataReply {
 
 service FinalTransactionWHService {
     rpc FinalTransactionWH (WHCreateTransferData) returns (WHCreateTransferDataReply) {}
+}
+
+message DeleteCusBAMsg {
+    string customer_id = 1;
+    string stripe_token = 2;
+}
+
+service DeleteCusBAService {
+    rpc DeleteCusBA (DeleteCusBAMsg) returns (stripeEmpty) {}
 }

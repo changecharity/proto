@@ -174,3 +174,12 @@ message UsersProfileReply {
 service GetUsersProfileService {
     rpc GetUsersProfile (UserToken) returns (UsersProfileReply) {}
 }
+
+message DeleteUsersBAMsg {
+    string user_token = 1;
+    string password = 2;
+}
+
+service DeleteUsersBAService {
+    rpc DeleteUsersBA (DeleteUsersBAMsg) returns (GlobalSuccessReply) {}
+}
