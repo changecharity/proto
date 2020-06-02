@@ -45,12 +45,17 @@ service FinalTransactionWHService {
 message DeleteCusBAMsg {
     string customer_id = 1;
     string stripe_token = 2;
+    int32 ba_count = 3;
 }
 
 service DeleteCusBAService {
     rpc DeleteCusBA (DeleteCusBAMsg) returns (StripeEmpty) {}
 }
 
+message AddCusBAReply {
+    int32 ba_count = 1;
+}
+
 service AddCusBAService {
-    rpc AddCusBA (DeleteCusBAMsg) returns (StripeEmpty) {}
+    rpc AddCusBA (DeleteCusBAMsg) returns (AddCusBAReply) {}
 }
