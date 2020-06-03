@@ -199,6 +199,7 @@ service ValidNewAccService {
 message ValidPassMsg {
     string token = 1;
     string table = 2;
+    string password = 3;
 }
 
 service ValidPassService {
