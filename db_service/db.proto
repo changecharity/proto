@@ -60,6 +60,7 @@ message Login {
     string password = 2;
     string user_token = 3;
     string table = 4;
+    int32 key = 5;
 }
 
 service AuthLoginService{
@@ -200,8 +201,21 @@ message ValidPassMsg {
     string token = 1;
     string table = 2;
     string password = 3;
+    int32 key = 4;
 }
 
 service ValidPassService {
     rpc ValidPass (ValidPassMsg) returns (GlobalSuccessReply) {}
+}
+
+service ValidKeyService {
+    rpc ValidKey (ValidPassMsg) returns (GlobalSuccessReply) {}
+}
+
+service SendForgotPassService {
+    rpc SendForgotPass (Login) returns (GlobalSuccessReply) {}
+}
+
+service ForgotPassService {
+    rpc ForgotPass (Login) returns (GlobalSuccessReply) {}
 }
