@@ -195,3 +195,12 @@ message ValidNewAccMsg {
 service ValidNewAccService {
     rpc ValidNewAcc (ValidNewAccMsg) returns (GlobalSuccessReply) {}
 }
+
+message ValidPassMsg {
+    string token = 1;
+    string table = 2;
+}
+
+service ValidPassService {
+    rpc ValidPass (ValidPassMsg) returns (GlobalSuccessReply) {}
+}
