@@ -187,3 +187,11 @@ service DeleteUsersBAService {
 service UpdateUsersBAService {
     rpc UpdateUsersBA (UserSignUp) returns (GlobalSuccessReply) {}
 }
+
+message ValidNewAccMsg {
+    string account_id = 1;
+}
+
+service ValidNewAccService {
+    rpc ValidNewAcc (ValidNewAccMsg) returns (GlobalSuccessReply) {}
+}
