@@ -36,6 +36,7 @@ message WHCreateTransferData {
 message WHCreateTransferDataReply {
     string charge_id = 1;
     string transfer_id = 2;
+    int64 transfered_amount = 3;
 }
 
 service FinalTransactionWHService {
