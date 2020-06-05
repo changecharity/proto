@@ -36,7 +36,7 @@ message TransfersPDFArray {
 message TransfersPDF {
     int32 total_charged = 1;
     string dop = 2;
-    int32 ein = 3;
+    int64 ein = 3;
     string name = 4;
 }
 
