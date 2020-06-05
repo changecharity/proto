@@ -17,6 +17,7 @@ message UserSignUp {
     int32 key = 8;
     int32 mask = 9;
     string bank_name = 10;
+    string name = 11;
 }
 
 service UserSignUpService {
@@ -27,7 +28,7 @@ message OrgSignUp {
     string name = 1;
     string email = 2;
     string password = 3;
-    int32 ein = 4;
+    int64 ein = 4;
     string org_token = 5;
     string plaid_public_token = 6;
     string plaid_account_id = 7;
