@@ -254,7 +254,12 @@ message SingleTransfer {
     int64 transfered_amount = 3;
 }
 
+message GetTransfersMsg {
+    string org_token = 1;
+    int32 offset = 2;
+}
+
 // GetTransfers is for orgs and gets their transfers as opposed to a user who would get his transactions
 service GetTransfers {
-    rpc GetDashboard (OrgToken) returns (OrgsTransfers) {}
+    rpc GetDashboard (GetTransfersMsg) returns (OrgsTransfers) {}
 }
