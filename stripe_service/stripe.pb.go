@@ -582,7 +582,12 @@ var file_stripe_proto_rawDesc = []byte{
 	0x42, 0x41, 0x12, 0x15, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x44, 0x65, 0x6c, 0x65, 0x74,
 	0x65, 0x43, 0x75, 0x73, 0x42, 0x41, 0x4d, 0x73, 0x67, 0x1a, 0x14, 0x2e, 0x70, 0x72, 0x6f, 0x74,
 	0x6f, 0x2e, 0x41, 0x64, 0x64, 0x43, 0x75, 0x73, 0x42, 0x41, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x22,
-	0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x00, 0x32, 0x55, 0x0a, 0x17, 0x63, 0x72, 0x65, 0x61, 0x74, 0x65, 0x41, 0x6e, 0x64, 0x53, 0x65,
+	0x6e, 0x64, 0x54, 0x6f, 0x73, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x3a, 0x0a, 0x10,
+	0x63, 0x72, 0x65, 0x61, 0x74, 0x65, 0x41, 0x6e, 0x64, 0x53, 0x65, 0x6e, 0x64, 0x54, 0x6f, 0x73,
+	0x12, 0x10, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x52, 0x65, 0x73, 0x65, 0x6e, 0x64, 0x54,
+	0x6f, 0x73, 0x1a, 0x12, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x53, 0x74, 0x72, 0x69, 0x70,
+	0x65, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -615,13 +620,15 @@ var file_stripe_proto_depIdxs = []int32{
 	4, // 2: proto.FinalTransactionWHService.FinalTransactionWH:input_type -> proto.WHCreateTransferData
 	6, // 3: proto.DeleteCusBAService.DeleteCusBA:input_type -> proto.DeleteCusBAMsg
 	6, // 4: proto.AddCusBAService.AddCusBA:input_type -> proto.DeleteCusBAMsg
-	2, // 5: proto.CreateCusService.CreateCus:output_type -> proto.CreateCusReply
-	3, // 6: proto.CreateAccService.CreateAcc:output_type -> proto.CreateAccReply
-	5, // 7: proto.FinalTransactionWHService.FinalTransactionWH:output_type -> proto.WHCreateTransferDataReply
-	0, // 8: proto.DeleteCusBAService.DeleteCusBA:output_type -> proto.StripeEmpty
-	7, // 9: proto.AddCusBAService.AddCusBA:output_type -> proto.AddCusBAReply
-	5, // [5:10] is the sub-list for method output_type
-	0, // [0:5] is the sub-list for method input_type
+	8, // 5: proto.createAndSendTosService.createAndSendTos:input_type -> proto.ResendTos
+	2, // 6: proto.CreateCusService.CreateCus:output_type -> proto.CreateCusReply
+	3, // 7: proto.CreateAccService.CreateAcc:output_type -> proto.CreateAccReply
+	5, // 8: proto.FinalTransactionWHService.FinalTransactionWH:output_type -> proto.WHCreateTransferDataReply
+	0, // 9: proto.DeleteCusBAService.DeleteCusBA:output_type -> proto.StripeEmpty
+	7, // 10: proto.AddCusBAService.AddCusBA:output_type -> proto.AddCusBAReply
+	0, // 11: proto.createAndSendTosService.createAndSendTos:output_type -> proto.StripeEmpty
+	6, // [6:12] is the sub-list for method output_type
+	0, // [0:6] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
 	0, // [0:0] is the sub-list for extension extendee
 	0, // [0:0] is the sub-list for field type_name
@@ -750,7 +757,7 @@ func file_stripe_proto_init() {
 			NumEnums:      0,
 			NumMessages:   9,
 			NumExtensions: 0,
-			NumServices:   5,
+			NumServices:   6,
 		},
 		GoTypes:           file_stripe_proto_goTypes,
 		DependencyIndexes: file_stripe_proto_depIdxs,
@@ -1124,6 +1131,78 @@ var _AddCusBAService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "AddCusBA",
 			Handler:    _AddCusBAService_AddCusBA_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "stripe.proto",
+}
+
+// CreateAndSendTosServiceClient is the client API for CreateAndSendTosService service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+type CreateAndSendTosServiceClient interface {
+	CreateAndSendTos(ctx context.Context, in *ResendTos, opts ...grpc.CallOption) (*StripeEmpty, error)
+}
+
+type createAndSendTosServiceClient struct {
+	cc grpc.ClientConnInterface
+}
+
+func NewCreateAndSendTosServiceClient(cc grpc.ClientConnInterface) CreateAndSendTosServiceClient {
+	return &createAndSendTosServiceClient{cc}
+}
+
+func (c *createAndSendTosServiceClient) CreateAndSendTos(ctx context.Context, in *ResendTos, opts ...grpc.CallOption) (*StripeEmpty, error) {
+	out := new(StripeEmpty)
+	err := c.cc.Invoke(ctx, "/proto.createAndSendTosService/createAndSendTos", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// CreateAndSendTosServiceServer is the server API for CreateAndSendTosService service.
+type CreateAndSendTosServiceServer interface {
+	CreateAndSendTos(context.Context, *ResendTos) (*StripeEmpty, error)
+}
+
+// UnimplementedCreateAndSendTosServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedCreateAndSendTosServiceServer struct {
+}
+
+func (*UnimplementedCreateAndSendTosServiceServer) CreateAndSendTos(context.Context, *ResendTos) (*StripeEmpty, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateAndSendTos not implemented")
+}
+
+func RegisterCreateAndSendTosServiceServer(s *grpc.Server, srv CreateAndSendTosServiceServer) {
+	s.RegisterService(&_CreateAndSendTosService_serviceDesc, srv)
+}
+
+func _CreateAndSendTosService_CreateAndSendTos_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ResendTos)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CreateAndSendTosServiceServer).CreateAndSendTos(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/proto.createAndSendTosService/CreateAndSendTos",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CreateAndSendTosServiceServer).CreateAndSendTos(ctx, req.(*ResendTos))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+var _CreateAndSendTosService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "proto.createAndSendTosService",
+	HandlerType: (*CreateAndSendTosServiceServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "createAndSendTos",
+			Handler:    _CreateAndSendTosService_CreateAndSendTos_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

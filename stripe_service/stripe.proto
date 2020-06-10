@@ -65,3 +65,7 @@ message ResendTos {
     string email = 1;
     string account_id = 2;
 }
+
+service createAndSendTosService {
+    rpc createAndSendTos (ResendTos) returns (StripeEmpty) {}
+}
