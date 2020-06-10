@@ -149,6 +149,10 @@ message UserToken {
     string user_token = 1;
 }
 
+message OrgToken {
+    string org_token = 1;
+}
+
 message UsersOrgInfoReply {
     string name = 1;
     string logo_location = 2;
@@ -219,4 +223,8 @@ service SendForgotPassService {
 
 service ForgotPassService {
     rpc ForgotPass (Login) returns (GlobalSuccessReply) {}
+}
+
+service CheckOrgTosAcceptedService {
+    rpc CheckOrgTosAccepted (OrgToken) returns (GlobalSuccessReply) {}
 }
