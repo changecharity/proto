@@ -60,3 +60,8 @@ message AddCusBAReply {
 service AddCusBAService {
     rpc AddCusBA (DeleteCusBAMsg) returns (AddCusBAReply) {}
 }
+
+message ResendTos {
+    string email = 1;
+    string account_id = 2;
+}

@@ -228,3 +228,7 @@ service ForgotPassService {
 service CheckOrgTosAcceptedService {
     rpc CheckOrgTosAccepted (OrgToken) returns (GlobalSuccessReply) {}
 }
+
+service ResendOrgsTosService {
+    rpc ResendOrgsTos (OrgToken) returns (GlobalSuccessReply) {}
+}
