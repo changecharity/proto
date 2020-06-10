@@ -260,6 +260,6 @@ message GetTransfersMsg {
 }
 
 // GetTransfers is for orgs and gets their transfers as opposed to a user who would get his transactions
-service GetTransfers {
-    rpc GetDashboard (GetTransfersMsg) returns (OrgsTransfers) {}
+service GetTransfersService {
+    rpc GetTransfers (GetTransfersMsg) returns (OrgsTransfers) {}
 }

@@ -1931,12 +1931,13 @@ var file_db_proto_rawDesc = []byte{
 	0x12, 0x33, 0x0a, 0x0c, 0x47, 0x65, 0x74, 0x44, 0x61, 0x73, 0x68, 0x62, 0x6f, 0x61, 0x72, 0x64,
 	0x12, 0x0f, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x4f, 0x72, 0x67, 0x54, 0x6f, 0x6b, 0x65,
 	0x6e, 0x1a, 0x10, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x44, 0x61, 0x73, 0x68, 0x62, 0x6f,
-	0x61, 0x72, 0x64, 0x22, 0x00, 0x32, 0x4e, 0x0a, 0x0c, 0x47, 0x65, 0x74, 0x54, 0x72, 0x61, 0x6e,
-	0x73, 0x66, 0x65, 0x72, 0x73, 0x12, 0x3e, 0x0a, 0x0c, 0x47, 0x65, 0x74, 0x44, 0x61, 0x73, 0x68,
-	0x62, 0x6f, 0x61, 0x72, 0x64, 0x12, 0x16, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x65,
-	0x74, 0x54, 0x72, 0x61, 0x6e, 0x73, 0x66, 0x65, 0x72, 0x73, 0x4d, 0x73, 0x67, 0x1a, 0x14, 0x2e,
-	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x4f, 0x72, 0x67, 0x73, 0x54, 0x72, 0x61, 0x6e, 0x73, 0x66,
-	0x65, 0x72, 0x73, 0x22, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x61, 0x72, 0x64, 0x22, 0x00, 0x32, 0x55, 0x0a, 0x13, 0x47, 0x65, 0x74, 0x54, 0x72, 0x61, 0x6e,
+	0x73, 0x66, 0x65, 0x72, 0x73, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x3e, 0x0a, 0x0c,
+	0x47, 0x65, 0x74, 0x54, 0x72, 0x61, 0x6e, 0x73, 0x66, 0x65, 0x72, 0x73, 0x12, 0x16, 0x2e, 0x70,
+	0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x65, 0x74, 0x54, 0x72, 0x61, 0x6e, 0x73, 0x66, 0x65, 0x72,
+	0x73, 0x4d, 0x73, 0x67, 0x1a, 0x14, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x4f, 0x72, 0x67,
+	0x73, 0x54, 0x72, 0x61, 0x6e, 0x73, 0x66, 0x65, 0x72, 0x73, 0x22, 0x00, 0x62, 0x06, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -2010,7 +2011,7 @@ var file_db_proto_depIdxs = []int32{
 	16, // 25: proto.CheckOrgTosAcceptedService.CheckOrgTosAccepted:input_type -> proto.OrgToken
 	16, // 26: proto.ResendOrgsTosService.ResendOrgsTos:input_type -> proto.OrgToken
 	16, // 27: proto.GetDashboardService.GetDashboard:input_type -> proto.OrgToken
-	26, // 28: proto.GetTransfers.GetDashboard:input_type -> proto.GetTransfersMsg
+	26, // 28: proto.GetTransfersService.GetTransfers:input_type -> proto.GetTransfersMsg
 	0,  // 29: proto.UserSignUpService.SendUserSignUp:output_type -> proto.GlobalSuccessReply
 	0,  // 30: proto.OrgSignUpService.SendOrgSignUp:output_type -> proto.GlobalSuccessReply
 	0,  // 31: proto.CheckUserSignUpService.CheckUserSignUp:output_type -> proto.GlobalSuccessReply
@@ -2037,7 +2038,7 @@ var file_db_proto_depIdxs = []int32{
 	0,  // 52: proto.CheckOrgTosAcceptedService.CheckOrgTosAccepted:output_type -> proto.GlobalSuccessReply
 	0,  // 53: proto.ResendOrgsTosService.ResendOrgsTos:output_type -> proto.GlobalSuccessReply
 	23, // 54: proto.GetDashboardService.GetDashboard:output_type -> proto.Dashboard
-	24, // 55: proto.GetTransfers.GetDashboard:output_type -> proto.OrgsTransfers
+	24, // 55: proto.GetTransfersService.GetTransfers:output_type -> proto.OrgsTransfers
 	29, // [29:56] is the sub-list for method output_type
 	2,  // [2:29] is the sub-list for method input_type
 	2,  // [2:2] is the sub-list for extension type_name
@@ -4276,72 +4277,72 @@ var _GetDashboardService_serviceDesc = grpc.ServiceDesc{
 	Metadata: "db.proto",
 }
 
-// GetTransfersClient is the client API for GetTransfers service.
+// GetTransfersServiceClient is the client API for GetTransfersService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
-type GetTransfersClient interface {
-	GetDashboard(ctx context.Context, in *GetTransfersMsg, opts ...grpc.CallOption) (*OrgsTransfers, error)
+type GetTransfersServiceClient interface {
+	GetTransfers(ctx context.Context, in *GetTransfersMsg, opts ...grpc.CallOption) (*OrgsTransfers, error)
 }
 
-type getTransfersClient struct {
+type getTransfersServiceClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewGetTransfersClient(cc grpc.ClientConnInterface) GetTransfersClient {
-	return &getTransfersClient{cc}
+func NewGetTransfersServiceClient(cc grpc.ClientConnInterface) GetTransfersServiceClient {
+	return &getTransfersServiceClient{cc}
 }
 
-func (c *getTransfersClient) GetDashboard(ctx context.Context, in *GetTransfersMsg, opts ...grpc.CallOption) (*OrgsTransfers, error) {
+func (c *getTransfersServiceClient) GetTransfers(ctx context.Context, in *GetTransfersMsg, opts ...grpc.CallOption) (*OrgsTransfers, error) {
 	out := new(OrgsTransfers)
-	err := c.cc.Invoke(ctx, "/proto.GetTransfers/GetDashboard", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/proto.GetTransfersService/GetTransfers", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// GetTransfersServer is the server API for GetTransfers service.
-type GetTransfersServer interface {
-	GetDashboard(context.Context, *GetTransfersMsg) (*OrgsTransfers, error)
+// GetTransfersServiceServer is the server API for GetTransfersService service.
+type GetTransfersServiceServer interface {
+	GetTransfers(context.Context, *GetTransfersMsg) (*OrgsTransfers, error)
 }
 
-// UnimplementedGetTransfersServer can be embedded to have forward compatible implementations.
-type UnimplementedGetTransfersServer struct {
+// UnimplementedGetTransfersServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedGetTransfersServiceServer struct {
 }
 
-func (*UnimplementedGetTransfersServer) GetDashboard(context.Context, *GetTransfersMsg) (*OrgsTransfers, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method GetDashboard not implemented")
+func (*UnimplementedGetTransfersServiceServer) GetTransfers(context.Context, *GetTransfersMsg) (*OrgsTransfers, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetTransfers not implemented")
 }
 
-func RegisterGetTransfersServer(s *grpc.Server, srv GetTransfersServer) {
-	s.RegisterService(&_GetTransfers_serviceDesc, srv)
+func RegisterGetTransfersServiceServer(s *grpc.Server, srv GetTransfersServiceServer) {
+	s.RegisterService(&_GetTransfersService_serviceDesc, srv)
 }
 
-func _GetTransfers_GetDashboard_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _GetTransfersService_GetTransfers_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(GetTransfersMsg)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(GetTransfersServer).GetDashboard(ctx, in)
+		return srv.(GetTransfersServiceServer).GetTransfers(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/proto.GetTransfers/GetDashboard",
+		FullMethod: "/proto.GetTransfersService/GetTransfers",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GetTransfersServer).GetDashboard(ctx, req.(*GetTransfersMsg))
+		return srv.(GetTransfersServiceServer).GetTransfers(ctx, req.(*GetTransfersMsg))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-var _GetTransfers_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "proto.GetTransfers",
-	HandlerType: (*GetTransfersServer)(nil),
+var _GetTransfersService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "proto.GetTransfersService",
+	HandlerType: (*GetTransfersServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "GetDashboard",
-			Handler:    _GetTransfers_GetDashboard_Handler,
+			MethodName: "GetTransfers",
+			Handler:    _GetTransfersService_GetTransfers_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
