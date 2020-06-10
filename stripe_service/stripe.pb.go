@@ -582,9 +582,9 @@ var file_stripe_proto_rawDesc = []byte{
 	0x42, 0x41, 0x12, 0x15, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x44, 0x65, 0x6c, 0x65, 0x74,
 	0x65, 0x43, 0x75, 0x73, 0x42, 0x41, 0x4d, 0x73, 0x67, 0x1a, 0x14, 0x2e, 0x70, 0x72, 0x6f, 0x74,
 	0x6f, 0x2e, 0x41, 0x64, 0x64, 0x43, 0x75, 0x73, 0x42, 0x41, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x22,
-	0x00, 0x32, 0x55, 0x0a, 0x17, 0x63, 0x72, 0x65, 0x61, 0x74, 0x65, 0x41, 0x6e, 0x64, 0x53, 0x65,
+	0x00, 0x32, 0x55, 0x0a, 0x17, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x41, 0x6e, 0x64, 0x53, 0x65,
 	0x6e, 0x64, 0x54, 0x6f, 0x73, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x3a, 0x0a, 0x10,
-	0x63, 0x72, 0x65, 0x61, 0x74, 0x65, 0x41, 0x6e, 0x64, 0x53, 0x65, 0x6e, 0x64, 0x54, 0x6f, 0x73,
+	0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x41, 0x6e, 0x64, 0x53, 0x65, 0x6e, 0x64, 0x54, 0x6f, 0x73,
 	0x12, 0x10, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x52, 0x65, 0x73, 0x65, 0x6e, 0x64, 0x54,
 	0x6f, 0x73, 0x1a, 0x12, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x53, 0x74, 0x72, 0x69, 0x70,
 	0x65, 0x45, 0x6d, 0x70, 0x74, 0x79, 0x22, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
@@ -620,13 +620,13 @@ var file_stripe_proto_depIdxs = []int32{
 	4, // 2: proto.FinalTransactionWHService.FinalTransactionWH:input_type -> proto.WHCreateTransferData
 	6, // 3: proto.DeleteCusBAService.DeleteCusBA:input_type -> proto.DeleteCusBAMsg
 	6, // 4: proto.AddCusBAService.AddCusBA:input_type -> proto.DeleteCusBAMsg
-	8, // 5: proto.createAndSendTosService.createAndSendTos:input_type -> proto.ResendTos
+	8, // 5: proto.CreateAndSendTosService.CreateAndSendTos:input_type -> proto.ResendTos
 	2, // 6: proto.CreateCusService.CreateCus:output_type -> proto.CreateCusReply
 	3, // 7: proto.CreateAccService.CreateAcc:output_type -> proto.CreateAccReply
 	5, // 8: proto.FinalTransactionWHService.FinalTransactionWH:output_type -> proto.WHCreateTransferDataReply
 	0, // 9: proto.DeleteCusBAService.DeleteCusBA:output_type -> proto.StripeEmpty
 	7, // 10: proto.AddCusBAService.AddCusBA:output_type -> proto.AddCusBAReply
-	0, // 11: proto.createAndSendTosService.createAndSendTos:output_type -> proto.StripeEmpty
+	0, // 11: proto.CreateAndSendTosService.CreateAndSendTos:output_type -> proto.StripeEmpty
 	6, // [6:12] is the sub-list for method output_type
 	0, // [0:6] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
@@ -1154,7 +1154,7 @@ func NewCreateAndSendTosServiceClient(cc grpc.ClientConnInterface) CreateAndSend
 
 func (c *createAndSendTosServiceClient) CreateAndSendTos(ctx context.Context, in *ResendTos, opts ...grpc.CallOption) (*StripeEmpty, error) {
 	out := new(StripeEmpty)
-	err := c.cc.Invoke(ctx, "/proto.createAndSendTosService/createAndSendTos", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/proto.CreateAndSendTosService/CreateAndSendTos", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -1188,7 +1188,7 @@ func _CreateAndSendTosService_CreateAndSendTos_Handler(srv interface{}, ctx cont
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/proto.createAndSendTosService/CreateAndSendTos",
+		FullMethod: "/proto.CreateAndSendTosService/CreateAndSendTos",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(CreateAndSendTosServiceServer).CreateAndSendTos(ctx, req.(*ResendTos))
@@ -1197,11 +1197,11 @@ func _CreateAndSendTosService_CreateAndSendTos_Handler(srv interface{}, ctx cont
 }
 
 var _CreateAndSendTosService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "proto.createAndSendTosService",
+	ServiceName: "proto.CreateAndSendTosService",
 	HandlerType: (*CreateAndSendTosServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "createAndSendTos",
+			MethodName: "CreateAndSendTos",
 			Handler:    _CreateAndSendTosService_CreateAndSendTos_Handler,
 		},
 	},
