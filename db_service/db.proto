@@ -232,3 +232,29 @@ service CheckOrgTosAcceptedService {
 service ResendOrgsTosService {
     rpc ResendOrgsTos (OrgToken) returns (GlobalSuccessReply) {}
 }
+
+message Dashboard {
+    int64 total_collected = 1;
+    int64 total_collected_month = 2;
+    int64 total_collected_week = 3;
+    int32 total_users = 4;
+}
+
+service GetDashboardService {
+    rpc GetDashboard (OrgToken) returns (Dashboard) {}
+}
+
+message OrgsTransfers {
+    repeated SingleTransfer transfers = 1;
+}
+
+message SingleTransfer {
+    string name = 1;
+    string dop = 2;
+    int64 transfered_amount = 3;
+}
+
+// GetTransfers is for orgs and gets their transfers as opposed to a user who would get his transactions
+service GetTransfers {
+    rpc GetDashboard (OrgToken) returns (OrgsTransfers) {}
+}
