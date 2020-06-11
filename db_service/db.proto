@@ -263,3 +263,16 @@ message GetTransfersMsg {
 service GetTransfersService {
     rpc GetTransfers (GetTransfersMsg) returns (OrgsTransfers) {}
 }
+
+message LogoAndQrCode {
+    string qr = 1;
+    string logo = 2;
+}
+
+service OrgsGetQrService {
+    rpc OrgsGetQr (OrgToken) returns (LogoAndQrCode) {}
+}
+
+service OrgsGetLogoService {
+    rpc OrgsGetLogo (OrgToken) returns (LogoAndQrCode) {}
+}
