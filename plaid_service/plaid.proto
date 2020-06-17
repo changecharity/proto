@@ -22,6 +22,7 @@ service CreateExchangePlaidService {
 message TransactionWHData {
     string plaid_token = 1;
     int32 threshold = 2;
+    string dosu = 3;
 }
 
 message Transaction {
