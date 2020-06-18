@@ -18,6 +18,7 @@ message UserSignUp {
     int32 mask = 9;
     string bank_name = 10;
     string name = 11;
+    string legal_name = 12;
 }
 
 service UserSignUpService {
