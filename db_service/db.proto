@@ -176,6 +176,7 @@ message UsersProfileReply {
     int32 threshold = 1;
     int32 mask = 2;
     string bank_name = 3;
+    string legal_name = 4;
 }
 
 service GetUsersProfileService {
