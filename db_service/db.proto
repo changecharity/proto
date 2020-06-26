@@ -269,6 +269,8 @@ service GetTransfersService {
 message LogoAndQrCode {
     string qr = 1;
     string logo = 2;
+    string name = 3;
+    string email = 4;
 }
 
 service OrgsGetQrService {
