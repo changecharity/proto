@@ -280,3 +280,17 @@ service OrgsGetQrService {
 service OrgsGetLogoService {
     rpc OrgsGetLogo (OrgToken) returns (LogoAndQrCode) {}
 }
+
+service SetOrgService {
+    rpc SetOrg (UpdateThresholdMsg) returns (GlobalSuccessReply) {}
+}
+
+message GetOrgInfoSearchMsg {
+    string name = 1;
+    string logo = 2;
+}
+
+service GetOrgInfoSearchService {
+    rpc GetOrgInfoSearch (UpdateThresholdMsg) returns (GetOrgInfoSearchMsg) {}
+}
+
