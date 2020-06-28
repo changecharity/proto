@@ -281,6 +281,13 @@ service OrgsGetLogoService {
     rpc OrgsGetLogo (OrgToken) returns (LogoAndQrCode) {}
 }
 
+
+message TokenAndOrg {
+    string name = 1;
+    string logo = 2;
+}
+
+
 service SetOrgService {
     rpc SetOrg (UpdateThresholdMsg) returns (GlobalSuccessReply) {}
 }
