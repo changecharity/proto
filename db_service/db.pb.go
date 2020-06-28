@@ -2160,19 +2160,18 @@ var file_db_proto_rawDesc = []byte{
 	0x12, 0x36, 0x0a, 0x0b, 0x4f, 0x72, 0x67, 0x73, 0x47, 0x65, 0x74, 0x4c, 0x6f, 0x67, 0x6f, 0x12,
 	0x0f, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x4f, 0x72, 0x67, 0x54, 0x6f, 0x6b, 0x65, 0x6e,
 	0x1a, 0x14, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x4c, 0x6f, 0x67, 0x6f, 0x41, 0x6e, 0x64,
-	0x51, 0x72, 0x43, 0x6f, 0x64, 0x65, 0x22, 0x00, 0x32, 0x51, 0x0a, 0x0d, 0x53, 0x65, 0x74, 0x4f,
-	0x72, 0x67, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x40, 0x0a, 0x06, 0x53, 0x65, 0x74,
-	0x4f, 0x72, 0x67, 0x12, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x55, 0x70, 0x64, 0x61,
-	0x74, 0x65, 0x54, 0x68, 0x72, 0x65, 0x73, 0x68, 0x6f, 0x6c, 0x64, 0x4d, 0x73, 0x67, 0x1a, 0x19,
-	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x6c, 0x6f, 0x62, 0x61, 0x6c, 0x53, 0x75, 0x63,
-	0x63, 0x65, 0x73, 0x73, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x22, 0x00, 0x32, 0x66, 0x0a, 0x17, 0x47,
-	0x65, 0x74, 0x4f, 0x72, 0x67, 0x49, 0x6e, 0x66, 0x6f, 0x53, 0x65, 0x61, 0x72, 0x63, 0x68, 0x53,
-	0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x4b, 0x0a, 0x10, 0x47, 0x65, 0x74, 0x4f, 0x72, 0x67,
-	0x49, 0x6e, 0x66, 0x6f, 0x53, 0x65, 0x61, 0x72, 0x63, 0x68, 0x12, 0x19, 0x2e, 0x70, 0x72, 0x6f,
-	0x74, 0x6f, 0x2e, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x54, 0x68, 0x72, 0x65, 0x73, 0x68, 0x6f,
-	0x6c, 0x64, 0x4d, 0x73, 0x67, 0x1a, 0x1a, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x65,
-	0x74, 0x4f, 0x72, 0x67, 0x49, 0x6e, 0x66, 0x6f, 0x53, 0x65, 0x61, 0x72, 0x63, 0x68, 0x4d, 0x73,
-	0x67, 0x22, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x51, 0x72, 0x43, 0x6f, 0x64, 0x65, 0x22, 0x00, 0x32, 0x4a, 0x0a, 0x0d, 0x53, 0x65, 0x74, 0x4f,
+	0x72, 0x67, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x39, 0x0a, 0x06, 0x53, 0x65, 0x74,
+	0x4f, 0x72, 0x67, 0x12, 0x12, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x54, 0x6f, 0x6b, 0x65,
+	0x6e, 0x41, 0x6e, 0x64, 0x4f, 0x72, 0x67, 0x1a, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e,
+	0x47, 0x6c, 0x6f, 0x62, 0x61, 0x6c, 0x53, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x52, 0x65, 0x70,
+	0x6c, 0x79, 0x22, 0x00, 0x32, 0x5f, 0x0a, 0x17, 0x47, 0x65, 0x74, 0x4f, 0x72, 0x67, 0x49, 0x6e,
+	0x66, 0x6f, 0x53, 0x65, 0x61, 0x72, 0x63, 0x68, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12,
+	0x44, 0x0a, 0x10, 0x47, 0x65, 0x74, 0x4f, 0x72, 0x67, 0x49, 0x6e, 0x66, 0x6f, 0x53, 0x65, 0x61,
+	0x72, 0x63, 0x68, 0x12, 0x12, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x54, 0x6f, 0x6b, 0x65,
+	0x6e, 0x41, 0x6e, 0x64, 0x4f, 0x72, 0x67, 0x1a, 0x1a, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e,
+	0x47, 0x65, 0x74, 0x4f, 0x72, 0x67, 0x49, 0x6e, 0x66, 0x6f, 0x53, 0x65, 0x61, 0x72, 0x63, 0x68,
+	0x4d, 0x73, 0x67, 0x22, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -2252,8 +2251,8 @@ var file_db_proto_depIdxs = []int32{
 	26, // 28: proto.GetTransfersService.GetTransfers:input_type -> proto.GetTransfersMsg
 	16, // 29: proto.OrgsGetQrService.OrgsGetQr:input_type -> proto.OrgToken
 	16, // 30: proto.OrgsGetLogoService.OrgsGetLogo:input_type -> proto.OrgToken
-	14, // 31: proto.SetOrgService.SetOrg:input_type -> proto.UpdateThresholdMsg
-	14, // 32: proto.GetOrgInfoSearchService.GetOrgInfoSearch:input_type -> proto.UpdateThresholdMsg
+	28, // 31: proto.SetOrgService.SetOrg:input_type -> proto.TokenAndOrg
+	28, // 32: proto.GetOrgInfoSearchService.GetOrgInfoSearch:input_type -> proto.TokenAndOrg
 	0,  // 33: proto.UserSignUpService.SendUserSignUp:output_type -> proto.GlobalSuccessReply
 	0,  // 34: proto.OrgSignUpService.SendOrgSignUp:output_type -> proto.GlobalSuccessReply
 	0,  // 35: proto.CheckUserSignUpService.CheckUserSignUp:output_type -> proto.GlobalSuccessReply
@@ -4779,7 +4778,7 @@ var _OrgsGetLogoService_serviceDesc = grpc.ServiceDesc{
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type SetOrgServiceClient interface {
-	SetOrg(ctx context.Context, in *UpdateThresholdMsg, opts ...grpc.CallOption) (*GlobalSuccessReply, error)
+	SetOrg(ctx context.Context, in *TokenAndOrg, opts ...grpc.CallOption) (*GlobalSuccessReply, error)
 }
 
 type setOrgServiceClient struct {
@@ -4790,7 +4789,7 @@ func NewSetOrgServiceClient(cc grpc.ClientConnInterface) SetOrgServiceClient {
 	return &setOrgServiceClient{cc}
 }
 
-func (c *setOrgServiceClient) SetOrg(ctx context.Context, in *UpdateThresholdMsg, opts ...grpc.CallOption) (*GlobalSuccessReply, error) {
+func (c *setOrgServiceClient) SetOrg(ctx context.Context, in *TokenAndOrg, opts ...grpc.CallOption) (*GlobalSuccessReply, error) {
 	out := new(GlobalSuccessReply)
 	err := c.cc.Invoke(ctx, "/proto.SetOrgService/SetOrg", in, out, opts...)
 	if err != nil {
@@ -4801,14 +4800,14 @@ func (c *setOrgServiceClient) SetOrg(ctx context.Context, in *UpdateThresholdMsg
 
 // SetOrgServiceServer is the server API for SetOrgService service.
 type SetOrgServiceServer interface {
-	SetOrg(context.Context, *UpdateThresholdMsg) (*GlobalSuccessReply, error)
+	SetOrg(context.Context, *TokenAndOrg) (*GlobalSuccessReply, error)
 }
 
 // UnimplementedSetOrgServiceServer can be embedded to have forward compatible implementations.
 type UnimplementedSetOrgServiceServer struct {
 }
 
-func (*UnimplementedSetOrgServiceServer) SetOrg(context.Context, *UpdateThresholdMsg) (*GlobalSuccessReply, error) {
+func (*UnimplementedSetOrgServiceServer) SetOrg(context.Context, *TokenAndOrg) (*GlobalSuccessReply, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SetOrg not implemented")
 }
 
@@ -4817,7 +4816,7 @@ func RegisterSetOrgServiceServer(s *grpc.Server, srv SetOrgServiceServer) {
 }
 
 func _SetOrgService_SetOrg_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(UpdateThresholdMsg)
+	in := new(TokenAndOrg)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -4829,7 +4828,7 @@ func _SetOrgService_SetOrg_Handler(srv interface{}, ctx context.Context, dec fun
 		FullMethod: "/proto.SetOrgService/SetOrg",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(SetOrgServiceServer).SetOrg(ctx, req.(*UpdateThresholdMsg))
+		return srv.(SetOrgServiceServer).SetOrg(ctx, req.(*TokenAndOrg))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -4851,7 +4850,7 @@ var _SetOrgService_serviceDesc = grpc.ServiceDesc{
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type GetOrgInfoSearchServiceClient interface {
-	GetOrgInfoSearch(ctx context.Context, in *UpdateThresholdMsg, opts ...grpc.CallOption) (*GetOrgInfoSearchMsg, error)
+	GetOrgInfoSearch(ctx context.Context, in *TokenAndOrg, opts ...grpc.CallOption) (*GetOrgInfoSearchMsg, error)
 }
 
 type getOrgInfoSearchServiceClient struct {
@@ -4862,7 +4861,7 @@ func NewGetOrgInfoSearchServiceClient(cc grpc.ClientConnInterface) GetOrgInfoSea
 	return &getOrgInfoSearchServiceClient{cc}
 }
 
-func (c *getOrgInfoSearchServiceClient) GetOrgInfoSearch(ctx context.Context, in *UpdateThresholdMsg, opts ...grpc.CallOption) (*GetOrgInfoSearchMsg, error) {
+func (c *getOrgInfoSearchServiceClient) GetOrgInfoSearch(ctx context.Context, in *TokenAndOrg, opts ...grpc.CallOption) (*GetOrgInfoSearchMsg, error) {
 	out := new(GetOrgInfoSearchMsg)
 	err := c.cc.Invoke(ctx, "/proto.GetOrgInfoSearchService/GetOrgInfoSearch", in, out, opts...)
 	if err != nil {
@@ -4873,14 +4872,14 @@ func (c *getOrgInfoSearchServiceClient) GetOrgInfoSearch(ctx context.Context, in
 
 // GetOrgInfoSearchServiceServer is the server API for GetOrgInfoSearchService service.
 type GetOrgInfoSearchServiceServer interface {
-	GetOrgInfoSearch(context.Context, *UpdateThresholdMsg) (*GetOrgInfoSearchMsg, error)
+	GetOrgInfoSearch(context.Context, *TokenAndOrg) (*GetOrgInfoSearchMsg, error)
 }
 
 // UnimplementedGetOrgInfoSearchServiceServer can be embedded to have forward compatible implementations.
 type UnimplementedGetOrgInfoSearchServiceServer struct {
 }
 
-func (*UnimplementedGetOrgInfoSearchServiceServer) GetOrgInfoSearch(context.Context, *UpdateThresholdMsg) (*GetOrgInfoSearchMsg, error) {
+func (*UnimplementedGetOrgInfoSearchServiceServer) GetOrgInfoSearch(context.Context, *TokenAndOrg) (*GetOrgInfoSearchMsg, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetOrgInfoSearch not implemented")
 }
 
@@ -4889,7 +4888,7 @@ func RegisterGetOrgInfoSearchServiceServer(s *grpc.Server, srv GetOrgInfoSearchS
 }
 
 func _GetOrgInfoSearchService_GetOrgInfoSearch_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(UpdateThresholdMsg)
+	in := new(TokenAndOrg)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -4901,7 +4900,7 @@ func _GetOrgInfoSearchService_GetOrgInfoSearch_Handler(srv interface{}, ctx cont
 		FullMethod: "/proto.GetOrgInfoSearchService/GetOrgInfoSearch",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(GetOrgInfoSearchServiceServer).GetOrgInfoSearch(ctx, req.(*UpdateThresholdMsg))
+		return srv.(GetOrgInfoSearchServiceServer).GetOrgInfoSearch(ctx, req.(*TokenAndOrg))
 	}
 	return interceptor(ctx, in, info, handler)
 }
