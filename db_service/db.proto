@@ -272,6 +272,7 @@ message LogoAndQrCode {
     string logo = 2;
     string name = 3;
     string email = 4;
+    string description = 5;
 }
 
 service OrgsGetQrService {
