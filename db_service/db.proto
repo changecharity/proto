@@ -317,3 +317,16 @@ service GetOrgInfoSearchService {
     rpc GetOrgInfoSearch (TokenAndOrg) returns (GetOrgInfoSearchMsg) {}
 }
 
+message UpdateOrgMsg {
+    string org_token = 1;
+    string name = 2;
+    string description = 3;
+}
+
+service UpdateOrgNameService {
+    rpc UpdateOrgName (UpdateOrgMsg) returns (GlobalSuccessReply) {}
+}
+
+service UpdateOrgDescService {
+    rpc UpdateOrgDesc (UpdateOrgMsg) returns (GlobalSuccessReply) {}
+}
