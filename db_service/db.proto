@@ -283,7 +283,7 @@ service OrgsGetLogoService {
 
 
 message TokenAndOrg {
-    string name = 1;
+    string token = 1;
     int32 org = 2;
 }
 
@@ -291,9 +291,20 @@ service SetOrgService {
     rpc SetOrg (TokenAndOrg) returns (GlobalSuccessReply) {}
 }
 
+message SearchOrgsMsg {
+    repeated SearchOrgResults orgs = 1;
+}
+
+message SearchOrgResults {
+    string name = 1;
+    string logo = 2;
+    int32 id = 3;
+}
+
 message GetOrgInfoSearchMsg {
     string name = 1;
     string logo = 2;
+    string description = 3;
 }
 
 service GetOrgInfoSearchService {
