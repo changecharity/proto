@@ -283,7 +283,7 @@ service OrgsGetLogoService {
 
 
 message TokenAndOrg {
-    string token = 1;
+    string user_token = 1;
     int32 org = 2;
 }
 
