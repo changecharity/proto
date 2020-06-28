@@ -88,6 +88,7 @@ service ConfirmTransferService{
 message OrgName {
     string name = 1;
     int32 offset = 2;
+    string user_token = 3;
 }
 
 message OrgNameReply {
