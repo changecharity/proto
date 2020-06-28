@@ -287,9 +287,8 @@ message TokenAndOrg {
     string logo = 2;
 }
 
-
 service SetOrgService {
-    rpc SetOrg (UpdateThresholdMsg) returns (GlobalSuccessReply) {}
+    rpc SetOrg (TokenAndOrg) returns (GlobalSuccessReply) {}
 }
 
 message GetOrgInfoSearchMsg {
@@ -298,6 +297,6 @@ message GetOrgInfoSearchMsg {
 }
 
 service GetOrgInfoSearchService {
-    rpc GetOrgInfoSearch (UpdateThresholdMsg) returns (GetOrgInfoSearchMsg) {}
+    rpc GetOrgInfoSearch (TokenAndOrg) returns (GetOrgInfoSearchMsg) {}
 }
 
