@@ -310,6 +310,7 @@ message GetOrgInfoSearchMsg {
     string name = 1;
     string logo = 2;
     string description = 3;
+    int32 id = 4;
 }
 
 service GetOrgInfoSearchService {
