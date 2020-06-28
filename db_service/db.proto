@@ -301,6 +301,10 @@ message SearchOrgResults {
     int32 id = 3;
 }
 
+service GetOrgsSearchService {
+    rpc GetOrgsSearch (OrgName) returns (SearchOrgsMsg) {}
+}
+
 message GetOrgInfoSearchMsg {
     string name = 1;
     string logo = 2;

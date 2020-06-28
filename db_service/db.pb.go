@@ -2294,13 +2294,18 @@ var file_db_proto_rawDesc = []byte{
 	0x12, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x41, 0x6e, 0x64,
 	0x4f, 0x72, 0x67, 0x1a, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x6c, 0x6f, 0x62,
 	0x61, 0x6c, 0x53, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x22, 0x00,
-	0x32, 0x5f, 0x0a, 0x17, 0x47, 0x65, 0x74, 0x4f, 0x72, 0x67, 0x49, 0x6e, 0x66, 0x6f, 0x53, 0x65,
-	0x61, 0x72, 0x63, 0x68, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x44, 0x0a, 0x10, 0x47,
-	0x65, 0x74, 0x4f, 0x72, 0x67, 0x49, 0x6e, 0x66, 0x6f, 0x53, 0x65, 0x61, 0x72, 0x63, 0x68, 0x12,
-	0x12, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x41, 0x6e, 0x64,
-	0x4f, 0x72, 0x67, 0x1a, 0x1a, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x65, 0x74, 0x4f,
-	0x72, 0x67, 0x49, 0x6e, 0x66, 0x6f, 0x53, 0x65, 0x61, 0x72, 0x63, 0x68, 0x4d, 0x73, 0x67, 0x22,
-	0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x32, 0x4f, 0x0a, 0x14, 0x47, 0x65, 0x74, 0x4f, 0x72, 0x67, 0x73, 0x53, 0x65, 0x61, 0x72, 0x63,
+	0x68, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x37, 0x0a, 0x0d, 0x47, 0x65, 0x74, 0x4f,
+	0x72, 0x67, 0x73, 0x53, 0x65, 0x61, 0x72, 0x63, 0x68, 0x12, 0x0e, 0x2e, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x2e, 0x4f, 0x72, 0x67, 0x4e, 0x61, 0x6d, 0x65, 0x1a, 0x14, 0x2e, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x2e, 0x53, 0x65, 0x61, 0x72, 0x63, 0x68, 0x4f, 0x72, 0x67, 0x73, 0x4d, 0x73, 0x67, 0x22,
+	0x00, 0x32, 0x5f, 0x0a, 0x17, 0x47, 0x65, 0x74, 0x4f, 0x72, 0x67, 0x49, 0x6e, 0x66, 0x6f, 0x53,
+	0x65, 0x61, 0x72, 0x63, 0x68, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x44, 0x0a, 0x10,
+	0x47, 0x65, 0x74, 0x4f, 0x72, 0x67, 0x49, 0x6e, 0x66, 0x6f, 0x53, 0x65, 0x61, 0x72, 0x63, 0x68,
+	0x12, 0x12, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x41, 0x6e,
+	0x64, 0x4f, 0x72, 0x67, 0x1a, 0x1a, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x65, 0x74,
+	0x4f, 0x72, 0x67, 0x49, 0x6e, 0x66, 0x6f, 0x53, 0x65, 0x61, 0x72, 0x63, 0x68, 0x4d, 0x73, 0x67,
+	0x22, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -2384,40 +2389,42 @@ var file_db_proto_depIdxs = []int32{
 	16, // 30: proto.OrgsGetQrService.OrgsGetQr:input_type -> proto.OrgToken
 	16, // 31: proto.OrgsGetLogoService.OrgsGetLogo:input_type -> proto.OrgToken
 	28, // 32: proto.SetOrgService.SetOrg:input_type -> proto.TokenAndOrg
-	28, // 33: proto.GetOrgInfoSearchService.GetOrgInfoSearch:input_type -> proto.TokenAndOrg
-	0,  // 34: proto.UserSignUpService.SendUserSignUp:output_type -> proto.GlobalSuccessReply
-	0,  // 35: proto.OrgSignUpService.SendOrgSignUp:output_type -> proto.GlobalSuccessReply
-	0,  // 36: proto.CheckUserSignUpService.CheckUserSignUp:output_type -> proto.GlobalSuccessReply
-	0,  // 37: proto.CheckOrgSignUpService.CheckOrgSignUp:output_type -> proto.GlobalSuccessReply
-	0,  // 38: proto.ResendEmailAuthService.ResendEmailAuth:output_type -> proto.GlobalSuccessReply
-	0,  // 39: proto.AuthLoginService.AuthLogin:output_type -> proto.GlobalSuccessReply
-	0,  // 40: proto.BeginTransactionWHService.BeginTransactionWH:output_type -> proto.GlobalSuccessReply
-	0,  // 41: proto.ConfirmTransferService.ConfirmTransfer:output_type -> proto.GlobalSuccessReply
-	8,  // 42: proto.SearchOrgNameService.SearchOrgName:output_type -> proto.OrgNameReply
-	0,  // 43: proto.TransferPDFService.TransferPDF:output_type -> proto.GlobalSuccessReply
-	0,  // 44: proto.SaveLogoService.SaveLogo:output_type -> proto.GlobalSuccessReply
-	12, // 45: proto.GetTransactionsService.GetTransactions:output_type -> proto.GetTransactionsMsgReply
-	0,  // 46: proto.UpdateThresholdService.UpdateThreshold:output_type -> proto.GlobalSuccessReply
-	17, // 47: proto.GetUsersOrgInfoService.GetUsersOrgInfo:output_type -> proto.UsersOrgInfoReply
-	18, // 48: proto.GetUsersTotalsService.GetUsersTotals:output_type -> proto.UsersTotalsReply
-	19, // 49: proto.GetUsersProfileService.GetUsersProfile:output_type -> proto.UsersProfileReply
-	0,  // 50: proto.DeleteUsersBAService.DeleteUsersBA:output_type -> proto.GlobalSuccessReply
-	0,  // 51: proto.UpdateUsersBAService.UpdateUsersBA:output_type -> proto.GlobalSuccessReply
-	0,  // 52: proto.ValidNewAccService.ValidNewAcc:output_type -> proto.GlobalSuccessReply
-	0,  // 53: proto.ValidPassService.ValidPass:output_type -> proto.GlobalSuccessReply
-	0,  // 54: proto.ValidKeyService.ValidKey:output_type -> proto.GlobalSuccessReply
-	0,  // 55: proto.SendForgotPassService.SendForgotPass:output_type -> proto.GlobalSuccessReply
-	0,  // 56: proto.ForgotPassService.ForgotPass:output_type -> proto.GlobalSuccessReply
-	0,  // 57: proto.CheckOrgTosAcceptedService.CheckOrgTosAccepted:output_type -> proto.GlobalSuccessReply
-	0,  // 58: proto.ResendOrgsTosService.ResendOrgsTos:output_type -> proto.GlobalSuccessReply
-	23, // 59: proto.GetDashboardService.GetDashboard:output_type -> proto.Dashboard
-	24, // 60: proto.GetTransfersService.GetTransfers:output_type -> proto.OrgsTransfers
-	27, // 61: proto.OrgsGetQrService.OrgsGetQr:output_type -> proto.LogoAndQrCode
-	27, // 62: proto.OrgsGetLogoService.OrgsGetLogo:output_type -> proto.LogoAndQrCode
-	0,  // 63: proto.SetOrgService.SetOrg:output_type -> proto.GlobalSuccessReply
-	31, // 64: proto.GetOrgInfoSearchService.GetOrgInfoSearch:output_type -> proto.GetOrgInfoSearchMsg
-	34, // [34:65] is the sub-list for method output_type
-	3,  // [3:34] is the sub-list for method input_type
+	7,  // 33: proto.GetOrgsSearchService.GetOrgsSearch:input_type -> proto.OrgName
+	28, // 34: proto.GetOrgInfoSearchService.GetOrgInfoSearch:input_type -> proto.TokenAndOrg
+	0,  // 35: proto.UserSignUpService.SendUserSignUp:output_type -> proto.GlobalSuccessReply
+	0,  // 36: proto.OrgSignUpService.SendOrgSignUp:output_type -> proto.GlobalSuccessReply
+	0,  // 37: proto.CheckUserSignUpService.CheckUserSignUp:output_type -> proto.GlobalSuccessReply
+	0,  // 38: proto.CheckOrgSignUpService.CheckOrgSignUp:output_type -> proto.GlobalSuccessReply
+	0,  // 39: proto.ResendEmailAuthService.ResendEmailAuth:output_type -> proto.GlobalSuccessReply
+	0,  // 40: proto.AuthLoginService.AuthLogin:output_type -> proto.GlobalSuccessReply
+	0,  // 41: proto.BeginTransactionWHService.BeginTransactionWH:output_type -> proto.GlobalSuccessReply
+	0,  // 42: proto.ConfirmTransferService.ConfirmTransfer:output_type -> proto.GlobalSuccessReply
+	8,  // 43: proto.SearchOrgNameService.SearchOrgName:output_type -> proto.OrgNameReply
+	0,  // 44: proto.TransferPDFService.TransferPDF:output_type -> proto.GlobalSuccessReply
+	0,  // 45: proto.SaveLogoService.SaveLogo:output_type -> proto.GlobalSuccessReply
+	12, // 46: proto.GetTransactionsService.GetTransactions:output_type -> proto.GetTransactionsMsgReply
+	0,  // 47: proto.UpdateThresholdService.UpdateThreshold:output_type -> proto.GlobalSuccessReply
+	17, // 48: proto.GetUsersOrgInfoService.GetUsersOrgInfo:output_type -> proto.UsersOrgInfoReply
+	18, // 49: proto.GetUsersTotalsService.GetUsersTotals:output_type -> proto.UsersTotalsReply
+	19, // 50: proto.GetUsersProfileService.GetUsersProfile:output_type -> proto.UsersProfileReply
+	0,  // 51: proto.DeleteUsersBAService.DeleteUsersBA:output_type -> proto.GlobalSuccessReply
+	0,  // 52: proto.UpdateUsersBAService.UpdateUsersBA:output_type -> proto.GlobalSuccessReply
+	0,  // 53: proto.ValidNewAccService.ValidNewAcc:output_type -> proto.GlobalSuccessReply
+	0,  // 54: proto.ValidPassService.ValidPass:output_type -> proto.GlobalSuccessReply
+	0,  // 55: proto.ValidKeyService.ValidKey:output_type -> proto.GlobalSuccessReply
+	0,  // 56: proto.SendForgotPassService.SendForgotPass:output_type -> proto.GlobalSuccessReply
+	0,  // 57: proto.ForgotPassService.ForgotPass:output_type -> proto.GlobalSuccessReply
+	0,  // 58: proto.CheckOrgTosAcceptedService.CheckOrgTosAccepted:output_type -> proto.GlobalSuccessReply
+	0,  // 59: proto.ResendOrgsTosService.ResendOrgsTos:output_type -> proto.GlobalSuccessReply
+	23, // 60: proto.GetDashboardService.GetDashboard:output_type -> proto.Dashboard
+	24, // 61: proto.GetTransfersService.GetTransfers:output_type -> proto.OrgsTransfers
+	27, // 62: proto.OrgsGetQrService.OrgsGetQr:output_type -> proto.LogoAndQrCode
+	27, // 63: proto.OrgsGetLogoService.OrgsGetLogo:output_type -> proto.LogoAndQrCode
+	0,  // 64: proto.SetOrgService.SetOrg:output_type -> proto.GlobalSuccessReply
+	29, // 65: proto.GetOrgsSearchService.GetOrgsSearch:output_type -> proto.SearchOrgsMsg
+	31, // 66: proto.GetOrgInfoSearchService.GetOrgInfoSearch:output_type -> proto.GetOrgInfoSearchMsg
+	35, // [35:67] is the sub-list for method output_type
+	3,  // [3:35] is the sub-list for method input_type
 	3,  // [3:3] is the sub-list for extension type_name
 	3,  // [3:3] is the sub-list for extension extendee
 	0,  // [0:3] is the sub-list for field type_name
@@ -2822,7 +2829,7 @@ func file_db_proto_init() {
 			NumEnums:      0,
 			NumMessages:   32,
 			NumExtensions: 0,
-			NumServices:   31,
+			NumServices:   32,
 		},
 		GoTypes:           file_db_proto_goTypes,
 		DependencyIndexes: file_db_proto_depIdxs,
@@ -4996,6 +5003,78 @@ var _SetOrgService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "SetOrg",
 			Handler:    _SetOrgService_SetOrg_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "db.proto",
+}
+
+// GetOrgsSearchServiceClient is the client API for GetOrgsSearchService service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+type GetOrgsSearchServiceClient interface {
+	GetOrgsSearch(ctx context.Context, in *OrgName, opts ...grpc.CallOption) (*SearchOrgsMsg, error)
+}
+
+type getOrgsSearchServiceClient struct {
+	cc grpc.ClientConnInterface
+}
+
+func NewGetOrgsSearchServiceClient(cc grpc.ClientConnInterface) GetOrgsSearchServiceClient {
+	return &getOrgsSearchServiceClient{cc}
+}
+
+func (c *getOrgsSearchServiceClient) GetOrgsSearch(ctx context.Context, in *OrgName, opts ...grpc.CallOption) (*SearchOrgsMsg, error) {
+	out := new(SearchOrgsMsg)
+	err := c.cc.Invoke(ctx, "/proto.GetOrgsSearchService/GetOrgsSearch", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// GetOrgsSearchServiceServer is the server API for GetOrgsSearchService service.
+type GetOrgsSearchServiceServer interface {
+	GetOrgsSearch(context.Context, *OrgName) (*SearchOrgsMsg, error)
+}
+
+// UnimplementedGetOrgsSearchServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedGetOrgsSearchServiceServer struct {
+}
+
+func (*UnimplementedGetOrgsSearchServiceServer) GetOrgsSearch(context.Context, *OrgName) (*SearchOrgsMsg, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetOrgsSearch not implemented")
+}
+
+func RegisterGetOrgsSearchServiceServer(s *grpc.Server, srv GetOrgsSearchServiceServer) {
+	s.RegisterService(&_GetOrgsSearchService_serviceDesc, srv)
+}
+
+func _GetOrgsSearchService_GetOrgsSearch_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(OrgName)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(GetOrgsSearchServiceServer).GetOrgsSearch(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/proto.GetOrgsSearchService/GetOrgsSearch",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(GetOrgsSearchServiceServer).GetOrgsSearch(ctx, req.(*OrgName))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+var _GetOrgsSearchService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "proto.GetOrgsSearchService",
+	HandlerType: (*GetOrgsSearchServiceServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "GetOrgsSearch",
+			Handler:    _GetOrgsSearchService_GetOrgsSearch_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
