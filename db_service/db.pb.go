@@ -2404,18 +2404,13 @@ var file_db_proto_rawDesc = []byte{
 	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x41, 0x6e, 0x64, 0x4f, 0x72,
 	0x67, 0x1a, 0x1a, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x65, 0x74, 0x4f, 0x72, 0x67,
 	0x49, 0x6e, 0x66, 0x6f, 0x53, 0x65, 0x61, 0x72, 0x63, 0x68, 0x4d, 0x73, 0x67, 0x22, 0x00, 0x32,
-	0x59, 0x0a, 0x14, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4f, 0x72, 0x67, 0x4e, 0x61, 0x6d, 0x65,
+	0x59, 0x0a, 0x14, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4f, 0x72, 0x67, 0x49, 0x6e, 0x66, 0x6f,
 	0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x41, 0x0a, 0x0d, 0x55, 0x70, 0x64, 0x61, 0x74,
-	0x65, 0x4f, 0x72, 0x67, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x13, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x65, 0x4f, 0x72, 0x67, 0x49, 0x6e, 0x66, 0x6f, 0x12, 0x13, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
 	0x2e, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4f, 0x72, 0x67, 0x4d, 0x73, 0x67, 0x1a, 0x19, 0x2e,
 	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x6c, 0x6f, 0x62, 0x61, 0x6c, 0x53, 0x75, 0x63, 0x63,
-	0x65, 0x73, 0x73, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x22, 0x00, 0x32, 0x59, 0x0a, 0x14, 0x55, 0x70,
-	0x64, 0x61, 0x74, 0x65, 0x4f, 0x72, 0x67, 0x44, 0x65, 0x73, 0x63, 0x53, 0x65, 0x72, 0x76, 0x69,
-	0x63, 0x65, 0x12, 0x41, 0x0a, 0x0d, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x4f, 0x72, 0x67, 0x44,
-	0x65, 0x73, 0x63, 0x12, 0x13, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x55, 0x70, 0x64, 0x61,
-	0x74, 0x65, 0x4f, 0x72, 0x67, 0x4d, 0x73, 0x67, 0x1a, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
-	0x2e, 0x47, 0x6c, 0x6f, 0x62, 0x61, 0x6c, 0x53, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x52, 0x65,
-	0x70, 0x6c, 0x79, 0x22, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x65, 0x73, 0x73, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x22, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x33,
 }
 
 var (
@@ -2502,44 +2497,42 @@ var file_db_proto_depIdxs = []int32{
 	28, // 32: proto.SetOrgService.SetOrg:input_type -> proto.TokenAndOrg
 	7,  // 33: proto.GetOrgsSearchService.GetOrgsSearch:input_type -> proto.OrgName
 	28, // 34: proto.GetOrgInfoSearchService.GetOrgInfoSearch:input_type -> proto.TokenAndOrg
-	32, // 35: proto.UpdateOrgNameService.UpdateOrgName:input_type -> proto.UpdateOrgMsg
-	32, // 36: proto.UpdateOrgDescService.UpdateOrgDesc:input_type -> proto.UpdateOrgMsg
-	0,  // 37: proto.UserSignUpService.SendUserSignUp:output_type -> proto.GlobalSuccessReply
-	0,  // 38: proto.OrgSignUpService.SendOrgSignUp:output_type -> proto.GlobalSuccessReply
-	0,  // 39: proto.CheckUserSignUpService.CheckUserSignUp:output_type -> proto.GlobalSuccessReply
-	0,  // 40: proto.CheckOrgSignUpService.CheckOrgSignUp:output_type -> proto.GlobalSuccessReply
-	0,  // 41: proto.ResendEmailAuthService.ResendEmailAuth:output_type -> proto.GlobalSuccessReply
-	0,  // 42: proto.AuthLoginService.AuthLogin:output_type -> proto.GlobalSuccessReply
-	0,  // 43: proto.BeginTransactionWHService.BeginTransactionWH:output_type -> proto.GlobalSuccessReply
-	0,  // 44: proto.ConfirmTransferService.ConfirmTransfer:output_type -> proto.GlobalSuccessReply
-	8,  // 45: proto.SearchOrgNameService.SearchOrgName:output_type -> proto.OrgNameReply
-	0,  // 46: proto.TransferPDFService.TransferPDF:output_type -> proto.GlobalSuccessReply
-	0,  // 47: proto.SaveLogoService.SaveLogo:output_type -> proto.GlobalSuccessReply
-	12, // 48: proto.GetTransactionsService.GetTransactions:output_type -> proto.GetTransactionsMsgReply
-	0,  // 49: proto.UpdateThresholdService.UpdateThreshold:output_type -> proto.GlobalSuccessReply
-	17, // 50: proto.GetUsersOrgInfoService.GetUsersOrgInfo:output_type -> proto.UsersOrgInfoReply
-	18, // 51: proto.GetUsersTotalsService.GetUsersTotals:output_type -> proto.UsersTotalsReply
-	19, // 52: proto.GetUsersProfileService.GetUsersProfile:output_type -> proto.UsersProfileReply
-	0,  // 53: proto.DeleteUsersBAService.DeleteUsersBA:output_type -> proto.GlobalSuccessReply
-	0,  // 54: proto.UpdateUsersBAService.UpdateUsersBA:output_type -> proto.GlobalSuccessReply
-	0,  // 55: proto.ValidNewAccService.ValidNewAcc:output_type -> proto.GlobalSuccessReply
-	0,  // 56: proto.ValidPassService.ValidPass:output_type -> proto.GlobalSuccessReply
-	0,  // 57: proto.ValidKeyService.ValidKey:output_type -> proto.GlobalSuccessReply
-	0,  // 58: proto.SendForgotPassService.SendForgotPass:output_type -> proto.GlobalSuccessReply
-	0,  // 59: proto.ForgotPassService.ForgotPass:output_type -> proto.GlobalSuccessReply
-	0,  // 60: proto.CheckOrgTosAcceptedService.CheckOrgTosAccepted:output_type -> proto.GlobalSuccessReply
-	0,  // 61: proto.ResendOrgsTosService.ResendOrgsTos:output_type -> proto.GlobalSuccessReply
-	23, // 62: proto.GetDashboardService.GetDashboard:output_type -> proto.Dashboard
-	24, // 63: proto.GetTransfersService.GetTransfers:output_type -> proto.OrgsTransfers
-	27, // 64: proto.OrgsGetQrService.OrgsGetQr:output_type -> proto.LogoAndQrCode
-	27, // 65: proto.OrgsGetLogoService.OrgsGetLogo:output_type -> proto.LogoAndQrCode
-	0,  // 66: proto.SetOrgService.SetOrg:output_type -> proto.GlobalSuccessReply
-	29, // 67: proto.GetOrgsSearchService.GetOrgsSearch:output_type -> proto.SearchOrgsMsg
-	31, // 68: proto.GetOrgInfoSearchService.GetOrgInfoSearch:output_type -> proto.GetOrgInfoSearchMsg
-	0,  // 69: proto.UpdateOrgNameService.UpdateOrgName:output_type -> proto.GlobalSuccessReply
-	0,  // 70: proto.UpdateOrgDescService.UpdateOrgDesc:output_type -> proto.GlobalSuccessReply
-	37, // [37:71] is the sub-list for method output_type
-	3,  // [3:37] is the sub-list for method input_type
+	32, // 35: proto.UpdateOrgInfoService.UpdateOrgInfo:input_type -> proto.UpdateOrgMsg
+	0,  // 36: proto.UserSignUpService.SendUserSignUp:output_type -> proto.GlobalSuccessReply
+	0,  // 37: proto.OrgSignUpService.SendOrgSignUp:output_type -> proto.GlobalSuccessReply
+	0,  // 38: proto.CheckUserSignUpService.CheckUserSignUp:output_type -> proto.GlobalSuccessReply
+	0,  // 39: proto.CheckOrgSignUpService.CheckOrgSignUp:output_type -> proto.GlobalSuccessReply
+	0,  // 40: proto.ResendEmailAuthService.ResendEmailAuth:output_type -> proto.GlobalSuccessReply
+	0,  // 41: proto.AuthLoginService.AuthLogin:output_type -> proto.GlobalSuccessReply
+	0,  // 42: proto.BeginTransactionWHService.BeginTransactionWH:output_type -> proto.GlobalSuccessReply
+	0,  // 43: proto.ConfirmTransferService.ConfirmTransfer:output_type -> proto.GlobalSuccessReply
+	8,  // 44: proto.SearchOrgNameService.SearchOrgName:output_type -> proto.OrgNameReply
+	0,  // 45: proto.TransferPDFService.TransferPDF:output_type -> proto.GlobalSuccessReply
+	0,  // 46: proto.SaveLogoService.SaveLogo:output_type -> proto.GlobalSuccessReply
+	12, // 47: proto.GetTransactionsService.GetTransactions:output_type -> proto.GetTransactionsMsgReply
+	0,  // 48: proto.UpdateThresholdService.UpdateThreshold:output_type -> proto.GlobalSuccessReply
+	17, // 49: proto.GetUsersOrgInfoService.GetUsersOrgInfo:output_type -> proto.UsersOrgInfoReply
+	18, // 50: proto.GetUsersTotalsService.GetUsersTotals:output_type -> proto.UsersTotalsReply
+	19, // 51: proto.GetUsersProfileService.GetUsersProfile:output_type -> proto.UsersProfileReply
+	0,  // 52: proto.DeleteUsersBAService.DeleteUsersBA:output_type -> proto.GlobalSuccessReply
+	0,  // 53: proto.UpdateUsersBAService.UpdateUsersBA:output_type -> proto.GlobalSuccessReply
+	0,  // 54: proto.ValidNewAccService.ValidNewAcc:output_type -> proto.GlobalSuccessReply
+	0,  // 55: proto.ValidPassService.ValidPass:output_type -> proto.GlobalSuccessReply
+	0,  // 56: proto.ValidKeyService.ValidKey:output_type -> proto.GlobalSuccessReply
+	0,  // 57: proto.SendForgotPassService.SendForgotPass:output_type -> proto.GlobalSuccessReply
+	0,  // 58: proto.ForgotPassService.ForgotPass:output_type -> proto.GlobalSuccessReply
+	0,  // 59: proto.CheckOrgTosAcceptedService.CheckOrgTosAccepted:output_type -> proto.GlobalSuccessReply
+	0,  // 60: proto.ResendOrgsTosService.ResendOrgsTos:output_type -> proto.GlobalSuccessReply
+	23, // 61: proto.GetDashboardService.GetDashboard:output_type -> proto.Dashboard
+	24, // 62: proto.GetTransfersService.GetTransfers:output_type -> proto.OrgsTransfers
+	27, // 63: proto.OrgsGetQrService.OrgsGetQr:output_type -> proto.LogoAndQrCode
+	27, // 64: proto.OrgsGetLogoService.OrgsGetLogo:output_type -> proto.LogoAndQrCode
+	0,  // 65: proto.SetOrgService.SetOrg:output_type -> proto.GlobalSuccessReply
+	29, // 66: proto.GetOrgsSearchService.GetOrgsSearch:output_type -> proto.SearchOrgsMsg
+	31, // 67: proto.GetOrgInfoSearchService.GetOrgInfoSearch:output_type -> proto.GetOrgInfoSearchMsg
+	0,  // 68: proto.UpdateOrgInfoService.UpdateOrgInfo:output_type -> proto.GlobalSuccessReply
+	36, // [36:69] is the sub-list for method output_type
+	3,  // [3:36] is the sub-list for method input_type
 	3,  // [3:3] is the sub-list for extension type_name
 	3,  // [3:3] is the sub-list for extension extendee
 	0,  // [0:3] is the sub-list for field type_name
@@ -2956,7 +2949,7 @@ func file_db_proto_init() {
 			NumEnums:      0,
 			NumMessages:   33,
 			NumExtensions: 0,
-			NumServices:   34,
+			NumServices:   33,
 		},
 		GoTypes:           file_db_proto_goTypes,
 		DependencyIndexes: file_db_proto_depIdxs,
@@ -5280,144 +5273,72 @@ var _GetOrgInfoSearchService_serviceDesc = grpc.ServiceDesc{
 	Metadata: "db.proto",
 }
 
-// UpdateOrgNameServiceClient is the client API for UpdateOrgNameService service.
+// UpdateOrgInfoServiceClient is the client API for UpdateOrgInfoService service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
-type UpdateOrgNameServiceClient interface {
-	UpdateOrgName(ctx context.Context, in *UpdateOrgMsg, opts ...grpc.CallOption) (*GlobalSuccessReply, error)
+type UpdateOrgInfoServiceClient interface {
+	UpdateOrgInfo(ctx context.Context, in *UpdateOrgMsg, opts ...grpc.CallOption) (*GlobalSuccessReply, error)
 }
 
-type updateOrgNameServiceClient struct {
+type updateOrgInfoServiceClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewUpdateOrgNameServiceClient(cc grpc.ClientConnInterface) UpdateOrgNameServiceClient {
-	return &updateOrgNameServiceClient{cc}
+func NewUpdateOrgInfoServiceClient(cc grpc.ClientConnInterface) UpdateOrgInfoServiceClient {
+	return &updateOrgInfoServiceClient{cc}
 }
 
-func (c *updateOrgNameServiceClient) UpdateOrgName(ctx context.Context, in *UpdateOrgMsg, opts ...grpc.CallOption) (*GlobalSuccessReply, error) {
+func (c *updateOrgInfoServiceClient) UpdateOrgInfo(ctx context.Context, in *UpdateOrgMsg, opts ...grpc.CallOption) (*GlobalSuccessReply, error) {
 	out := new(GlobalSuccessReply)
-	err := c.cc.Invoke(ctx, "/proto.UpdateOrgNameService/UpdateOrgName", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/proto.UpdateOrgInfoService/UpdateOrgInfo", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// UpdateOrgNameServiceServer is the server API for UpdateOrgNameService service.
-type UpdateOrgNameServiceServer interface {
-	UpdateOrgName(context.Context, *UpdateOrgMsg) (*GlobalSuccessReply, error)
+// UpdateOrgInfoServiceServer is the server API for UpdateOrgInfoService service.
+type UpdateOrgInfoServiceServer interface {
+	UpdateOrgInfo(context.Context, *UpdateOrgMsg) (*GlobalSuccessReply, error)
 }
 
-// UnimplementedUpdateOrgNameServiceServer can be embedded to have forward compatible implementations.
-type UnimplementedUpdateOrgNameServiceServer struct {
+// UnimplementedUpdateOrgInfoServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedUpdateOrgInfoServiceServer struct {
 }
 
-func (*UnimplementedUpdateOrgNameServiceServer) UpdateOrgName(context.Context, *UpdateOrgMsg) (*GlobalSuccessReply, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method UpdateOrgName not implemented")
+func (*UnimplementedUpdateOrgInfoServiceServer) UpdateOrgInfo(context.Context, *UpdateOrgMsg) (*GlobalSuccessReply, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateOrgInfo not implemented")
 }
 
-func RegisterUpdateOrgNameServiceServer(s *grpc.Server, srv UpdateOrgNameServiceServer) {
-	s.RegisterService(&_UpdateOrgNameService_serviceDesc, srv)
+func RegisterUpdateOrgInfoServiceServer(s *grpc.Server, srv UpdateOrgInfoServiceServer) {
+	s.RegisterService(&_UpdateOrgInfoService_serviceDesc, srv)
 }
 
-func _UpdateOrgNameService_UpdateOrgName_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _UpdateOrgInfoService_UpdateOrgInfo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(UpdateOrgMsg)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UpdateOrgNameServiceServer).UpdateOrgName(ctx, in)
+		return srv.(UpdateOrgInfoServiceServer).UpdateOrgInfo(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/proto.UpdateOrgNameService/UpdateOrgName",
+		FullMethod: "/proto.UpdateOrgInfoService/UpdateOrgInfo",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UpdateOrgNameServiceServer).UpdateOrgName(ctx, req.(*UpdateOrgMsg))
+		return srv.(UpdateOrgInfoServiceServer).UpdateOrgInfo(ctx, req.(*UpdateOrgMsg))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-var _UpdateOrgNameService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "proto.UpdateOrgNameService",
-	HandlerType: (*UpdateOrgNameServiceServer)(nil),
+var _UpdateOrgInfoService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "proto.UpdateOrgInfoService",
+	HandlerType: (*UpdateOrgInfoServiceServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "UpdateOrgName",
-			Handler:    _UpdateOrgNameService_UpdateOrgName_Handler,
-		},
-	},
-	Streams:  []grpc.StreamDesc{},
-	Metadata: "db.proto",
-}
-
-// UpdateOrgDescServiceClient is the client API for UpdateOrgDescService service.
-//
-// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
-type UpdateOrgDescServiceClient interface {
-	UpdateOrgDesc(ctx context.Context, in *UpdateOrgMsg, opts ...grpc.CallOption) (*GlobalSuccessReply, error)
-}
-
-type updateOrgDescServiceClient struct {
-	cc grpc.ClientConnInterface
-}
-
-func NewUpdateOrgDescServiceClient(cc grpc.ClientConnInterface) UpdateOrgDescServiceClient {
-	return &updateOrgDescServiceClient{cc}
-}
-
-func (c *updateOrgDescServiceClient) UpdateOrgDesc(ctx context.Context, in *UpdateOrgMsg, opts ...grpc.CallOption) (*GlobalSuccessReply, error) {
-	out := new(GlobalSuccessReply)
-	err := c.cc.Invoke(ctx, "/proto.UpdateOrgDescService/UpdateOrgDesc", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-// UpdateOrgDescServiceServer is the server API for UpdateOrgDescService service.
-type UpdateOrgDescServiceServer interface {
-	UpdateOrgDesc(context.Context, *UpdateOrgMsg) (*GlobalSuccessReply, error)
-}
-
-// UnimplementedUpdateOrgDescServiceServer can be embedded to have forward compatible implementations.
-type UnimplementedUpdateOrgDescServiceServer struct {
-}
-
-func (*UnimplementedUpdateOrgDescServiceServer) UpdateOrgDesc(context.Context, *UpdateOrgMsg) (*GlobalSuccessReply, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method UpdateOrgDesc not implemented")
-}
-
-func RegisterUpdateOrgDescServiceServer(s *grpc.Server, srv UpdateOrgDescServiceServer) {
-	s.RegisterService(&_UpdateOrgDescService_serviceDesc, srv)
-}
-
-func _UpdateOrgDescService_UpdateOrgDesc_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(UpdateOrgMsg)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(UpdateOrgDescServiceServer).UpdateOrgDesc(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/proto.UpdateOrgDescService/UpdateOrgDesc",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UpdateOrgDescServiceServer).UpdateOrgDesc(ctx, req.(*UpdateOrgMsg))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-var _UpdateOrgDescService_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "proto.UpdateOrgDescService",
-	HandlerType: (*UpdateOrgDescServiceServer)(nil),
-	Methods: []grpc.MethodDesc{
-		{
-			MethodName: "UpdateOrgDesc",
-			Handler:    _UpdateOrgDescService_UpdateOrgDesc_Handler,
+			MethodName: "UpdateOrgInfo",
+			Handler:    _UpdateOrgInfoService_UpdateOrgInfo_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

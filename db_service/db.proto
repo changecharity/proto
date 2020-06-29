@@ -324,10 +324,6 @@ message UpdateOrgMsg {
     string description = 3;
 }
 
-service UpdateOrgNameService {
-    rpc UpdateOrgName (UpdateOrgMsg) returns (GlobalSuccessReply) {}
-}
-
-service UpdateOrgDescService {
-    rpc UpdateOrgDesc (UpdateOrgMsg) returns (GlobalSuccessReply) {}
+service UpdateOrgInfoService {
+    rpc UpdateOrgInfo (UpdateOrgMsg) returns (GlobalSuccessReply) {}
 }
