@@ -6,6 +6,10 @@ package proto;
 
 message StripeEmpty {}
 
+message StripeBool {
+    bool status = 1;
+}
+
 message CreateCusOrAcc {
     string stripe_token = 1;
     string email = 2;
@@ -68,4 +72,8 @@ message ResendTos {
 
 service CreateAndSendTosService {
     rpc CreateAndSendTos (ResendTos) returns (StripeEmpty) {}
+}
+
+service CheckAccCapableService {
+    rpc CheckAccCapable (ResendTos) returns (StripeBool) {}
 }
