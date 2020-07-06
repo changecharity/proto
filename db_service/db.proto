@@ -34,6 +34,8 @@ message OrgSignUp {
     string plaid_public_token = 6;
     string plaid_account_id = 7;
     int32 key = 8;
+    int32 mask = 9;
+    string bank_name = 10;
 }
 
 service OrgSignUpService {

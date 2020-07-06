@@ -4,6 +4,8 @@ syntax = "proto3";
 
 package proto;
 
+message PlaidEmpty {}
+
 message ExchangePlaid {
     string public_token = 1;
     string plaid_account_id = 2;
@@ -40,4 +42,8 @@ message TransactionWHDataReply {
 
 service SecondTransactionWHService {
     rpc SecondTransactionWH (TransactionWHData) returns (TransactionWHDataReply) {}
+}
+
+service DeleteItemService {
+    rpc DeleteItem (ExchangePlaidReply) returns (PlaidEmpty) {}
 }
