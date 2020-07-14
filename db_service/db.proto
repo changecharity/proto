@@ -36,6 +36,7 @@ message OrgSignUp {
     int32 key = 8;
     int32 mask = 9;
     string bank_name = 10;
+    bool manual_verify = 11;
 }
 
 service OrgSignUpService {
@@ -108,6 +109,10 @@ message TransferPDFParams {
 
 service TransferPDFService {
     rpc TransferPDF (TransferPDFParams) returns (GlobalSuccessReply) {}
+}
+
+service EmailAllRecieptsService {
+    rpc EmailAllReciepts (GlobalSuccessReply) returns (GlobalSuccessReply) {}
 }
 
 message SaveLogoMsg {
