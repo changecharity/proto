@@ -22,8 +22,8 @@ service CreateExchangePlaidService {
     rpc CreateExchangePlaid (ExchangePlaid) returns (ExchangePlaidReply) {}
 }
 
-service UpdateOrgItemService {
-    rpc UpdateOrgItem (ExchangePlaidReply) returns (ExchangePlaid) {}
+service ExchangeAccessPublicService {
+    rpc ExchangeAccessPublic (ExchangePlaidReply) returns (ExchangePlaid) {}
 }
 
 message TransactionWHData {
