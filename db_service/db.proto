@@ -52,7 +52,7 @@ service CheckOrgSignUpService {
 }
 
 service UpdateOrgItemService {
-    rpc UpdateOrgItem (OrgSignUp) returns (GlobalSuccessReply) {}
+    rpc UpdateOrgItem (OrgSignUp) returns (OrgSignUp) {}
 }
 
 service ManualCompleteOrgSignUpService {

@@ -22,6 +22,10 @@ service CreateExchangePlaidService {
     rpc CreateExchangePlaid (ExchangePlaid) returns (ExchangePlaidReply) {}
 }
 
+service UpdateOrgItemService {
+    rpc UpdateOrgItem (ExchangePlaidReply) returns (ExchangePlaid) {}
+}
+
 message TransactionWHData {
     string plaid_token = 1;
     int32 threshold = 2;
