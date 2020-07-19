@@ -9,6 +9,7 @@ message PlaidEmpty {}
 message ExchangePlaid {
     string public_token = 1;
     string plaid_account_id = 2;
+    bool manual = 3;
 }
 
 message ExchangePlaidReply {
