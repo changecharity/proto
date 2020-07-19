@@ -51,6 +51,14 @@ service CheckOrgSignUpService {
     rpc CheckOrgSignUp (OrgSignUp) returns (GlobalSuccessReply) {}
 }
 
+service UpdateOrgItemService {
+    rpc UpdateOrgItem (OrgSignUp) returns (GlobalSuccessReply) {}
+}
+
+service ManualCompleteOrgSignUpService {
+    rpc ManualCompleteOrgSignUp (OrgSignUp) returns (GlobalSuccessReply) {}
+}
+
 message ResendEmailAuthMsg {
     string token = 1;
     string table = 2;
