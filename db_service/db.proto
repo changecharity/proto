@@ -288,6 +288,7 @@ message LogoAndQrCode {
     string name = 3;
     string email = 4;
     string description = 5;
+    string url = 6;
 }
 
 service OrgsGetQrService {
