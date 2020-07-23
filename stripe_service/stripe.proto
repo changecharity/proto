@@ -23,6 +23,10 @@ service CreateCusService {
     rpc CreateCus (CreateCusOrAcc) returns (CreateCusReply) {}
 }
 
+service CreateBaseCusService {
+    rpc CreateBaseCus (CreateCusOrAcc) returns (CreateCusReply) {}
+}
+
 message CreateAccReply {
     string account_id = 1;
 }
