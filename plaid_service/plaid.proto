@@ -30,6 +30,7 @@ message TransactionWHData {
     string plaid_token = 1;
     int32 threshold = 2;
     string dosu = 3;
+    int32 monthly_remaining = 4;
 }
 
 message Transaction {
