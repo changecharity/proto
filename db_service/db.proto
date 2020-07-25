@@ -156,10 +156,15 @@ service GetTransactionsService {
 message UpdateThresholdMsg {
     string user_token = 1;
     int32 threshold = 2;
+    int32 monthly_limit = 3;
 }
 
 service UpdateThresholdService {
     rpc UpdateThreshold (UpdateThresholdMsg) returns (GlobalSuccessReply) {}
+}
+
+service UpdateMonthlyLimitService {
+    rpc UpdateMonthlyLimit (UpdateThresholdMsg) returns (GlobalSuccessReply) {}
 }
 
 message UserToken {
@@ -193,6 +198,7 @@ message UsersProfileReply {
     int32 mask = 2;
     string bank_name = 3;
     string legal_name = 4;
+    int32 monthly_limit = 5;
 }
 
 service GetUsersProfileService {
