@@ -6,6 +6,19 @@ package proto;
 
 message PlaidEmpty {}
 
+message CreateLinkTokenMsg {
+    string token_type = 1;
+}
+
+message CreateLinkTokenReply {
+    string link_token = 1;
+    string link_client_id = 2;
+}
+
+service CreateLinkTokenService {
+    rpc CreateLinkToken (CreateLinkTokenMsg) returns (CreateLinkTokenReply) {}
+}
+
 message ExchangePlaid {
     string public_token = 1;
     string plaid_account_id = 2;
