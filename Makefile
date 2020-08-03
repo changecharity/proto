@@ -19,6 +19,3 @@ mail:
 
 aws:
 	@protoc.exe -I aws_service/ aws_service/aws.proto --go_out=plugins=grpc:aws_service
-
-local:
-	@bash run-all.sh

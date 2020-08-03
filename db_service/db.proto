@@ -199,6 +199,13 @@ message UsersProfileReply {
     string bank_name = 3;
     string legal_name = 4;
     int32 monthly_limit = 5;
+    repeated UserCard cards = 6;
+}
+
+message UserCard {
+    string bank_name = 1;
+    int32 mask = 2;
+    int32 selected_org = 3;
 }
 
 service GetUsersProfileService {
