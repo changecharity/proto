@@ -349,3 +349,7 @@ message UpdateOrgMsg {
 service UpdateOrgInfoService {
     rpc UpdateOrgInfo (UpdateOrgMsg) returns (GlobalSuccessReply) {}
 }
+
+service AddNewCardService {
+    rpc AddNewCard (UserSignUp) returns (GlobalSuccessReply) {}
+}
