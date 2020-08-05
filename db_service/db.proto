@@ -360,3 +360,11 @@ service UpdateOrgInfoService {
 service AddNewCardService {
     rpc AddNewCard (UserSignUp) returns (GlobalSuccessReply) {}
 }
+
+service CreateCardLinkTokenService {
+    rpc CreateCardLinkToken (UserToken) returns (ResendEmailAuthMsg) {}
+}
+
+service CheckCardLinkedService {
+    rpc CheckCardLinked (UserToken) returns (GlobalSuccessReply) {}
+}

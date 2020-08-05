@@ -81,3 +81,20 @@ service CreateAndSendTosService {
 service CheckAccCapableService {
     rpc CheckAccCapable (ResendTos) returns (StripeBool) {}
 }
+
+message EphemeralToken {
+    string token = 1;
+}
+
+service CreateEphemeralCusTokenService {
+    rpc CreateEphemeralCusToken (CreateCusReply) returns (EphemeralToken) {}
+}
+
+message MaskAndCardBrand {
+    int32 mask = 1;
+    string card_brand = 2;
+}
+
+service CheckCusCardLinkedService {
+    rpc CheckCusCardLinked (CreateCusReply) returns (MaskAndCardBrand) {}
+}

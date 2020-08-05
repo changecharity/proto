@@ -2578,6 +2578,18 @@ var file_db_proto_rawDesc = []byte{
 	0x43, 0x61, 0x72, 0x64, 0x12, 0x11, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x55, 0x73, 0x65,
 	0x72, 0x53, 0x69, 0x67, 0x6e, 0x55, 0x70, 0x1a, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e,
 	0x47, 0x6c, 0x6f, 0x62, 0x61, 0x6c, 0x53, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x52, 0x65, 0x70,
+	0x6c, 0x79, 0x22, 0x00, 0x32, 0x62, 0x0a, 0x1a, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x43, 0x61,
+	0x72, 0x64, 0x4c, 0x69, 0x6e, 0x6b, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x53, 0x65, 0x72, 0x76, 0x69,
+	0x63, 0x65, 0x12, 0x44, 0x0a, 0x13, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x43, 0x61, 0x72, 0x64,
+	0x4c, 0x69, 0x6e, 0x6b, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x10, 0x2e, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x2e, 0x55, 0x73, 0x65, 0x72, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x1a, 0x19, 0x2e, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x2e, 0x52, 0x65, 0x73, 0x65, 0x6e, 0x64, 0x45, 0x6d, 0x61, 0x69, 0x6c, 0x41,
+	0x75, 0x74, 0x68, 0x4d, 0x73, 0x67, 0x22, 0x00, 0x32, 0x5a, 0x0a, 0x16, 0x43, 0x68, 0x65, 0x63,
+	0x6b, 0x43, 0x61, 0x72, 0x64, 0x4c, 0x69, 0x6e, 0x6b, 0x65, 0x64, 0x53, 0x65, 0x72, 0x76, 0x69,
+	0x63, 0x65, 0x12, 0x40, 0x0a, 0x0f, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x43, 0x61, 0x72, 0x64, 0x4c,
+	0x69, 0x6e, 0x6b, 0x65, 0x64, 0x12, 0x10, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x55, 0x73,
+	0x65, 0x72, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x1a, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e,
+	0x47, 0x6c, 0x6f, 0x62, 0x61, 0x6c, 0x53, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x52, 0x65, 0x70,
 	0x6c, 0x79, 0x22, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
@@ -2673,46 +2685,50 @@ var file_db_proto_depIdxs = []int32{
 	29, // 39: proto.GetOrgInfoSearchService.GetOrgInfoSearch:input_type -> proto.TokenAndOrg
 	33, // 40: proto.UpdateOrgInfoService.UpdateOrgInfo:input_type -> proto.UpdateOrgMsg
 	1,  // 41: proto.AddNewCardService.AddNewCard:input_type -> proto.UserSignUp
-	0,  // 42: proto.UserSignUpService.SendUserSignUp:output_type -> proto.GlobalSuccessReply
-	0,  // 43: proto.OrgSignUpService.SendOrgSignUp:output_type -> proto.GlobalSuccessReply
-	0,  // 44: proto.CheckUserSignUpService.CheckUserSignUp:output_type -> proto.GlobalSuccessReply
-	0,  // 45: proto.CheckOrgSignUpService.CheckOrgSignUp:output_type -> proto.GlobalSuccessReply
-	2,  // 46: proto.UpdateOrgItemService.UpdateOrgItem:output_type -> proto.OrgSignUp
-	0,  // 47: proto.ManualCompleteOrgSignUpService.ManualCompleteOrgSignUp:output_type -> proto.GlobalSuccessReply
-	0,  // 48: proto.ResendEmailAuthService.ResendEmailAuth:output_type -> proto.GlobalSuccessReply
-	0,  // 49: proto.AuthLoginService.AuthLogin:output_type -> proto.GlobalSuccessReply
-	0,  // 50: proto.BeginTransactionWHService.BeginTransactionWH:output_type -> proto.GlobalSuccessReply
-	0,  // 51: proto.ConfirmTransferService.ConfirmTransfer:output_type -> proto.GlobalSuccessReply
-	8,  // 52: proto.SearchOrgNameService.SearchOrgName:output_type -> proto.OrgNameReply
-	0,  // 53: proto.TransferPDFService.TransferPDF:output_type -> proto.GlobalSuccessReply
-	0,  // 54: proto.EmailAllRecieptsService.EmailAllReciepts:output_type -> proto.GlobalSuccessReply
-	0,  // 55: proto.SaveLogoService.SaveLogo:output_type -> proto.GlobalSuccessReply
-	12, // 56: proto.GetTransactionsService.GetTransactions:output_type -> proto.GetTransactionsMsgReply
-	0,  // 57: proto.UpdateThresholdService.UpdateThreshold:output_type -> proto.GlobalSuccessReply
-	0,  // 58: proto.UpdateMonthlyLimitService.UpdateMonthlyLimit:output_type -> proto.GlobalSuccessReply
-	17, // 59: proto.GetUsersOrgInfoService.GetUsersOrgInfo:output_type -> proto.UsersOrgInfoReply
-	18, // 60: proto.GetUsersTotalsService.GetUsersTotals:output_type -> proto.UsersTotalsReply
-	19, // 61: proto.GetUsersProfileService.GetUsersProfile:output_type -> proto.UsersProfileReply
-	0,  // 62: proto.DeleteUsersBAService.DeleteUsersBA:output_type -> proto.GlobalSuccessReply
-	0,  // 63: proto.UpdateUsersBAService.UpdateUsersBA:output_type -> proto.GlobalSuccessReply
-	0,  // 64: proto.ValidNewAccService.ValidNewAcc:output_type -> proto.GlobalSuccessReply
-	0,  // 65: proto.ValidPassService.ValidPass:output_type -> proto.GlobalSuccessReply
-	0,  // 66: proto.ValidKeyService.ValidKey:output_type -> proto.GlobalSuccessReply
-	0,  // 67: proto.SendForgotPassService.SendForgotPass:output_type -> proto.GlobalSuccessReply
-	0,  // 68: proto.ForgotPassService.ForgotPass:output_type -> proto.GlobalSuccessReply
-	0,  // 69: proto.CheckOrgTosAcceptedService.CheckOrgTosAccepted:output_type -> proto.GlobalSuccessReply
-	0,  // 70: proto.ResendOrgsTosService.ResendOrgsTos:output_type -> proto.GlobalSuccessReply
-	24, // 71: proto.GetDashboardService.GetDashboard:output_type -> proto.Dashboard
-	25, // 72: proto.GetTransfersService.GetTransfers:output_type -> proto.OrgsTransfers
-	28, // 73: proto.OrgsGetQrService.OrgsGetQr:output_type -> proto.LogoAndQrCode
-	28, // 74: proto.OrgsGetLogoService.OrgsGetLogo:output_type -> proto.LogoAndQrCode
-	0,  // 75: proto.SetOrgService.SetOrg:output_type -> proto.GlobalSuccessReply
-	30, // 76: proto.GetOrgsSearchService.GetOrgsSearch:output_type -> proto.SearchOrgsMsg
-	32, // 77: proto.GetOrgInfoSearchService.GetOrgInfoSearch:output_type -> proto.GetOrgInfoSearchMsg
-	0,  // 78: proto.UpdateOrgInfoService.UpdateOrgInfo:output_type -> proto.GlobalSuccessReply
-	0,  // 79: proto.AddNewCardService.AddNewCard:output_type -> proto.GlobalSuccessReply
-	42, // [42:80] is the sub-list for method output_type
-	4,  // [4:42] is the sub-list for method input_type
+	15, // 42: proto.CreateCardLinkTokenService.CreateCardLinkToken:input_type -> proto.UserToken
+	15, // 43: proto.CheckCardLinkedService.CheckCardLinked:input_type -> proto.UserToken
+	0,  // 44: proto.UserSignUpService.SendUserSignUp:output_type -> proto.GlobalSuccessReply
+	0,  // 45: proto.OrgSignUpService.SendOrgSignUp:output_type -> proto.GlobalSuccessReply
+	0,  // 46: proto.CheckUserSignUpService.CheckUserSignUp:output_type -> proto.GlobalSuccessReply
+	0,  // 47: proto.CheckOrgSignUpService.CheckOrgSignUp:output_type -> proto.GlobalSuccessReply
+	2,  // 48: proto.UpdateOrgItemService.UpdateOrgItem:output_type -> proto.OrgSignUp
+	0,  // 49: proto.ManualCompleteOrgSignUpService.ManualCompleteOrgSignUp:output_type -> proto.GlobalSuccessReply
+	0,  // 50: proto.ResendEmailAuthService.ResendEmailAuth:output_type -> proto.GlobalSuccessReply
+	0,  // 51: proto.AuthLoginService.AuthLogin:output_type -> proto.GlobalSuccessReply
+	0,  // 52: proto.BeginTransactionWHService.BeginTransactionWH:output_type -> proto.GlobalSuccessReply
+	0,  // 53: proto.ConfirmTransferService.ConfirmTransfer:output_type -> proto.GlobalSuccessReply
+	8,  // 54: proto.SearchOrgNameService.SearchOrgName:output_type -> proto.OrgNameReply
+	0,  // 55: proto.TransferPDFService.TransferPDF:output_type -> proto.GlobalSuccessReply
+	0,  // 56: proto.EmailAllRecieptsService.EmailAllReciepts:output_type -> proto.GlobalSuccessReply
+	0,  // 57: proto.SaveLogoService.SaveLogo:output_type -> proto.GlobalSuccessReply
+	12, // 58: proto.GetTransactionsService.GetTransactions:output_type -> proto.GetTransactionsMsgReply
+	0,  // 59: proto.UpdateThresholdService.UpdateThreshold:output_type -> proto.GlobalSuccessReply
+	0,  // 60: proto.UpdateMonthlyLimitService.UpdateMonthlyLimit:output_type -> proto.GlobalSuccessReply
+	17, // 61: proto.GetUsersOrgInfoService.GetUsersOrgInfo:output_type -> proto.UsersOrgInfoReply
+	18, // 62: proto.GetUsersTotalsService.GetUsersTotals:output_type -> proto.UsersTotalsReply
+	19, // 63: proto.GetUsersProfileService.GetUsersProfile:output_type -> proto.UsersProfileReply
+	0,  // 64: proto.DeleteUsersBAService.DeleteUsersBA:output_type -> proto.GlobalSuccessReply
+	0,  // 65: proto.UpdateUsersBAService.UpdateUsersBA:output_type -> proto.GlobalSuccessReply
+	0,  // 66: proto.ValidNewAccService.ValidNewAcc:output_type -> proto.GlobalSuccessReply
+	0,  // 67: proto.ValidPassService.ValidPass:output_type -> proto.GlobalSuccessReply
+	0,  // 68: proto.ValidKeyService.ValidKey:output_type -> proto.GlobalSuccessReply
+	0,  // 69: proto.SendForgotPassService.SendForgotPass:output_type -> proto.GlobalSuccessReply
+	0,  // 70: proto.ForgotPassService.ForgotPass:output_type -> proto.GlobalSuccessReply
+	0,  // 71: proto.CheckOrgTosAcceptedService.CheckOrgTosAccepted:output_type -> proto.GlobalSuccessReply
+	0,  // 72: proto.ResendOrgsTosService.ResendOrgsTos:output_type -> proto.GlobalSuccessReply
+	24, // 73: proto.GetDashboardService.GetDashboard:output_type -> proto.Dashboard
+	25, // 74: proto.GetTransfersService.GetTransfers:output_type -> proto.OrgsTransfers
+	28, // 75: proto.OrgsGetQrService.OrgsGetQr:output_type -> proto.LogoAndQrCode
+	28, // 76: proto.OrgsGetLogoService.OrgsGetLogo:output_type -> proto.LogoAndQrCode
+	0,  // 77: proto.SetOrgService.SetOrg:output_type -> proto.GlobalSuccessReply
+	30, // 78: proto.GetOrgsSearchService.GetOrgsSearch:output_type -> proto.SearchOrgsMsg
+	32, // 79: proto.GetOrgInfoSearchService.GetOrgInfoSearch:output_type -> proto.GetOrgInfoSearchMsg
+	0,  // 80: proto.UpdateOrgInfoService.UpdateOrgInfo:output_type -> proto.GlobalSuccessReply
+	0,  // 81: proto.AddNewCardService.AddNewCard:output_type -> proto.GlobalSuccessReply
+	3,  // 82: proto.CreateCardLinkTokenService.CreateCardLinkToken:output_type -> proto.ResendEmailAuthMsg
+	0,  // 83: proto.CheckCardLinkedService.CheckCardLinked:output_type -> proto.GlobalSuccessReply
+	44, // [44:84] is the sub-list for method output_type
+	4,  // [4:44] is the sub-list for method input_type
 	4,  // [4:4] is the sub-list for extension type_name
 	4,  // [4:4] is the sub-list for extension extendee
 	0,  // [0:4] is the sub-list for field type_name
@@ -3141,7 +3157,7 @@ func file_db_proto_init() {
 			NumEnums:      0,
 			NumMessages:   34,
 			NumExtensions: 0,
-			NumServices:   38,
+			NumServices:   40,
 		},
 		GoTypes:           file_db_proto_goTypes,
 		DependencyIndexes: file_db_proto_depIdxs,
@@ -5891,6 +5907,150 @@ var _AddNewCardService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "AddNewCard",
 			Handler:    _AddNewCardService_AddNewCard_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "db.proto",
+}
+
+// CreateCardLinkTokenServiceClient is the client API for CreateCardLinkTokenService service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+type CreateCardLinkTokenServiceClient interface {
+	CreateCardLinkToken(ctx context.Context, in *UserToken, opts ...grpc.CallOption) (*ResendEmailAuthMsg, error)
+}
+
+type createCardLinkTokenServiceClient struct {
+	cc grpc.ClientConnInterface
+}
+
+func NewCreateCardLinkTokenServiceClient(cc grpc.ClientConnInterface) CreateCardLinkTokenServiceClient {
+	return &createCardLinkTokenServiceClient{cc}
+}
+
+func (c *createCardLinkTokenServiceClient) CreateCardLinkToken(ctx context.Context, in *UserToken, opts ...grpc.CallOption) (*ResendEmailAuthMsg, error) {
+	out := new(ResendEmailAuthMsg)
+	err := c.cc.Invoke(ctx, "/proto.CreateCardLinkTokenService/CreateCardLinkToken", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// CreateCardLinkTokenServiceServer is the server API for CreateCardLinkTokenService service.
+type CreateCardLinkTokenServiceServer interface {
+	CreateCardLinkToken(context.Context, *UserToken) (*ResendEmailAuthMsg, error)
+}
+
+// UnimplementedCreateCardLinkTokenServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedCreateCardLinkTokenServiceServer struct {
+}
+
+func (*UnimplementedCreateCardLinkTokenServiceServer) CreateCardLinkToken(context.Context, *UserToken) (*ResendEmailAuthMsg, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CreateCardLinkToken not implemented")
+}
+
+func RegisterCreateCardLinkTokenServiceServer(s *grpc.Server, srv CreateCardLinkTokenServiceServer) {
+	s.RegisterService(&_CreateCardLinkTokenService_serviceDesc, srv)
+}
+
+func _CreateCardLinkTokenService_CreateCardLinkToken_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UserToken)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CreateCardLinkTokenServiceServer).CreateCardLinkToken(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/proto.CreateCardLinkTokenService/CreateCardLinkToken",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CreateCardLinkTokenServiceServer).CreateCardLinkToken(ctx, req.(*UserToken))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+var _CreateCardLinkTokenService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "proto.CreateCardLinkTokenService",
+	HandlerType: (*CreateCardLinkTokenServiceServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "CreateCardLinkToken",
+			Handler:    _CreateCardLinkTokenService_CreateCardLinkToken_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "db.proto",
+}
+
+// CheckCardLinkedServiceClient is the client API for CheckCardLinkedService service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+type CheckCardLinkedServiceClient interface {
+	CheckCardLinked(ctx context.Context, in *UserToken, opts ...grpc.CallOption) (*GlobalSuccessReply, error)
+}
+
+type checkCardLinkedServiceClient struct {
+	cc grpc.ClientConnInterface
+}
+
+func NewCheckCardLinkedServiceClient(cc grpc.ClientConnInterface) CheckCardLinkedServiceClient {
+	return &checkCardLinkedServiceClient{cc}
+}
+
+func (c *checkCardLinkedServiceClient) CheckCardLinked(ctx context.Context, in *UserToken, opts ...grpc.CallOption) (*GlobalSuccessReply, error) {
+	out := new(GlobalSuccessReply)
+	err := c.cc.Invoke(ctx, "/proto.CheckCardLinkedService/CheckCardLinked", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// CheckCardLinkedServiceServer is the server API for CheckCardLinkedService service.
+type CheckCardLinkedServiceServer interface {
+	CheckCardLinked(context.Context, *UserToken) (*GlobalSuccessReply, error)
+}
+
+// UnimplementedCheckCardLinkedServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedCheckCardLinkedServiceServer struct {
+}
+
+func (*UnimplementedCheckCardLinkedServiceServer) CheckCardLinked(context.Context, *UserToken) (*GlobalSuccessReply, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CheckCardLinked not implemented")
+}
+
+func RegisterCheckCardLinkedServiceServer(s *grpc.Server, srv CheckCardLinkedServiceServer) {
+	s.RegisterService(&_CheckCardLinkedService_serviceDesc, srv)
+}
+
+func _CheckCardLinkedService_CheckCardLinked_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(UserToken)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(CheckCardLinkedServiceServer).CheckCardLinked(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/proto.CheckCardLinkedService/CheckCardLinked",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(CheckCardLinkedServiceServer).CheckCardLinked(ctx, req.(*UserToken))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+var _CheckCardLinkedService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "proto.CheckCardLinkedService",
+	HandlerType: (*CheckCardLinkedServiceServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "CheckCardLinked",
+			Handler:    _CheckCardLinkedService_CheckCardLinked_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
