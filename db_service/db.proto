@@ -368,3 +368,7 @@ service CreateCardLinkTokenService {
 service CheckCardLinkedService {
     rpc CheckCardLinked (UserToken) returns (GlobalSuccessReply) {}
 }
+
+service HourlyDBCallService {
+    rpc HourlyDBCall (GlobalSuccessReply) returns (GlobalSuccessReply) {}
+}
