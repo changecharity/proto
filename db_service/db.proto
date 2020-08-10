@@ -8,6 +8,10 @@ message GlobalSuccessReply {
     bool success = 1;
 }
 
+message StatusUpdate {
+    bool status = 1;
+}
+
 message UserSignUp {
     string email = 1;
     string password = 2;
@@ -200,6 +204,7 @@ message UsersProfileReply {
     string legal_name = 4;
     int32 monthly_limit = 5;
     repeated UserCard cards = 6;
+    bool round_up_status = 7;
 }
 
 message UserCard {
@@ -359,6 +364,10 @@ service UpdateOrgInfoService {
 
 service AddNewCardService {
     rpc AddNewCard (UserSignUp) returns (GlobalSuccessReply) {}
+}
+
+service UpdateRoundUpStatusService {
+    rpc UpdateRoundUpStatus (StatusUpdate) returns (GlobalSuccessReply) {}
 }
 
 service CreateCardLinkTokenService {

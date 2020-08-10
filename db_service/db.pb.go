@@ -78,6 +78,53 @@ func (x *GlobalSuccessReply) GetSuccess() bool {
 	return false
 }
 
+type StatusUpdate struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	Status bool `protobuf:"varint,1,opt,name=status,proto3" json:"status,omitempty"`
+}
+
+func (x *StatusUpdate) Reset() {
+	*x = StatusUpdate{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_db_proto_msgTypes[1]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *StatusUpdate) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*StatusUpdate) ProtoMessage() {}
+
+func (x *StatusUpdate) ProtoReflect() protoreflect.Message {
+	mi := &file_db_proto_msgTypes[1]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use StatusUpdate.ProtoReflect.Descriptor instead.
+func (*StatusUpdate) Descriptor() ([]byte, []int) {
+	return file_db_proto_rawDescGZIP(), []int{1}
+}
+
+func (x *StatusUpdate) GetStatus() bool {
+	if x != nil {
+		return x.Status
+	}
+	return false
+}
+
 type UserSignUp struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -98,7 +145,7 @@ type UserSignUp struct {
 func (x *UserSignUp) Reset() {
 	*x = UserSignUp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[1]
+		mi := &file_db_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -111,7 +158,7 @@ func (x *UserSignUp) String() string {
 func (*UserSignUp) ProtoMessage() {}
 
 func (x *UserSignUp) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[1]
+	mi := &file_db_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -124,7 +171,7 @@ func (x *UserSignUp) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UserSignUp.ProtoReflect.Descriptor instead.
 func (*UserSignUp) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{1}
+	return file_db_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *UserSignUp) GetEmail() string {
@@ -218,7 +265,7 @@ type OrgSignUp struct {
 func (x *OrgSignUp) Reset() {
 	*x = OrgSignUp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[2]
+		mi := &file_db_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -231,7 +278,7 @@ func (x *OrgSignUp) String() string {
 func (*OrgSignUp) ProtoMessage() {}
 
 func (x *OrgSignUp) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[2]
+	mi := &file_db_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -244,7 +291,7 @@ func (x *OrgSignUp) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use OrgSignUp.ProtoReflect.Descriptor instead.
 func (*OrgSignUp) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{2}
+	return file_db_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *OrgSignUp) GetName() string {
@@ -336,7 +383,7 @@ type ResendEmailAuthMsg struct {
 func (x *ResendEmailAuthMsg) Reset() {
 	*x = ResendEmailAuthMsg{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[3]
+		mi := &file_db_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -349,7 +396,7 @@ func (x *ResendEmailAuthMsg) String() string {
 func (*ResendEmailAuthMsg) ProtoMessage() {}
 
 func (x *ResendEmailAuthMsg) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[3]
+	mi := &file_db_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -362,7 +409,7 @@ func (x *ResendEmailAuthMsg) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ResendEmailAuthMsg.ProtoReflect.Descriptor instead.
 func (*ResendEmailAuthMsg) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{3}
+	return file_db_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *ResendEmailAuthMsg) GetToken() string {
@@ -394,7 +441,7 @@ type Login struct {
 func (x *Login) Reset() {
 	*x = Login{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[4]
+		mi := &file_db_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -407,7 +454,7 @@ func (x *Login) String() string {
 func (*Login) ProtoMessage() {}
 
 func (x *Login) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[4]
+	mi := &file_db_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -420,7 +467,7 @@ func (x *Login) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Login.ProtoReflect.Descriptor instead.
 func (*Login) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{4}
+	return file_db_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *Login) GetEmail() string {
@@ -469,7 +516,7 @@ type TransactionItemID struct {
 func (x *TransactionItemID) Reset() {
 	*x = TransactionItemID{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[5]
+		mi := &file_db_proto_msgTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -482,7 +529,7 @@ func (x *TransactionItemID) String() string {
 func (*TransactionItemID) ProtoMessage() {}
 
 func (x *TransactionItemID) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[5]
+	mi := &file_db_proto_msgTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -495,7 +542,7 @@ func (x *TransactionItemID) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TransactionItemID.ProtoReflect.Descriptor instead.
 func (*TransactionItemID) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{5}
+	return file_db_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *TransactionItemID) GetItemId() string {
@@ -516,7 +563,7 @@ type StripeChargeID struct {
 func (x *StripeChargeID) Reset() {
 	*x = StripeChargeID{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[6]
+		mi := &file_db_proto_msgTypes[7]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -529,7 +576,7 @@ func (x *StripeChargeID) String() string {
 func (*StripeChargeID) ProtoMessage() {}
 
 func (x *StripeChargeID) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[6]
+	mi := &file_db_proto_msgTypes[7]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -542,7 +589,7 @@ func (x *StripeChargeID) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use StripeChargeID.ProtoReflect.Descriptor instead.
 func (*StripeChargeID) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{6}
+	return file_db_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *StripeChargeID) GetChargeId() string {
@@ -565,7 +612,7 @@ type OrgName struct {
 func (x *OrgName) Reset() {
 	*x = OrgName{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[7]
+		mi := &file_db_proto_msgTypes[8]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -578,7 +625,7 @@ func (x *OrgName) String() string {
 func (*OrgName) ProtoMessage() {}
 
 func (x *OrgName) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[7]
+	mi := &file_db_proto_msgTypes[8]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -591,7 +638,7 @@ func (x *OrgName) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use OrgName.ProtoReflect.Descriptor instead.
 func (*OrgName) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{7}
+	return file_db_proto_rawDescGZIP(), []int{8}
 }
 
 func (x *OrgName) GetName() string {
@@ -626,7 +673,7 @@ type OrgNameReply struct {
 func (x *OrgNameReply) Reset() {
 	*x = OrgNameReply{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[8]
+		mi := &file_db_proto_msgTypes[9]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -639,7 +686,7 @@ func (x *OrgNameReply) String() string {
 func (*OrgNameReply) ProtoMessage() {}
 
 func (x *OrgNameReply) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[8]
+	mi := &file_db_proto_msgTypes[9]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -652,7 +699,7 @@ func (x *OrgNameReply) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use OrgNameReply.ProtoReflect.Descriptor instead.
 func (*OrgNameReply) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{8}
+	return file_db_proto_rawDescGZIP(), []int{9}
 }
 
 func (x *OrgNameReply) GetNames() []string {
@@ -674,7 +721,7 @@ type TransferPDFParams struct {
 func (x *TransferPDFParams) Reset() {
 	*x = TransferPDFParams{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[9]
+		mi := &file_db_proto_msgTypes[10]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -687,7 +734,7 @@ func (x *TransferPDFParams) String() string {
 func (*TransferPDFParams) ProtoMessage() {}
 
 func (x *TransferPDFParams) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[9]
+	mi := &file_db_proto_msgTypes[10]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -700,7 +747,7 @@ func (x *TransferPDFParams) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TransferPDFParams.ProtoReflect.Descriptor instead.
 func (*TransferPDFParams) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{9}
+	return file_db_proto_rawDescGZIP(), []int{10}
 }
 
 func (x *TransferPDFParams) GetUserToken() string {
@@ -722,7 +769,7 @@ type SaveLogoMsg struct {
 func (x *SaveLogoMsg) Reset() {
 	*x = SaveLogoMsg{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[10]
+		mi := &file_db_proto_msgTypes[11]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -735,7 +782,7 @@ func (x *SaveLogoMsg) String() string {
 func (*SaveLogoMsg) ProtoMessage() {}
 
 func (x *SaveLogoMsg) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[10]
+	mi := &file_db_proto_msgTypes[11]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -748,7 +795,7 @@ func (x *SaveLogoMsg) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SaveLogoMsg.ProtoReflect.Descriptor instead.
 func (*SaveLogoMsg) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{10}
+	return file_db_proto_rawDescGZIP(), []int{11}
 }
 
 func (x *SaveLogoMsg) GetOrgToken() string {
@@ -777,7 +824,7 @@ type GetTransactionsMsg struct {
 func (x *GetTransactionsMsg) Reset() {
 	*x = GetTransactionsMsg{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[11]
+		mi := &file_db_proto_msgTypes[12]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -790,7 +837,7 @@ func (x *GetTransactionsMsg) String() string {
 func (*GetTransactionsMsg) ProtoMessage() {}
 
 func (x *GetTransactionsMsg) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[11]
+	mi := &file_db_proto_msgTypes[12]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -803,7 +850,7 @@ func (x *GetTransactionsMsg) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetTransactionsMsg.ProtoReflect.Descriptor instead.
 func (*GetTransactionsMsg) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{11}
+	return file_db_proto_rawDescGZIP(), []int{12}
 }
 
 func (x *GetTransactionsMsg) GetUserToken() string {
@@ -831,7 +878,7 @@ type GetTransactionsMsgReply struct {
 func (x *GetTransactionsMsgReply) Reset() {
 	*x = GetTransactionsMsgReply{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[12]
+		mi := &file_db_proto_msgTypes[13]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -844,7 +891,7 @@ func (x *GetTransactionsMsgReply) String() string {
 func (*GetTransactionsMsgReply) ProtoMessage() {}
 
 func (x *GetTransactionsMsgReply) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[12]
+	mi := &file_db_proto_msgTypes[13]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -857,7 +904,7 @@ func (x *GetTransactionsMsgReply) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetTransactionsMsgReply.ProtoReflect.Descriptor instead.
 func (*GetTransactionsMsgReply) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{12}
+	return file_db_proto_rawDescGZIP(), []int{13}
 }
 
 func (x *GetTransactionsMsgReply) GetTransactions() []*TransactionData {
@@ -881,7 +928,7 @@ type TransactionData struct {
 func (x *TransactionData) Reset() {
 	*x = TransactionData{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[13]
+		mi := &file_db_proto_msgTypes[14]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -894,7 +941,7 @@ func (x *TransactionData) String() string {
 func (*TransactionData) ProtoMessage() {}
 
 func (x *TransactionData) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[13]
+	mi := &file_db_proto_msgTypes[14]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -907,7 +954,7 @@ func (x *TransactionData) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TransactionData.ProtoReflect.Descriptor instead.
 func (*TransactionData) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{13}
+	return file_db_proto_rawDescGZIP(), []int{14}
 }
 
 func (x *TransactionData) GetName() string {
@@ -951,7 +998,7 @@ type UpdateThresholdMsg struct {
 func (x *UpdateThresholdMsg) Reset() {
 	*x = UpdateThresholdMsg{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[14]
+		mi := &file_db_proto_msgTypes[15]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -964,7 +1011,7 @@ func (x *UpdateThresholdMsg) String() string {
 func (*UpdateThresholdMsg) ProtoMessage() {}
 
 func (x *UpdateThresholdMsg) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[14]
+	mi := &file_db_proto_msgTypes[15]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -977,7 +1024,7 @@ func (x *UpdateThresholdMsg) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UpdateThresholdMsg.ProtoReflect.Descriptor instead.
 func (*UpdateThresholdMsg) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{14}
+	return file_db_proto_rawDescGZIP(), []int{15}
 }
 
 func (x *UpdateThresholdMsg) GetUserToken() string {
@@ -1012,7 +1059,7 @@ type UserToken struct {
 func (x *UserToken) Reset() {
 	*x = UserToken{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[15]
+		mi := &file_db_proto_msgTypes[16]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1025,7 +1072,7 @@ func (x *UserToken) String() string {
 func (*UserToken) ProtoMessage() {}
 
 func (x *UserToken) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[15]
+	mi := &file_db_proto_msgTypes[16]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1038,7 +1085,7 @@ func (x *UserToken) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UserToken.ProtoReflect.Descriptor instead.
 func (*UserToken) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{15}
+	return file_db_proto_rawDescGZIP(), []int{16}
 }
 
 func (x *UserToken) GetUserToken() string {
@@ -1059,7 +1106,7 @@ type OrgToken struct {
 func (x *OrgToken) Reset() {
 	*x = OrgToken{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[16]
+		mi := &file_db_proto_msgTypes[17]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1072,7 +1119,7 @@ func (x *OrgToken) String() string {
 func (*OrgToken) ProtoMessage() {}
 
 func (x *OrgToken) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[16]
+	mi := &file_db_proto_msgTypes[17]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1085,7 +1132,7 @@ func (x *OrgToken) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use OrgToken.ProtoReflect.Descriptor instead.
 func (*OrgToken) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{16}
+	return file_db_proto_rawDescGZIP(), []int{17}
 }
 
 func (x *OrgToken) GetOrgToken() string {
@@ -1107,7 +1154,7 @@ type UsersOrgInfoReply struct {
 func (x *UsersOrgInfoReply) Reset() {
 	*x = UsersOrgInfoReply{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[17]
+		mi := &file_db_proto_msgTypes[18]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1120,7 +1167,7 @@ func (x *UsersOrgInfoReply) String() string {
 func (*UsersOrgInfoReply) ProtoMessage() {}
 
 func (x *UsersOrgInfoReply) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[17]
+	mi := &file_db_proto_msgTypes[18]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1133,7 +1180,7 @@ func (x *UsersOrgInfoReply) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UsersOrgInfoReply.ProtoReflect.Descriptor instead.
 func (*UsersOrgInfoReply) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{17}
+	return file_db_proto_rawDescGZIP(), []int{18}
 }
 
 func (x *UsersOrgInfoReply) GetName() string {
@@ -1162,7 +1209,7 @@ type UsersTotalsReply struct {
 func (x *UsersTotalsReply) Reset() {
 	*x = UsersTotalsReply{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[18]
+		mi := &file_db_proto_msgTypes[19]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1175,7 +1222,7 @@ func (x *UsersTotalsReply) String() string {
 func (*UsersTotalsReply) ProtoMessage() {}
 
 func (x *UsersTotalsReply) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[18]
+	mi := &file_db_proto_msgTypes[19]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1188,7 +1235,7 @@ func (x *UsersTotalsReply) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UsersTotalsReply.ProtoReflect.Descriptor instead.
 func (*UsersTotalsReply) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{18}
+	return file_db_proto_rawDescGZIP(), []int{19}
 }
 
 func (x *UsersTotalsReply) GetMonthlyTotal() int64 {
@@ -1210,18 +1257,19 @@ type UsersProfileReply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Threshold    int32       `protobuf:"varint,1,opt,name=threshold,proto3" json:"threshold,omitempty"`
-	Mask         int32       `protobuf:"varint,2,opt,name=mask,proto3" json:"mask,omitempty"`
-	BankName     string      `protobuf:"bytes,3,opt,name=bank_name,json=bankName,proto3" json:"bank_name,omitempty"`
-	LegalName    string      `protobuf:"bytes,4,opt,name=legal_name,json=legalName,proto3" json:"legal_name,omitempty"`
-	MonthlyLimit int32       `protobuf:"varint,5,opt,name=monthly_limit,json=monthlyLimit,proto3" json:"monthly_limit,omitempty"`
-	Cards        []*UserCard `protobuf:"bytes,6,rep,name=cards,proto3" json:"cards,omitempty"`
+	Threshold     int32       `protobuf:"varint,1,opt,name=threshold,proto3" json:"threshold,omitempty"`
+	Mask          int32       `protobuf:"varint,2,opt,name=mask,proto3" json:"mask,omitempty"`
+	BankName      string      `protobuf:"bytes,3,opt,name=bank_name,json=bankName,proto3" json:"bank_name,omitempty"`
+	LegalName     string      `protobuf:"bytes,4,opt,name=legal_name,json=legalName,proto3" json:"legal_name,omitempty"`
+	MonthlyLimit  int32       `protobuf:"varint,5,opt,name=monthly_limit,json=monthlyLimit,proto3" json:"monthly_limit,omitempty"`
+	Cards         []*UserCard `protobuf:"bytes,6,rep,name=cards,proto3" json:"cards,omitempty"`
+	RoundUpStatus bool        `protobuf:"varint,7,opt,name=round_up_status,json=roundUpStatus,proto3" json:"round_up_status,omitempty"`
 }
 
 func (x *UsersProfileReply) Reset() {
 	*x = UsersProfileReply{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[19]
+		mi := &file_db_proto_msgTypes[20]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1234,7 +1282,7 @@ func (x *UsersProfileReply) String() string {
 func (*UsersProfileReply) ProtoMessage() {}
 
 func (x *UsersProfileReply) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[19]
+	mi := &file_db_proto_msgTypes[20]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1247,7 +1295,7 @@ func (x *UsersProfileReply) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UsersProfileReply.ProtoReflect.Descriptor instead.
 func (*UsersProfileReply) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{19}
+	return file_db_proto_rawDescGZIP(), []int{20}
 }
 
 func (x *UsersProfileReply) GetThreshold() int32 {
@@ -1292,6 +1340,13 @@ func (x *UsersProfileReply) GetCards() []*UserCard {
 	return nil
 }
 
+func (x *UsersProfileReply) GetRoundUpStatus() bool {
+	if x != nil {
+		return x.RoundUpStatus
+	}
+	return false
+}
+
 type UserCard struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -1305,7 +1360,7 @@ type UserCard struct {
 func (x *UserCard) Reset() {
 	*x = UserCard{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[20]
+		mi := &file_db_proto_msgTypes[21]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1318,7 +1373,7 @@ func (x *UserCard) String() string {
 func (*UserCard) ProtoMessage() {}
 
 func (x *UserCard) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[20]
+	mi := &file_db_proto_msgTypes[21]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1331,7 +1386,7 @@ func (x *UserCard) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UserCard.ProtoReflect.Descriptor instead.
 func (*UserCard) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{20}
+	return file_db_proto_rawDescGZIP(), []int{21}
 }
 
 func (x *UserCard) GetBankName() string {
@@ -1367,7 +1422,7 @@ type DeleteUsersBAMsg struct {
 func (x *DeleteUsersBAMsg) Reset() {
 	*x = DeleteUsersBAMsg{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[21]
+		mi := &file_db_proto_msgTypes[22]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1380,7 +1435,7 @@ func (x *DeleteUsersBAMsg) String() string {
 func (*DeleteUsersBAMsg) ProtoMessage() {}
 
 func (x *DeleteUsersBAMsg) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[21]
+	mi := &file_db_proto_msgTypes[22]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1393,7 +1448,7 @@ func (x *DeleteUsersBAMsg) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use DeleteUsersBAMsg.ProtoReflect.Descriptor instead.
 func (*DeleteUsersBAMsg) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{21}
+	return file_db_proto_rawDescGZIP(), []int{22}
 }
 
 func (x *DeleteUsersBAMsg) GetUserToken() string {
@@ -1421,7 +1476,7 @@ type ValidNewAccMsg struct {
 func (x *ValidNewAccMsg) Reset() {
 	*x = ValidNewAccMsg{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[22]
+		mi := &file_db_proto_msgTypes[23]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1434,7 +1489,7 @@ func (x *ValidNewAccMsg) String() string {
 func (*ValidNewAccMsg) ProtoMessage() {}
 
 func (x *ValidNewAccMsg) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[22]
+	mi := &file_db_proto_msgTypes[23]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1447,7 +1502,7 @@ func (x *ValidNewAccMsg) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ValidNewAccMsg.ProtoReflect.Descriptor instead.
 func (*ValidNewAccMsg) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{22}
+	return file_db_proto_rawDescGZIP(), []int{23}
 }
 
 func (x *ValidNewAccMsg) GetAccountId() string {
@@ -1471,7 +1526,7 @@ type ValidPassMsg struct {
 func (x *ValidPassMsg) Reset() {
 	*x = ValidPassMsg{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[23]
+		mi := &file_db_proto_msgTypes[24]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1484,7 +1539,7 @@ func (x *ValidPassMsg) String() string {
 func (*ValidPassMsg) ProtoMessage() {}
 
 func (x *ValidPassMsg) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[23]
+	mi := &file_db_proto_msgTypes[24]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1497,7 +1552,7 @@ func (x *ValidPassMsg) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ValidPassMsg.ProtoReflect.Descriptor instead.
 func (*ValidPassMsg) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{23}
+	return file_db_proto_rawDescGZIP(), []int{24}
 }
 
 func (x *ValidPassMsg) GetToken() string {
@@ -1542,7 +1597,7 @@ type Dashboard struct {
 func (x *Dashboard) Reset() {
 	*x = Dashboard{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[24]
+		mi := &file_db_proto_msgTypes[25]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1555,7 +1610,7 @@ func (x *Dashboard) String() string {
 func (*Dashboard) ProtoMessage() {}
 
 func (x *Dashboard) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[24]
+	mi := &file_db_proto_msgTypes[25]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1568,7 +1623,7 @@ func (x *Dashboard) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Dashboard.ProtoReflect.Descriptor instead.
 func (*Dashboard) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{24}
+	return file_db_proto_rawDescGZIP(), []int{25}
 }
 
 func (x *Dashboard) GetTotalCollected() int64 {
@@ -1610,7 +1665,7 @@ type OrgsTransfers struct {
 func (x *OrgsTransfers) Reset() {
 	*x = OrgsTransfers{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[25]
+		mi := &file_db_proto_msgTypes[26]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1623,7 +1678,7 @@ func (x *OrgsTransfers) String() string {
 func (*OrgsTransfers) ProtoMessage() {}
 
 func (x *OrgsTransfers) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[25]
+	mi := &file_db_proto_msgTypes[26]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1636,7 +1691,7 @@ func (x *OrgsTransfers) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use OrgsTransfers.ProtoReflect.Descriptor instead.
 func (*OrgsTransfers) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{25}
+	return file_db_proto_rawDescGZIP(), []int{26}
 }
 
 func (x *OrgsTransfers) GetTransfers() []*SingleTransfer {
@@ -1659,7 +1714,7 @@ type SingleTransfer struct {
 func (x *SingleTransfer) Reset() {
 	*x = SingleTransfer{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[26]
+		mi := &file_db_proto_msgTypes[27]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1672,7 +1727,7 @@ func (x *SingleTransfer) String() string {
 func (*SingleTransfer) ProtoMessage() {}
 
 func (x *SingleTransfer) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[26]
+	mi := &file_db_proto_msgTypes[27]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1685,7 +1740,7 @@ func (x *SingleTransfer) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SingleTransfer.ProtoReflect.Descriptor instead.
 func (*SingleTransfer) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{26}
+	return file_db_proto_rawDescGZIP(), []int{27}
 }
 
 func (x *SingleTransfer) GetName() string {
@@ -1721,7 +1776,7 @@ type GetTransfersMsg struct {
 func (x *GetTransfersMsg) Reset() {
 	*x = GetTransfersMsg{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[27]
+		mi := &file_db_proto_msgTypes[28]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1734,7 +1789,7 @@ func (x *GetTransfersMsg) String() string {
 func (*GetTransfersMsg) ProtoMessage() {}
 
 func (x *GetTransfersMsg) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[27]
+	mi := &file_db_proto_msgTypes[28]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1747,7 +1802,7 @@ func (x *GetTransfersMsg) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetTransfersMsg.ProtoReflect.Descriptor instead.
 func (*GetTransfersMsg) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{27}
+	return file_db_proto_rawDescGZIP(), []int{28}
 }
 
 func (x *GetTransfersMsg) GetOrgToken() string {
@@ -1780,7 +1835,7 @@ type LogoAndQrCode struct {
 func (x *LogoAndQrCode) Reset() {
 	*x = LogoAndQrCode{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[28]
+		mi := &file_db_proto_msgTypes[29]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1793,7 +1848,7 @@ func (x *LogoAndQrCode) String() string {
 func (*LogoAndQrCode) ProtoMessage() {}
 
 func (x *LogoAndQrCode) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[28]
+	mi := &file_db_proto_msgTypes[29]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1806,7 +1861,7 @@ func (x *LogoAndQrCode) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use LogoAndQrCode.ProtoReflect.Descriptor instead.
 func (*LogoAndQrCode) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{28}
+	return file_db_proto_rawDescGZIP(), []int{29}
 }
 
 func (x *LogoAndQrCode) GetQr() string {
@@ -1863,7 +1918,7 @@ type TokenAndOrg struct {
 func (x *TokenAndOrg) Reset() {
 	*x = TokenAndOrg{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[29]
+		mi := &file_db_proto_msgTypes[30]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1876,7 +1931,7 @@ func (x *TokenAndOrg) String() string {
 func (*TokenAndOrg) ProtoMessage() {}
 
 func (x *TokenAndOrg) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[29]
+	mi := &file_db_proto_msgTypes[30]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1889,7 +1944,7 @@ func (x *TokenAndOrg) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use TokenAndOrg.ProtoReflect.Descriptor instead.
 func (*TokenAndOrg) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{29}
+	return file_db_proto_rawDescGZIP(), []int{30}
 }
 
 func (x *TokenAndOrg) GetUserToken() string {
@@ -1917,7 +1972,7 @@ type SearchOrgsMsg struct {
 func (x *SearchOrgsMsg) Reset() {
 	*x = SearchOrgsMsg{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[30]
+		mi := &file_db_proto_msgTypes[31]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1930,7 +1985,7 @@ func (x *SearchOrgsMsg) String() string {
 func (*SearchOrgsMsg) ProtoMessage() {}
 
 func (x *SearchOrgsMsg) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[30]
+	mi := &file_db_proto_msgTypes[31]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1943,7 +1998,7 @@ func (x *SearchOrgsMsg) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SearchOrgsMsg.ProtoReflect.Descriptor instead.
 func (*SearchOrgsMsg) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{30}
+	return file_db_proto_rawDescGZIP(), []int{31}
 }
 
 func (x *SearchOrgsMsg) GetOrgs() []*SearchOrgResults {
@@ -1966,7 +2021,7 @@ type SearchOrgResults struct {
 func (x *SearchOrgResults) Reset() {
 	*x = SearchOrgResults{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[31]
+		mi := &file_db_proto_msgTypes[32]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -1979,7 +2034,7 @@ func (x *SearchOrgResults) String() string {
 func (*SearchOrgResults) ProtoMessage() {}
 
 func (x *SearchOrgResults) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[31]
+	mi := &file_db_proto_msgTypes[32]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1992,7 +2047,7 @@ func (x *SearchOrgResults) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SearchOrgResults.ProtoReflect.Descriptor instead.
 func (*SearchOrgResults) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{31}
+	return file_db_proto_rawDescGZIP(), []int{32}
 }
 
 func (x *SearchOrgResults) GetName() string {
@@ -2030,7 +2085,7 @@ type GetOrgInfoSearchMsg struct {
 func (x *GetOrgInfoSearchMsg) Reset() {
 	*x = GetOrgInfoSearchMsg{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[32]
+		mi := &file_db_proto_msgTypes[33]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2043,7 +2098,7 @@ func (x *GetOrgInfoSearchMsg) String() string {
 func (*GetOrgInfoSearchMsg) ProtoMessage() {}
 
 func (x *GetOrgInfoSearchMsg) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[32]
+	mi := &file_db_proto_msgTypes[33]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2056,7 +2111,7 @@ func (x *GetOrgInfoSearchMsg) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetOrgInfoSearchMsg.ProtoReflect.Descriptor instead.
 func (*GetOrgInfoSearchMsg) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{32}
+	return file_db_proto_rawDescGZIP(), []int{33}
 }
 
 func (x *GetOrgInfoSearchMsg) GetName() string {
@@ -2100,7 +2155,7 @@ type UpdateOrgMsg struct {
 func (x *UpdateOrgMsg) Reset() {
 	*x = UpdateOrgMsg{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_db_proto_msgTypes[33]
+		mi := &file_db_proto_msgTypes[34]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -2113,7 +2168,7 @@ func (x *UpdateOrgMsg) String() string {
 func (*UpdateOrgMsg) ProtoMessage() {}
 
 func (x *UpdateOrgMsg) ProtoReflect() protoreflect.Message {
-	mi := &file_db_proto_msgTypes[33]
+	mi := &file_db_proto_msgTypes[34]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -2126,7 +2181,7 @@ func (x *UpdateOrgMsg) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UpdateOrgMsg.ProtoReflect.Descriptor instead.
 func (*UpdateOrgMsg) Descriptor() ([]byte, []int) {
-	return file_db_proto_rawDescGZIP(), []int{33}
+	return file_db_proto_rawDescGZIP(), []int{34}
 }
 
 func (x *UpdateOrgMsg) GetOrgToken() string {
@@ -2157,133 +2212,138 @@ var file_db_proto_rawDesc = []byte{
 	0x6f, 0x22, 0x2e, 0x0a, 0x12, 0x47, 0x6c, 0x6f, 0x62, 0x61, 0x6c, 0x53, 0x75, 0x63, 0x63, 0x65,
 	0x73, 0x73, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x12, 0x18, 0x0a, 0x07, 0x73, 0x75, 0x63, 0x63, 0x65,
 	0x73, 0x73, 0x18, 0x01, 0x20, 0x01, 0x28, 0x08, 0x52, 0x07, 0x73, 0x75, 0x63, 0x63, 0x65, 0x73,
-	0x73, 0x22, 0xab, 0x02, 0x0a, 0x0a, 0x55, 0x73, 0x65, 0x72, 0x53, 0x69, 0x67, 0x6e, 0x55, 0x70,
-	0x12, 0x14, 0x0a, 0x05, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
-	0x05, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x12, 0x1a, 0x0a, 0x08, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f,
-	0x72, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f,
-	0x72, 0x64, 0x12, 0x1d, 0x0a, 0x0a, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x74, 0x6f, 0x6b, 0x65, 0x6e,
-	0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x75, 0x73, 0x65, 0x72, 0x54, 0x6f, 0x6b, 0x65,
-	0x6e, 0x12, 0x2c, 0x0a, 0x12, 0x70, 0x6c, 0x61, 0x69, 0x64, 0x5f, 0x70, 0x75, 0x62, 0x6c, 0x69,
-	0x63, 0x5f, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x05, 0x20, 0x01, 0x28, 0x09, 0x52, 0x10, 0x70,
-	0x6c, 0x61, 0x69, 0x64, 0x50, 0x75, 0x62, 0x6c, 0x69, 0x63, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12,
-	0x28, 0x0a, 0x10, 0x70, 0x6c, 0x61, 0x69, 0x64, 0x5f, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74,
-	0x5f, 0x69, 0x64, 0x18, 0x06, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0e, 0x70, 0x6c, 0x61, 0x69, 0x64,
-	0x41, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x49, 0x64, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65, 0x79,
-	0x18, 0x08, 0x20, 0x01, 0x28, 0x05, 0x52, 0x03, 0x6b, 0x65, 0x79, 0x12, 0x12, 0x0a, 0x04, 0x6d,
-	0x61, 0x73, 0x6b, 0x18, 0x09, 0x20, 0x01, 0x28, 0x05, 0x52, 0x04, 0x6d, 0x61, 0x73, 0x6b, 0x12,
-	0x1b, 0x0a, 0x09, 0x62, 0x61, 0x6e, 0x6b, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x0a, 0x20, 0x01,
-	0x28, 0x09, 0x52, 0x08, 0x62, 0x61, 0x6e, 0x6b, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x12, 0x0a, 0x04,
-	0x6e, 0x61, 0x6d, 0x65, 0x18, 0x0b, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65,
-	0x12, 0x1d, 0x0a, 0x0a, 0x6c, 0x65, 0x67, 0x61, 0x6c, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x0c,
-	0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x6c, 0x65, 0x67, 0x61, 0x6c, 0x4e, 0x61, 0x6d, 0x65, 0x22,
-	0xc0, 0x02, 0x0a, 0x09, 0x4f, 0x72, 0x67, 0x53, 0x69, 0x67, 0x6e, 0x55, 0x70, 0x12, 0x12, 0x0a,
-	0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d,
-	0x65, 0x12, 0x14, 0x0a, 0x05, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09,
-	0x52, 0x05, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x12, 0x1a, 0x0a, 0x08, 0x70, 0x61, 0x73, 0x73, 0x77,
-	0x6f, 0x72, 0x64, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x70, 0x61, 0x73, 0x73, 0x77,
-	0x6f, 0x72, 0x64, 0x12, 0x10, 0x0a, 0x03, 0x65, 0x69, 0x6e, 0x18, 0x04, 0x20, 0x01, 0x28, 0x03,
-	0x52, 0x03, 0x65, 0x69, 0x6e, 0x12, 0x1b, 0x0a, 0x09, 0x6f, 0x72, 0x67, 0x5f, 0x74, 0x6f, 0x6b,
-	0x65, 0x6e, 0x18, 0x05, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6f, 0x72, 0x67, 0x54, 0x6f, 0x6b,
-	0x65, 0x6e, 0x12, 0x2c, 0x0a, 0x12, 0x70, 0x6c, 0x61, 0x69, 0x64, 0x5f, 0x70, 0x75, 0x62, 0x6c,
-	0x69, 0x63, 0x5f, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x06, 0x20, 0x01, 0x28, 0x09, 0x52, 0x10,
-	0x70, 0x6c, 0x61, 0x69, 0x64, 0x50, 0x75, 0x62, 0x6c, 0x69, 0x63, 0x54, 0x6f, 0x6b, 0x65, 0x6e,
-	0x12, 0x28, 0x0a, 0x10, 0x70, 0x6c, 0x61, 0x69, 0x64, 0x5f, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e,
-	0x74, 0x5f, 0x69, 0x64, 0x18, 0x07, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0e, 0x70, 0x6c, 0x61, 0x69,
-	0x64, 0x41, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x49, 0x64, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65,
-	0x79, 0x18, 0x08, 0x20, 0x01, 0x28, 0x05, 0x52, 0x03, 0x6b, 0x65, 0x79, 0x12, 0x12, 0x0a, 0x04,
-	0x6d, 0x61, 0x73, 0x6b, 0x18, 0x09, 0x20, 0x01, 0x28, 0x05, 0x52, 0x04, 0x6d, 0x61, 0x73, 0x6b,
-	0x12, 0x1b, 0x0a, 0x09, 0x62, 0x61, 0x6e, 0x6b, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x0a, 0x20,
-	0x01, 0x28, 0x09, 0x52, 0x08, 0x62, 0x61, 0x6e, 0x6b, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x23, 0x0a,
-	0x0d, 0x6d, 0x61, 0x6e, 0x75, 0x61, 0x6c, 0x5f, 0x76, 0x65, 0x72, 0x69, 0x66, 0x79, 0x18, 0x0b,
-	0x20, 0x01, 0x28, 0x08, 0x52, 0x0c, 0x6d, 0x61, 0x6e, 0x75, 0x61, 0x6c, 0x56, 0x65, 0x72, 0x69,
-	0x66, 0x79, 0x22, 0x40, 0x0a, 0x12, 0x52, 0x65, 0x73, 0x65, 0x6e, 0x64, 0x45, 0x6d, 0x61, 0x69,
-	0x6c, 0x41, 0x75, 0x74, 0x68, 0x4d, 0x73, 0x67, 0x12, 0x14, 0x0a, 0x05, 0x74, 0x6f, 0x6b, 0x65,
-	0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x14,
-	0x0a, 0x05, 0x74, 0x61, 0x62, 0x6c, 0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x74,
-	0x61, 0x62, 0x6c, 0x65, 0x22, 0x80, 0x01, 0x0a, 0x05, 0x4c, 0x6f, 0x67, 0x69, 0x6e, 0x12, 0x14,
-	0x0a, 0x05, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x65,
-	0x6d, 0x61, 0x69, 0x6c, 0x12, 0x1a, 0x0a, 0x08, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64,
-	0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64,
-	0x12, 0x1d, 0x0a, 0x0a, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x03,
-	0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x75, 0x73, 0x65, 0x72, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12,
-	0x14, 0x0a, 0x05, 0x74, 0x61, 0x62, 0x6c, 0x65, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05,
-	0x74, 0x61, 0x62, 0x6c, 0x65, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65, 0x79, 0x18, 0x05, 0x20, 0x01,
-	0x28, 0x05, 0x52, 0x03, 0x6b, 0x65, 0x79, 0x22, 0x2c, 0x0a, 0x11, 0x54, 0x72, 0x61, 0x6e, 0x73,
-	0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x49, 0x74, 0x65, 0x6d, 0x49, 0x44, 0x12, 0x17, 0x0a, 0x07,
-	0x69, 0x74, 0x65, 0x6d, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x69,
-	0x74, 0x65, 0x6d, 0x49, 0x64, 0x22, 0x2d, 0x0a, 0x0e, 0x53, 0x74, 0x72, 0x69, 0x70, 0x65, 0x43,
-	0x68, 0x61, 0x72, 0x67, 0x65, 0x49, 0x44, 0x12, 0x1b, 0x0a, 0x09, 0x63, 0x68, 0x61, 0x72, 0x67,
-	0x65, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x63, 0x68, 0x61, 0x72,
-	0x67, 0x65, 0x49, 0x64, 0x22, 0x54, 0x0a, 0x07, 0x4f, 0x72, 0x67, 0x4e, 0x61, 0x6d, 0x65, 0x12,
-	0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6e,
-	0x61, 0x6d, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x6f, 0x66, 0x66, 0x73, 0x65, 0x74, 0x18, 0x02, 0x20,
-	0x01, 0x28, 0x05, 0x52, 0x06, 0x6f, 0x66, 0x66, 0x73, 0x65, 0x74, 0x12, 0x1d, 0x0a, 0x0a, 0x75,
-	0x73, 0x65, 0x72, 0x5f, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52,
-	0x09, 0x75, 0x73, 0x65, 0x72, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x22, 0x24, 0x0a, 0x0c, 0x4f, 0x72,
-	0x67, 0x4e, 0x61, 0x6d, 0x65, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x12, 0x14, 0x0a, 0x05, 0x6e, 0x61,
-	0x6d, 0x65, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x09, 0x52, 0x05, 0x6e, 0x61, 0x6d, 0x65, 0x73,
-	0x22, 0x32, 0x0a, 0x11, 0x54, 0x72, 0x61, 0x6e, 0x73, 0x66, 0x65, 0x72, 0x50, 0x44, 0x46, 0x50,
-	0x61, 0x72, 0x61, 0x6d, 0x73, 0x12, 0x1d, 0x0a, 0x0a, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x74, 0x6f,
-	0x6b, 0x65, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x75, 0x73, 0x65, 0x72, 0x54,
-	0x6f, 0x6b, 0x65, 0x6e, 0x22, 0x4f, 0x0a, 0x0b, 0x53, 0x61, 0x76, 0x65, 0x4c, 0x6f, 0x67, 0x6f,
-	0x4d, 0x73, 0x67, 0x12, 0x1b, 0x0a, 0x09, 0x6f, 0x72, 0x67, 0x5f, 0x74, 0x6f, 0x6b, 0x65, 0x6e,
-	0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6f, 0x72, 0x67, 0x54, 0x6f, 0x6b, 0x65, 0x6e,
-	0x12, 0x23, 0x0a, 0x0d, 0x66, 0x69, 0x6c, 0x65, 0x5f, 0x6c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f,
-	0x6e, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0c, 0x66, 0x69, 0x6c, 0x65, 0x4c, 0x6f, 0x63,
-	0x61, 0x74, 0x69, 0x6f, 0x6e, 0x22, 0x4b, 0x0a, 0x12, 0x47, 0x65, 0x74, 0x54, 0x72, 0x61, 0x6e,
-	0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x4d, 0x73, 0x67, 0x12, 0x1d, 0x0a, 0x0a, 0x75,
-	0x73, 0x65, 0x72, 0x5f, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
-	0x09, 0x75, 0x73, 0x65, 0x72, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x16, 0x0a, 0x06, 0x6f, 0x66,
-	0x66, 0x73, 0x65, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x05, 0x52, 0x06, 0x6f, 0x66, 0x66, 0x73,
-	0x65, 0x74, 0x22, 0x55, 0x0a, 0x17, 0x47, 0x65, 0x74, 0x54, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63,
-	0x74, 0x69, 0x6f, 0x6e, 0x73, 0x4d, 0x73, 0x67, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x12, 0x3a, 0x0a,
-	0x0c, 0x74, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x18, 0x01, 0x20,
-	0x03, 0x28, 0x0b, 0x32, 0x16, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x54, 0x72, 0x61, 0x6e,
-	0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x44, 0x61, 0x74, 0x61, 0x52, 0x0c, 0x74, 0x72, 0x61,
-	0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x22, 0x67, 0x0a, 0x0f, 0x54, 0x72, 0x61,
-	0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x44, 0x61, 0x74, 0x61, 0x12, 0x12, 0x0a, 0x04,
-	0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65,
-	0x12, 0x10, 0x0a, 0x03, 0x64, 0x6f, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x64,
-	0x6f, 0x74, 0x12, 0x16, 0x0a, 0x06, 0x61, 0x6d, 0x6f, 0x75, 0x6e, 0x74, 0x18, 0x03, 0x20, 0x01,
-	0x28, 0x01, 0x52, 0x06, 0x61, 0x6d, 0x6f, 0x75, 0x6e, 0x74, 0x12, 0x16, 0x0a, 0x06, 0x63, 0x68,
-	0x61, 0x6e, 0x67, 0x65, 0x18, 0x04, 0x20, 0x01, 0x28, 0x05, 0x52, 0x06, 0x63, 0x68, 0x61, 0x6e,
-	0x67, 0x65, 0x22, 0x76, 0x0a, 0x12, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x54, 0x68, 0x72, 0x65,
-	0x73, 0x68, 0x6f, 0x6c, 0x64, 0x4d, 0x73, 0x67, 0x12, 0x1d, 0x0a, 0x0a, 0x75, 0x73, 0x65, 0x72,
-	0x5f, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x75, 0x73,
-	0x65, 0x72, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x1c, 0x0a, 0x09, 0x74, 0x68, 0x72, 0x65, 0x73,
-	0x68, 0x6f, 0x6c, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x05, 0x52, 0x09, 0x74, 0x68, 0x72, 0x65,
-	0x73, 0x68, 0x6f, 0x6c, 0x64, 0x12, 0x23, 0x0a, 0x0d, 0x6d, 0x6f, 0x6e, 0x74, 0x68, 0x6c, 0x79,
-	0x5f, 0x6c, 0x69, 0x6d, 0x69, 0x74, 0x18, 0x03, 0x20, 0x01, 0x28, 0x05, 0x52, 0x0c, 0x6d, 0x6f,
-	0x6e, 0x74, 0x68, 0x6c, 0x79, 0x4c, 0x69, 0x6d, 0x69, 0x74, 0x22, 0x2a, 0x0a, 0x09, 0x55, 0x73,
-	0x65, 0x72, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x1d, 0x0a, 0x0a, 0x75, 0x73, 0x65, 0x72, 0x5f,
-	0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x75, 0x73, 0x65,
-	0x72, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x22, 0x27, 0x0a, 0x08, 0x4f, 0x72, 0x67, 0x54, 0x6f, 0x6b,
-	0x65, 0x6e, 0x12, 0x1b, 0x0a, 0x09, 0x6f, 0x72, 0x67, 0x5f, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x18,
-	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6f, 0x72, 0x67, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x22,
-	0x4c, 0x0a, 0x11, 0x55, 0x73, 0x65, 0x72, 0x73, 0x4f, 0x72, 0x67, 0x49, 0x6e, 0x66, 0x6f, 0x52,
-	0x65, 0x70, 0x6c, 0x79, 0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01,
-	0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0x23, 0x0a, 0x0d, 0x6c, 0x6f, 0x67, 0x6f,
+	0x73, 0x22, 0x26, 0x0a, 0x0c, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x55, 0x70, 0x64, 0x61, 0x74,
+	0x65, 0x12, 0x16, 0x0a, 0x06, 0x73, 0x74, 0x61, 0x74, 0x75, 0x73, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x08, 0x52, 0x06, 0x73, 0x74, 0x61, 0x74, 0x75, 0x73, 0x22, 0xab, 0x02, 0x0a, 0x0a, 0x55, 0x73,
+	0x65, 0x72, 0x53, 0x69, 0x67, 0x6e, 0x55, 0x70, 0x12, 0x14, 0x0a, 0x05, 0x65, 0x6d, 0x61, 0x69,
+	0x6c, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x12, 0x1a,
+	0x0a, 0x08, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09,
+	0x52, 0x08, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x12, 0x1d, 0x0a, 0x0a, 0x75, 0x73,
+	0x65, 0x72, 0x5f, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09,
+	0x75, 0x73, 0x65, 0x72, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x2c, 0x0a, 0x12, 0x70, 0x6c, 0x61,
+	0x69, 0x64, 0x5f, 0x70, 0x75, 0x62, 0x6c, 0x69, 0x63, 0x5f, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x18,
+	0x05, 0x20, 0x01, 0x28, 0x09, 0x52, 0x10, 0x70, 0x6c, 0x61, 0x69, 0x64, 0x50, 0x75, 0x62, 0x6c,
+	0x69, 0x63, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x28, 0x0a, 0x10, 0x70, 0x6c, 0x61, 0x69, 0x64,
+	0x5f, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x5f, 0x69, 0x64, 0x18, 0x06, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x0e, 0x70, 0x6c, 0x61, 0x69, 0x64, 0x41, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x49,
+	0x64, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65, 0x79, 0x18, 0x08, 0x20, 0x01, 0x28, 0x05, 0x52, 0x03,
+	0x6b, 0x65, 0x79, 0x12, 0x12, 0x0a, 0x04, 0x6d, 0x61, 0x73, 0x6b, 0x18, 0x09, 0x20, 0x01, 0x28,
+	0x05, 0x52, 0x04, 0x6d, 0x61, 0x73, 0x6b, 0x12, 0x1b, 0x0a, 0x09, 0x62, 0x61, 0x6e, 0x6b, 0x5f,
+	0x6e, 0x61, 0x6d, 0x65, 0x18, 0x0a, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x62, 0x61, 0x6e, 0x6b,
+	0x4e, 0x61, 0x6d, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x0b, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0x1d, 0x0a, 0x0a, 0x6c, 0x65, 0x67, 0x61,
+	0x6c, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x0c, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x6c, 0x65,
+	0x67, 0x61, 0x6c, 0x4e, 0x61, 0x6d, 0x65, 0x22, 0xc0, 0x02, 0x0a, 0x09, 0x4f, 0x72, 0x67, 0x53,
+	0x69, 0x67, 0x6e, 0x55, 0x70, 0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0x14, 0x0a, 0x05, 0x65, 0x6d, 0x61,
+	0x69, 0x6c, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x12,
+	0x1a, 0x0a, 0x08, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x18, 0x03, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x08, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x12, 0x10, 0x0a, 0x03, 0x65,
+	0x69, 0x6e, 0x18, 0x04, 0x20, 0x01, 0x28, 0x03, 0x52, 0x03, 0x65, 0x69, 0x6e, 0x12, 0x1b, 0x0a,
+	0x09, 0x6f, 0x72, 0x67, 0x5f, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x05, 0x20, 0x01, 0x28, 0x09,
+	0x52, 0x08, 0x6f, 0x72, 0x67, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x2c, 0x0a, 0x12, 0x70, 0x6c,
+	0x61, 0x69, 0x64, 0x5f, 0x70, 0x75, 0x62, 0x6c, 0x69, 0x63, 0x5f, 0x74, 0x6f, 0x6b, 0x65, 0x6e,
+	0x18, 0x06, 0x20, 0x01, 0x28, 0x09, 0x52, 0x10, 0x70, 0x6c, 0x61, 0x69, 0x64, 0x50, 0x75, 0x62,
+	0x6c, 0x69, 0x63, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x28, 0x0a, 0x10, 0x70, 0x6c, 0x61, 0x69,
+	0x64, 0x5f, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x5f, 0x69, 0x64, 0x18, 0x07, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x0e, 0x70, 0x6c, 0x61, 0x69, 0x64, 0x41, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74,
+	0x49, 0x64, 0x12, 0x10, 0x0a, 0x03, 0x6b, 0x65, 0x79, 0x18, 0x08, 0x20, 0x01, 0x28, 0x05, 0x52,
+	0x03, 0x6b, 0x65, 0x79, 0x12, 0x12, 0x0a, 0x04, 0x6d, 0x61, 0x73, 0x6b, 0x18, 0x09, 0x20, 0x01,
+	0x28, 0x05, 0x52, 0x04, 0x6d, 0x61, 0x73, 0x6b, 0x12, 0x1b, 0x0a, 0x09, 0x62, 0x61, 0x6e, 0x6b,
+	0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x0a, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x62, 0x61, 0x6e,
+	0x6b, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x23, 0x0a, 0x0d, 0x6d, 0x61, 0x6e, 0x75, 0x61, 0x6c, 0x5f,
+	0x76, 0x65, 0x72, 0x69, 0x66, 0x79, 0x18, 0x0b, 0x20, 0x01, 0x28, 0x08, 0x52, 0x0c, 0x6d, 0x61,
+	0x6e, 0x75, 0x61, 0x6c, 0x56, 0x65, 0x72, 0x69, 0x66, 0x79, 0x22, 0x40, 0x0a, 0x12, 0x52, 0x65,
+	0x73, 0x65, 0x6e, 0x64, 0x45, 0x6d, 0x61, 0x69, 0x6c, 0x41, 0x75, 0x74, 0x68, 0x4d, 0x73, 0x67,
+	0x12, 0x14, 0x0a, 0x05, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52,
+	0x05, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x14, 0x0a, 0x05, 0x74, 0x61, 0x62, 0x6c, 0x65, 0x18,
+	0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x74, 0x61, 0x62, 0x6c, 0x65, 0x22, 0x80, 0x01, 0x0a,
+	0x05, 0x4c, 0x6f, 0x67, 0x69, 0x6e, 0x12, 0x14, 0x0a, 0x05, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x12, 0x1a, 0x0a, 0x08,
+	0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08,
+	0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x12, 0x1d, 0x0a, 0x0a, 0x75, 0x73, 0x65, 0x72,
+	0x5f, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x75, 0x73,
+	0x65, 0x72, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x14, 0x0a, 0x05, 0x74, 0x61, 0x62, 0x6c, 0x65,
+	0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x74, 0x61, 0x62, 0x6c, 0x65, 0x12, 0x10, 0x0a,
+	0x03, 0x6b, 0x65, 0x79, 0x18, 0x05, 0x20, 0x01, 0x28, 0x05, 0x52, 0x03, 0x6b, 0x65, 0x79, 0x22,
+	0x2c, 0x0a, 0x11, 0x54, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x49, 0x74,
+	0x65, 0x6d, 0x49, 0x44, 0x12, 0x17, 0x0a, 0x07, 0x69, 0x74, 0x65, 0x6d, 0x5f, 0x69, 0x64, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x69, 0x74, 0x65, 0x6d, 0x49, 0x64, 0x22, 0x2d, 0x0a,
+	0x0e, 0x53, 0x74, 0x72, 0x69, 0x70, 0x65, 0x43, 0x68, 0x61, 0x72, 0x67, 0x65, 0x49, 0x44, 0x12,
+	0x1b, 0x0a, 0x09, 0x63, 0x68, 0x61, 0x72, 0x67, 0x65, 0x5f, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x08, 0x63, 0x68, 0x61, 0x72, 0x67, 0x65, 0x49, 0x64, 0x22, 0x54, 0x0a, 0x07,
+	0x4f, 0x72, 0x67, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18,
+	0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0x16, 0x0a, 0x06, 0x6f,
+	0x66, 0x66, 0x73, 0x65, 0x74, 0x18, 0x02, 0x20, 0x01, 0x28, 0x05, 0x52, 0x06, 0x6f, 0x66, 0x66,
+	0x73, 0x65, 0x74, 0x12, 0x1d, 0x0a, 0x0a, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x74, 0x6f, 0x6b, 0x65,
+	0x6e, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x75, 0x73, 0x65, 0x72, 0x54, 0x6f, 0x6b,
+	0x65, 0x6e, 0x22, 0x24, 0x0a, 0x0c, 0x4f, 0x72, 0x67, 0x4e, 0x61, 0x6d, 0x65, 0x52, 0x65, 0x70,
+	0x6c, 0x79, 0x12, 0x14, 0x0a, 0x05, 0x6e, 0x61, 0x6d, 0x65, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28,
+	0x09, 0x52, 0x05, 0x6e, 0x61, 0x6d, 0x65, 0x73, 0x22, 0x32, 0x0a, 0x11, 0x54, 0x72, 0x61, 0x6e,
+	0x73, 0x66, 0x65, 0x72, 0x50, 0x44, 0x46, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x73, 0x12, 0x1d, 0x0a,
+	0x0a, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28,
+	0x09, 0x52, 0x09, 0x75, 0x73, 0x65, 0x72, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x22, 0x4f, 0x0a, 0x0b,
+	0x53, 0x61, 0x76, 0x65, 0x4c, 0x6f, 0x67, 0x6f, 0x4d, 0x73, 0x67, 0x12, 0x1b, 0x0a, 0x09, 0x6f,
+	0x72, 0x67, 0x5f, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08,
+	0x6f, 0x72, 0x67, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x23, 0x0a, 0x0d, 0x66, 0x69, 0x6c, 0x65,
 	0x5f, 0x6c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52,
-	0x0c, 0x6c, 0x6f, 0x67, 0x6f, 0x4c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x22, 0x5a, 0x0a,
-	0x10, 0x55, 0x73, 0x65, 0x72, 0x73, 0x54, 0x6f, 0x74, 0x61, 0x6c, 0x73, 0x52, 0x65, 0x70, 0x6c,
-	0x79, 0x12, 0x23, 0x0a, 0x0d, 0x6d, 0x6f, 0x6e, 0x74, 0x68, 0x6c, 0x79, 0x5f, 0x74, 0x6f, 0x74,
-	0x61, 0x6c, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03, 0x52, 0x0c, 0x6d, 0x6f, 0x6e, 0x74, 0x68, 0x6c,
-	0x79, 0x54, 0x6f, 0x74, 0x61, 0x6c, 0x12, 0x21, 0x0a, 0x0c, 0x77, 0x65, 0x65, 0x6b, 0x6c, 0x79,
-	0x5f, 0x74, 0x6f, 0x74, 0x61, 0x6c, 0x18, 0x02, 0x20, 0x01, 0x28, 0x03, 0x52, 0x0b, 0x77, 0x65,
-	0x65, 0x6b, 0x6c, 0x79, 0x54, 0x6f, 0x74, 0x61, 0x6c, 0x22, 0xcd, 0x01, 0x0a, 0x11, 0x55, 0x73,
-	0x65, 0x72, 0x73, 0x50, 0x72, 0x6f, 0x66, 0x69, 0x6c, 0x65, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x12,
-	0x1c, 0x0a, 0x09, 0x74, 0x68, 0x72, 0x65, 0x73, 0x68, 0x6f, 0x6c, 0x64, 0x18, 0x01, 0x20, 0x01,
-	0x28, 0x05, 0x52, 0x09, 0x74, 0x68, 0x72, 0x65, 0x73, 0x68, 0x6f, 0x6c, 0x64, 0x12, 0x12, 0x0a,
-	0x04, 0x6d, 0x61, 0x73, 0x6b, 0x18, 0x02, 0x20, 0x01, 0x28, 0x05, 0x52, 0x04, 0x6d, 0x61, 0x73,
-	0x6b, 0x12, 0x1b, 0x0a, 0x09, 0x62, 0x61, 0x6e, 0x6b, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x03,
-	0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x62, 0x61, 0x6e, 0x6b, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x1d,
-	0x0a, 0x0a, 0x6c, 0x65, 0x67, 0x61, 0x6c, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x04, 0x20, 0x01,
-	0x28, 0x09, 0x52, 0x09, 0x6c, 0x65, 0x67, 0x61, 0x6c, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x23, 0x0a,
-	0x0d, 0x6d, 0x6f, 0x6e, 0x74, 0x68, 0x6c, 0x79, 0x5f, 0x6c, 0x69, 0x6d, 0x69, 0x74, 0x18, 0x05,
+	0x0c, 0x66, 0x69, 0x6c, 0x65, 0x4c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x22, 0x4b, 0x0a,
+	0x12, 0x47, 0x65, 0x74, 0x54, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73,
+	0x4d, 0x73, 0x67, 0x12, 0x1d, 0x0a, 0x0a, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x74, 0x6f, 0x6b, 0x65,
+	0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x75, 0x73, 0x65, 0x72, 0x54, 0x6f, 0x6b,
+	0x65, 0x6e, 0x12, 0x16, 0x0a, 0x06, 0x6f, 0x66, 0x66, 0x73, 0x65, 0x74, 0x18, 0x02, 0x20, 0x01,
+	0x28, 0x05, 0x52, 0x06, 0x6f, 0x66, 0x66, 0x73, 0x65, 0x74, 0x22, 0x55, 0x0a, 0x17, 0x47, 0x65,
+	0x74, 0x54, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x4d, 0x73, 0x67,
+	0x52, 0x65, 0x70, 0x6c, 0x79, 0x12, 0x3a, 0x0a, 0x0c, 0x74, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63,
+	0x74, 0x69, 0x6f, 0x6e, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x16, 0x2e, 0x70, 0x72,
+	0x6f, 0x74, 0x6f, 0x2e, 0x54, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x44,
+	0x61, 0x74, 0x61, 0x52, 0x0c, 0x74, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e,
+	0x73, 0x22, 0x67, 0x0a, 0x0f, 0x54, 0x72, 0x61, 0x6e, 0x73, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e,
+	0x44, 0x61, 0x74, 0x61, 0x12, 0x12, 0x0a, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01,
+	0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65, 0x12, 0x10, 0x0a, 0x03, 0x64, 0x6f, 0x74, 0x18,
+	0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x64, 0x6f, 0x74, 0x12, 0x16, 0x0a, 0x06, 0x61, 0x6d,
+	0x6f, 0x75, 0x6e, 0x74, 0x18, 0x03, 0x20, 0x01, 0x28, 0x01, 0x52, 0x06, 0x61, 0x6d, 0x6f, 0x75,
+	0x6e, 0x74, 0x12, 0x16, 0x0a, 0x06, 0x63, 0x68, 0x61, 0x6e, 0x67, 0x65, 0x18, 0x04, 0x20, 0x01,
+	0x28, 0x05, 0x52, 0x06, 0x63, 0x68, 0x61, 0x6e, 0x67, 0x65, 0x22, 0x76, 0x0a, 0x12, 0x55, 0x70,
+	0x64, 0x61, 0x74, 0x65, 0x54, 0x68, 0x72, 0x65, 0x73, 0x68, 0x6f, 0x6c, 0x64, 0x4d, 0x73, 0x67,
+	0x12, 0x1d, 0x0a, 0x0a, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x01,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x75, 0x73, 0x65, 0x72, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12,
+	0x1c, 0x0a, 0x09, 0x74, 0x68, 0x72, 0x65, 0x73, 0x68, 0x6f, 0x6c, 0x64, 0x18, 0x02, 0x20, 0x01,
+	0x28, 0x05, 0x52, 0x09, 0x74, 0x68, 0x72, 0x65, 0x73, 0x68, 0x6f, 0x6c, 0x64, 0x12, 0x23, 0x0a,
+	0x0d, 0x6d, 0x6f, 0x6e, 0x74, 0x68, 0x6c, 0x79, 0x5f, 0x6c, 0x69, 0x6d, 0x69, 0x74, 0x18, 0x03,
 	0x20, 0x01, 0x28, 0x05, 0x52, 0x0c, 0x6d, 0x6f, 0x6e, 0x74, 0x68, 0x6c, 0x79, 0x4c, 0x69, 0x6d,
-	0x69, 0x74, 0x12, 0x25, 0x0a, 0x05, 0x63, 0x61, 0x72, 0x64, 0x73, 0x18, 0x06, 0x20, 0x03, 0x28,
-	0x0b, 0x32, 0x0f, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x55, 0x73, 0x65, 0x72, 0x43, 0x61,
-	0x72, 0x64, 0x52, 0x05, 0x63, 0x61, 0x72, 0x64, 0x73, 0x22, 0x5e, 0x0a, 0x08, 0x55, 0x73, 0x65,
+	0x69, 0x74, 0x22, 0x2a, 0x0a, 0x09, 0x55, 0x73, 0x65, 0x72, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12,
+	0x1d, 0x0a, 0x0a, 0x75, 0x73, 0x65, 0x72, 0x5f, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x01, 0x20,
+	0x01, 0x28, 0x09, 0x52, 0x09, 0x75, 0x73, 0x65, 0x72, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x22, 0x27,
+	0x0a, 0x08, 0x4f, 0x72, 0x67, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x1b, 0x0a, 0x09, 0x6f, 0x72,
+	0x67, 0x5f, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x6f,
+	0x72, 0x67, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x22, 0x4c, 0x0a, 0x11, 0x55, 0x73, 0x65, 0x72, 0x73,
+	0x4f, 0x72, 0x67, 0x49, 0x6e, 0x66, 0x6f, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x12, 0x12, 0x0a, 0x04,
+	0x6e, 0x61, 0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x04, 0x6e, 0x61, 0x6d, 0x65,
+	0x12, 0x23, 0x0a, 0x0d, 0x6c, 0x6f, 0x67, 0x6f, 0x5f, 0x6c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f,
+	0x6e, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0c, 0x6c, 0x6f, 0x67, 0x6f, 0x4c, 0x6f, 0x63,
+	0x61, 0x74, 0x69, 0x6f, 0x6e, 0x22, 0x5a, 0x0a, 0x10, 0x55, 0x73, 0x65, 0x72, 0x73, 0x54, 0x6f,
+	0x74, 0x61, 0x6c, 0x73, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x12, 0x23, 0x0a, 0x0d, 0x6d, 0x6f, 0x6e,
+	0x74, 0x68, 0x6c, 0x79, 0x5f, 0x74, 0x6f, 0x74, 0x61, 0x6c, 0x18, 0x01, 0x20, 0x01, 0x28, 0x03,
+	0x52, 0x0c, 0x6d, 0x6f, 0x6e, 0x74, 0x68, 0x6c, 0x79, 0x54, 0x6f, 0x74, 0x61, 0x6c, 0x12, 0x21,
+	0x0a, 0x0c, 0x77, 0x65, 0x65, 0x6b, 0x6c, 0x79, 0x5f, 0x74, 0x6f, 0x74, 0x61, 0x6c, 0x18, 0x02,
+	0x20, 0x01, 0x28, 0x03, 0x52, 0x0b, 0x77, 0x65, 0x65, 0x6b, 0x6c, 0x79, 0x54, 0x6f, 0x74, 0x61,
+	0x6c, 0x22, 0xf5, 0x01, 0x0a, 0x11, 0x55, 0x73, 0x65, 0x72, 0x73, 0x50, 0x72, 0x6f, 0x66, 0x69,
+	0x6c, 0x65, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x12, 0x1c, 0x0a, 0x09, 0x74, 0x68, 0x72, 0x65, 0x73,
+	0x68, 0x6f, 0x6c, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x05, 0x52, 0x09, 0x74, 0x68, 0x72, 0x65,
+	0x73, 0x68, 0x6f, 0x6c, 0x64, 0x12, 0x12, 0x0a, 0x04, 0x6d, 0x61, 0x73, 0x6b, 0x18, 0x02, 0x20,
+	0x01, 0x28, 0x05, 0x52, 0x04, 0x6d, 0x61, 0x73, 0x6b, 0x12, 0x1b, 0x0a, 0x09, 0x62, 0x61, 0x6e,
+	0x6b, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x62, 0x61,
+	0x6e, 0x6b, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x1d, 0x0a, 0x0a, 0x6c, 0x65, 0x67, 0x61, 0x6c, 0x5f,
+	0x6e, 0x61, 0x6d, 0x65, 0x18, 0x04, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x6c, 0x65, 0x67, 0x61,
+	0x6c, 0x4e, 0x61, 0x6d, 0x65, 0x12, 0x23, 0x0a, 0x0d, 0x6d, 0x6f, 0x6e, 0x74, 0x68, 0x6c, 0x79,
+	0x5f, 0x6c, 0x69, 0x6d, 0x69, 0x74, 0x18, 0x05, 0x20, 0x01, 0x28, 0x05, 0x52, 0x0c, 0x6d, 0x6f,
+	0x6e, 0x74, 0x68, 0x6c, 0x79, 0x4c, 0x69, 0x6d, 0x69, 0x74, 0x12, 0x25, 0x0a, 0x05, 0x63, 0x61,
+	0x72, 0x64, 0x73, 0x18, 0x06, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x0f, 0x2e, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x2e, 0x55, 0x73, 0x65, 0x72, 0x43, 0x61, 0x72, 0x64, 0x52, 0x05, 0x63, 0x61, 0x72, 0x64,
+	0x73, 0x12, 0x26, 0x0a, 0x0f, 0x72, 0x6f, 0x75, 0x6e, 0x64, 0x5f, 0x75, 0x70, 0x5f, 0x73, 0x74,
+	0x61, 0x74, 0x75, 0x73, 0x18, 0x07, 0x20, 0x01, 0x28, 0x08, 0x52, 0x0d, 0x72, 0x6f, 0x75, 0x6e,
+	0x64, 0x55, 0x70, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x22, 0x5e, 0x0a, 0x08, 0x55, 0x73, 0x65,
 	0x72, 0x43, 0x61, 0x72, 0x64, 0x12, 0x1b, 0x0a, 0x09, 0x62, 0x61, 0x6e, 0x6b, 0x5f, 0x6e, 0x61,
 	0x6d, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x62, 0x61, 0x6e, 0x6b, 0x4e, 0x61,
 	0x6d, 0x65, 0x12, 0x12, 0x0a, 0x04, 0x6d, 0x61, 0x73, 0x6b, 0x18, 0x02, 0x20, 0x01, 0x28, 0x05,
@@ -2578,25 +2638,32 @@ var file_db_proto_rawDesc = []byte{
 	0x43, 0x61, 0x72, 0x64, 0x12, 0x11, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x55, 0x73, 0x65,
 	0x72, 0x53, 0x69, 0x67, 0x6e, 0x55, 0x70, 0x1a, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e,
 	0x47, 0x6c, 0x6f, 0x62, 0x61, 0x6c, 0x53, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x52, 0x65, 0x70,
-	0x6c, 0x79, 0x22, 0x00, 0x32, 0x62, 0x0a, 0x1a, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x43, 0x61,
-	0x72, 0x64, 0x4c, 0x69, 0x6e, 0x6b, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x53, 0x65, 0x72, 0x76, 0x69,
-	0x63, 0x65, 0x12, 0x44, 0x0a, 0x13, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x43, 0x61, 0x72, 0x64,
-	0x4c, 0x69, 0x6e, 0x6b, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x12, 0x10, 0x2e, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x2e, 0x55, 0x73, 0x65, 0x72, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x1a, 0x19, 0x2e, 0x70, 0x72,
-	0x6f, 0x74, 0x6f, 0x2e, 0x52, 0x65, 0x73, 0x65, 0x6e, 0x64, 0x45, 0x6d, 0x61, 0x69, 0x6c, 0x41,
-	0x75, 0x74, 0x68, 0x4d, 0x73, 0x67, 0x22, 0x00, 0x32, 0x5a, 0x0a, 0x16, 0x43, 0x68, 0x65, 0x63,
-	0x6b, 0x43, 0x61, 0x72, 0x64, 0x4c, 0x69, 0x6e, 0x6b, 0x65, 0x64, 0x53, 0x65, 0x72, 0x76, 0x69,
-	0x63, 0x65, 0x12, 0x40, 0x0a, 0x0f, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x43, 0x61, 0x72, 0x64, 0x4c,
-	0x69, 0x6e, 0x6b, 0x65, 0x64, 0x12, 0x10, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x55, 0x73,
-	0x65, 0x72, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x1a, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e,
-	0x47, 0x6c, 0x6f, 0x62, 0x61, 0x6c, 0x53, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x52, 0x65, 0x70,
-	0x6c, 0x79, 0x22, 0x00, 0x32, 0x5d, 0x0a, 0x13, 0x48, 0x6f, 0x75, 0x72, 0x6c, 0x79, 0x44, 0x42,
-	0x43, 0x61, 0x6c, 0x6c, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x46, 0x0a, 0x0c, 0x48,
-	0x6f, 0x75, 0x72, 0x6c, 0x79, 0x44, 0x42, 0x43, 0x61, 0x6c, 0x6c, 0x12, 0x19, 0x2e, 0x70, 0x72,
-	0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x6c, 0x6f, 0x62, 0x61, 0x6c, 0x53, 0x75, 0x63, 0x63, 0x65, 0x73,
-	0x73, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x1a, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47,
-	0x6c, 0x6f, 0x62, 0x61, 0x6c, 0x53, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x52, 0x65, 0x70, 0x6c,
-	0x79, 0x22, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x6c, 0x79, 0x22, 0x00, 0x32, 0x65, 0x0a, 0x1a, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x52, 0x6f,
+	0x75, 0x6e, 0x64, 0x55, 0x70, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x53, 0x65, 0x72, 0x76, 0x69,
+	0x63, 0x65, 0x12, 0x47, 0x0a, 0x13, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x52, 0x6f, 0x75, 0x6e,
+	0x64, 0x55, 0x70, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x12, 0x13, 0x2e, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x2e, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x1a, 0x19,
+	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x6c, 0x6f, 0x62, 0x61, 0x6c, 0x53, 0x75, 0x63,
+	0x63, 0x65, 0x73, 0x73, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x22, 0x00, 0x32, 0x62, 0x0a, 0x1a, 0x43,
+	0x72, 0x65, 0x61, 0x74, 0x65, 0x43, 0x61, 0x72, 0x64, 0x4c, 0x69, 0x6e, 0x6b, 0x54, 0x6f, 0x6b,
+	0x65, 0x6e, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x44, 0x0a, 0x13, 0x43, 0x72, 0x65,
+	0x61, 0x74, 0x65, 0x43, 0x61, 0x72, 0x64, 0x4c, 0x69, 0x6e, 0x6b, 0x54, 0x6f, 0x6b, 0x65, 0x6e,
+	0x12, 0x10, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x55, 0x73, 0x65, 0x72, 0x54, 0x6f, 0x6b,
+	0x65, 0x6e, 0x1a, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x52, 0x65, 0x73, 0x65, 0x6e,
+	0x64, 0x45, 0x6d, 0x61, 0x69, 0x6c, 0x41, 0x75, 0x74, 0x68, 0x4d, 0x73, 0x67, 0x22, 0x00, 0x32,
+	0x5a, 0x0a, 0x16, 0x43, 0x68, 0x65, 0x63, 0x6b, 0x43, 0x61, 0x72, 0x64, 0x4c, 0x69, 0x6e, 0x6b,
+	0x65, 0x64, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x40, 0x0a, 0x0f, 0x43, 0x68, 0x65,
+	0x63, 0x6b, 0x43, 0x61, 0x72, 0x64, 0x4c, 0x69, 0x6e, 0x6b, 0x65, 0x64, 0x12, 0x10, 0x2e, 0x70,
+	0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x55, 0x73, 0x65, 0x72, 0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x1a, 0x19,
+	0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x6c, 0x6f, 0x62, 0x61, 0x6c, 0x53, 0x75, 0x63,
+	0x63, 0x65, 0x73, 0x73, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x22, 0x00, 0x32, 0x5d, 0x0a, 0x13, 0x48,
+	0x6f, 0x75, 0x72, 0x6c, 0x79, 0x44, 0x42, 0x43, 0x61, 0x6c, 0x6c, 0x53, 0x65, 0x72, 0x76, 0x69,
+	0x63, 0x65, 0x12, 0x46, 0x0a, 0x0c, 0x48, 0x6f, 0x75, 0x72, 0x6c, 0x79, 0x44, 0x42, 0x43, 0x61,
+	0x6c, 0x6c, 0x12, 0x19, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x6c, 0x6f, 0x62, 0x61,
+	0x6c, 0x53, 0x75, 0x63, 0x63, 0x65, 0x73, 0x73, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x1a, 0x19, 0x2e,
+	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x2e, 0x47, 0x6c, 0x6f, 0x62, 0x61, 0x6c, 0x53, 0x75, 0x63, 0x63,
+	0x65, 0x73, 0x73, 0x52, 0x65, 0x70, 0x6c, 0x79, 0x22, 0x00, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74,
+	0x6f, 0x33,
 }
 
 var (
@@ -2611,132 +2678,135 @@ func file_db_proto_rawDescGZIP() []byte {
 	return file_db_proto_rawDescData
 }
 
-var file_db_proto_msgTypes = make([]protoimpl.MessageInfo, 34)
+var file_db_proto_msgTypes = make([]protoimpl.MessageInfo, 35)
 var file_db_proto_goTypes = []interface{}{
 	(*GlobalSuccessReply)(nil),      // 0: proto.GlobalSuccessReply
-	(*UserSignUp)(nil),              // 1: proto.UserSignUp
-	(*OrgSignUp)(nil),               // 2: proto.OrgSignUp
-	(*ResendEmailAuthMsg)(nil),      // 3: proto.ResendEmailAuthMsg
-	(*Login)(nil),                   // 4: proto.Login
-	(*TransactionItemID)(nil),       // 5: proto.TransactionItemID
-	(*StripeChargeID)(nil),          // 6: proto.StripeChargeID
-	(*OrgName)(nil),                 // 7: proto.OrgName
-	(*OrgNameReply)(nil),            // 8: proto.OrgNameReply
-	(*TransferPDFParams)(nil),       // 9: proto.TransferPDFParams
-	(*SaveLogoMsg)(nil),             // 10: proto.SaveLogoMsg
-	(*GetTransactionsMsg)(nil),      // 11: proto.GetTransactionsMsg
-	(*GetTransactionsMsgReply)(nil), // 12: proto.GetTransactionsMsgReply
-	(*TransactionData)(nil),         // 13: proto.TransactionData
-	(*UpdateThresholdMsg)(nil),      // 14: proto.UpdateThresholdMsg
-	(*UserToken)(nil),               // 15: proto.UserToken
-	(*OrgToken)(nil),                // 16: proto.OrgToken
-	(*UsersOrgInfoReply)(nil),       // 17: proto.UsersOrgInfoReply
-	(*UsersTotalsReply)(nil),        // 18: proto.UsersTotalsReply
-	(*UsersProfileReply)(nil),       // 19: proto.UsersProfileReply
-	(*UserCard)(nil),                // 20: proto.UserCard
-	(*DeleteUsersBAMsg)(nil),        // 21: proto.DeleteUsersBAMsg
-	(*ValidNewAccMsg)(nil),          // 22: proto.ValidNewAccMsg
-	(*ValidPassMsg)(nil),            // 23: proto.ValidPassMsg
-	(*Dashboard)(nil),               // 24: proto.Dashboard
-	(*OrgsTransfers)(nil),           // 25: proto.OrgsTransfers
-	(*SingleTransfer)(nil),          // 26: proto.SingleTransfer
-	(*GetTransfersMsg)(nil),         // 27: proto.GetTransfersMsg
-	(*LogoAndQrCode)(nil),           // 28: proto.LogoAndQrCode
-	(*TokenAndOrg)(nil),             // 29: proto.TokenAndOrg
-	(*SearchOrgsMsg)(nil),           // 30: proto.SearchOrgsMsg
-	(*SearchOrgResults)(nil),        // 31: proto.SearchOrgResults
-	(*GetOrgInfoSearchMsg)(nil),     // 32: proto.GetOrgInfoSearchMsg
-	(*UpdateOrgMsg)(nil),            // 33: proto.UpdateOrgMsg
+	(*StatusUpdate)(nil),            // 1: proto.StatusUpdate
+	(*UserSignUp)(nil),              // 2: proto.UserSignUp
+	(*OrgSignUp)(nil),               // 3: proto.OrgSignUp
+	(*ResendEmailAuthMsg)(nil),      // 4: proto.ResendEmailAuthMsg
+	(*Login)(nil),                   // 5: proto.Login
+	(*TransactionItemID)(nil),       // 6: proto.TransactionItemID
+	(*StripeChargeID)(nil),          // 7: proto.StripeChargeID
+	(*OrgName)(nil),                 // 8: proto.OrgName
+	(*OrgNameReply)(nil),            // 9: proto.OrgNameReply
+	(*TransferPDFParams)(nil),       // 10: proto.TransferPDFParams
+	(*SaveLogoMsg)(nil),             // 11: proto.SaveLogoMsg
+	(*GetTransactionsMsg)(nil),      // 12: proto.GetTransactionsMsg
+	(*GetTransactionsMsgReply)(nil), // 13: proto.GetTransactionsMsgReply
+	(*TransactionData)(nil),         // 14: proto.TransactionData
+	(*UpdateThresholdMsg)(nil),      // 15: proto.UpdateThresholdMsg
+	(*UserToken)(nil),               // 16: proto.UserToken
+	(*OrgToken)(nil),                // 17: proto.OrgToken
+	(*UsersOrgInfoReply)(nil),       // 18: proto.UsersOrgInfoReply
+	(*UsersTotalsReply)(nil),        // 19: proto.UsersTotalsReply
+	(*UsersProfileReply)(nil),       // 20: proto.UsersProfileReply
+	(*UserCard)(nil),                // 21: proto.UserCard
+	(*DeleteUsersBAMsg)(nil),        // 22: proto.DeleteUsersBAMsg
+	(*ValidNewAccMsg)(nil),          // 23: proto.ValidNewAccMsg
+	(*ValidPassMsg)(nil),            // 24: proto.ValidPassMsg
+	(*Dashboard)(nil),               // 25: proto.Dashboard
+	(*OrgsTransfers)(nil),           // 26: proto.OrgsTransfers
+	(*SingleTransfer)(nil),          // 27: proto.SingleTransfer
+	(*GetTransfersMsg)(nil),         // 28: proto.GetTransfersMsg
+	(*LogoAndQrCode)(nil),           // 29: proto.LogoAndQrCode
+	(*TokenAndOrg)(nil),             // 30: proto.TokenAndOrg
+	(*SearchOrgsMsg)(nil),           // 31: proto.SearchOrgsMsg
+	(*SearchOrgResults)(nil),        // 32: proto.SearchOrgResults
+	(*GetOrgInfoSearchMsg)(nil),     // 33: proto.GetOrgInfoSearchMsg
+	(*UpdateOrgMsg)(nil),            // 34: proto.UpdateOrgMsg
 }
 var file_db_proto_depIdxs = []int32{
-	13, // 0: proto.GetTransactionsMsgReply.transactions:type_name -> proto.TransactionData
-	20, // 1: proto.UsersProfileReply.cards:type_name -> proto.UserCard
-	26, // 2: proto.OrgsTransfers.transfers:type_name -> proto.SingleTransfer
-	31, // 3: proto.SearchOrgsMsg.orgs:type_name -> proto.SearchOrgResults
-	1,  // 4: proto.UserSignUpService.SendUserSignUp:input_type -> proto.UserSignUp
-	2,  // 5: proto.OrgSignUpService.SendOrgSignUp:input_type -> proto.OrgSignUp
-	1,  // 6: proto.CheckUserSignUpService.CheckUserSignUp:input_type -> proto.UserSignUp
-	2,  // 7: proto.CheckOrgSignUpService.CheckOrgSignUp:input_type -> proto.OrgSignUp
-	2,  // 8: proto.UpdateOrgItemService.UpdateOrgItem:input_type -> proto.OrgSignUp
-	2,  // 9: proto.ManualCompleteOrgSignUpService.ManualCompleteOrgSignUp:input_type -> proto.OrgSignUp
-	3,  // 10: proto.ResendEmailAuthService.ResendEmailAuth:input_type -> proto.ResendEmailAuthMsg
-	4,  // 11: proto.AuthLoginService.AuthLogin:input_type -> proto.Login
-	5,  // 12: proto.BeginTransactionWHService.BeginTransactionWH:input_type -> proto.TransactionItemID
-	6,  // 13: proto.ConfirmTransferService.ConfirmTransfer:input_type -> proto.StripeChargeID
-	7,  // 14: proto.SearchOrgNameService.SearchOrgName:input_type -> proto.OrgName
-	9,  // 15: proto.TransferPDFService.TransferPDF:input_type -> proto.TransferPDFParams
+	14, // 0: proto.GetTransactionsMsgReply.transactions:type_name -> proto.TransactionData
+	21, // 1: proto.UsersProfileReply.cards:type_name -> proto.UserCard
+	27, // 2: proto.OrgsTransfers.transfers:type_name -> proto.SingleTransfer
+	32, // 3: proto.SearchOrgsMsg.orgs:type_name -> proto.SearchOrgResults
+	2,  // 4: proto.UserSignUpService.SendUserSignUp:input_type -> proto.UserSignUp
+	3,  // 5: proto.OrgSignUpService.SendOrgSignUp:input_type -> proto.OrgSignUp
+	2,  // 6: proto.CheckUserSignUpService.CheckUserSignUp:input_type -> proto.UserSignUp
+	3,  // 7: proto.CheckOrgSignUpService.CheckOrgSignUp:input_type -> proto.OrgSignUp
+	3,  // 8: proto.UpdateOrgItemService.UpdateOrgItem:input_type -> proto.OrgSignUp
+	3,  // 9: proto.ManualCompleteOrgSignUpService.ManualCompleteOrgSignUp:input_type -> proto.OrgSignUp
+	4,  // 10: proto.ResendEmailAuthService.ResendEmailAuth:input_type -> proto.ResendEmailAuthMsg
+	5,  // 11: proto.AuthLoginService.AuthLogin:input_type -> proto.Login
+	6,  // 12: proto.BeginTransactionWHService.BeginTransactionWH:input_type -> proto.TransactionItemID
+	7,  // 13: proto.ConfirmTransferService.ConfirmTransfer:input_type -> proto.StripeChargeID
+	8,  // 14: proto.SearchOrgNameService.SearchOrgName:input_type -> proto.OrgName
+	10, // 15: proto.TransferPDFService.TransferPDF:input_type -> proto.TransferPDFParams
 	0,  // 16: proto.EmailAllRecieptsService.EmailAllReciepts:input_type -> proto.GlobalSuccessReply
-	10, // 17: proto.SaveLogoService.SaveLogo:input_type -> proto.SaveLogoMsg
-	11, // 18: proto.GetTransactionsService.GetTransactions:input_type -> proto.GetTransactionsMsg
-	14, // 19: proto.UpdateThresholdService.UpdateThreshold:input_type -> proto.UpdateThresholdMsg
-	14, // 20: proto.UpdateMonthlyLimitService.UpdateMonthlyLimit:input_type -> proto.UpdateThresholdMsg
-	15, // 21: proto.GetUsersOrgInfoService.GetUsersOrgInfo:input_type -> proto.UserToken
-	15, // 22: proto.GetUsersTotalsService.GetUsersTotals:input_type -> proto.UserToken
-	15, // 23: proto.GetUsersProfileService.GetUsersProfile:input_type -> proto.UserToken
-	21, // 24: proto.DeleteUsersBAService.DeleteUsersBA:input_type -> proto.DeleteUsersBAMsg
-	1,  // 25: proto.UpdateUsersBAService.UpdateUsersBA:input_type -> proto.UserSignUp
-	22, // 26: proto.ValidNewAccService.ValidNewAcc:input_type -> proto.ValidNewAccMsg
-	23, // 27: proto.ValidPassService.ValidPass:input_type -> proto.ValidPassMsg
-	23, // 28: proto.ValidKeyService.ValidKey:input_type -> proto.ValidPassMsg
-	4,  // 29: proto.SendForgotPassService.SendForgotPass:input_type -> proto.Login
-	4,  // 30: proto.ForgotPassService.ForgotPass:input_type -> proto.Login
-	16, // 31: proto.CheckOrgTosAcceptedService.CheckOrgTosAccepted:input_type -> proto.OrgToken
-	16, // 32: proto.ResendOrgsTosService.ResendOrgsTos:input_type -> proto.OrgToken
-	16, // 33: proto.GetDashboardService.GetDashboard:input_type -> proto.OrgToken
-	27, // 34: proto.GetTransfersService.GetTransfers:input_type -> proto.GetTransfersMsg
-	16, // 35: proto.OrgsGetQrService.OrgsGetQr:input_type -> proto.OrgToken
-	16, // 36: proto.OrgsGetLogoService.OrgsGetLogo:input_type -> proto.OrgToken
-	29, // 37: proto.SetOrgService.SetOrg:input_type -> proto.TokenAndOrg
-	7,  // 38: proto.GetOrgsSearchService.GetOrgsSearch:input_type -> proto.OrgName
-	29, // 39: proto.GetOrgInfoSearchService.GetOrgInfoSearch:input_type -> proto.TokenAndOrg
-	33, // 40: proto.UpdateOrgInfoService.UpdateOrgInfo:input_type -> proto.UpdateOrgMsg
-	1,  // 41: proto.AddNewCardService.AddNewCard:input_type -> proto.UserSignUp
-	15, // 42: proto.CreateCardLinkTokenService.CreateCardLinkToken:input_type -> proto.UserToken
-	15, // 43: proto.CheckCardLinkedService.CheckCardLinked:input_type -> proto.UserToken
-	0,  // 44: proto.HourlyDBCallService.HourlyDBCall:input_type -> proto.GlobalSuccessReply
-	0,  // 45: proto.UserSignUpService.SendUserSignUp:output_type -> proto.GlobalSuccessReply
-	0,  // 46: proto.OrgSignUpService.SendOrgSignUp:output_type -> proto.GlobalSuccessReply
-	0,  // 47: proto.CheckUserSignUpService.CheckUserSignUp:output_type -> proto.GlobalSuccessReply
-	0,  // 48: proto.CheckOrgSignUpService.CheckOrgSignUp:output_type -> proto.GlobalSuccessReply
-	2,  // 49: proto.UpdateOrgItemService.UpdateOrgItem:output_type -> proto.OrgSignUp
-	0,  // 50: proto.ManualCompleteOrgSignUpService.ManualCompleteOrgSignUp:output_type -> proto.GlobalSuccessReply
-	0,  // 51: proto.ResendEmailAuthService.ResendEmailAuth:output_type -> proto.GlobalSuccessReply
-	0,  // 52: proto.AuthLoginService.AuthLogin:output_type -> proto.GlobalSuccessReply
-	0,  // 53: proto.BeginTransactionWHService.BeginTransactionWH:output_type -> proto.GlobalSuccessReply
-	0,  // 54: proto.ConfirmTransferService.ConfirmTransfer:output_type -> proto.GlobalSuccessReply
-	8,  // 55: proto.SearchOrgNameService.SearchOrgName:output_type -> proto.OrgNameReply
-	0,  // 56: proto.TransferPDFService.TransferPDF:output_type -> proto.GlobalSuccessReply
-	0,  // 57: proto.EmailAllRecieptsService.EmailAllReciepts:output_type -> proto.GlobalSuccessReply
-	0,  // 58: proto.SaveLogoService.SaveLogo:output_type -> proto.GlobalSuccessReply
-	12, // 59: proto.GetTransactionsService.GetTransactions:output_type -> proto.GetTransactionsMsgReply
-	0,  // 60: proto.UpdateThresholdService.UpdateThreshold:output_type -> proto.GlobalSuccessReply
-	0,  // 61: proto.UpdateMonthlyLimitService.UpdateMonthlyLimit:output_type -> proto.GlobalSuccessReply
-	17, // 62: proto.GetUsersOrgInfoService.GetUsersOrgInfo:output_type -> proto.UsersOrgInfoReply
-	18, // 63: proto.GetUsersTotalsService.GetUsersTotals:output_type -> proto.UsersTotalsReply
-	19, // 64: proto.GetUsersProfileService.GetUsersProfile:output_type -> proto.UsersProfileReply
-	0,  // 65: proto.DeleteUsersBAService.DeleteUsersBA:output_type -> proto.GlobalSuccessReply
-	0,  // 66: proto.UpdateUsersBAService.UpdateUsersBA:output_type -> proto.GlobalSuccessReply
-	0,  // 67: proto.ValidNewAccService.ValidNewAcc:output_type -> proto.GlobalSuccessReply
-	0,  // 68: proto.ValidPassService.ValidPass:output_type -> proto.GlobalSuccessReply
-	0,  // 69: proto.ValidKeyService.ValidKey:output_type -> proto.GlobalSuccessReply
-	0,  // 70: proto.SendForgotPassService.SendForgotPass:output_type -> proto.GlobalSuccessReply
-	0,  // 71: proto.ForgotPassService.ForgotPass:output_type -> proto.GlobalSuccessReply
-	0,  // 72: proto.CheckOrgTosAcceptedService.CheckOrgTosAccepted:output_type -> proto.GlobalSuccessReply
-	0,  // 73: proto.ResendOrgsTosService.ResendOrgsTos:output_type -> proto.GlobalSuccessReply
-	24, // 74: proto.GetDashboardService.GetDashboard:output_type -> proto.Dashboard
-	25, // 75: proto.GetTransfersService.GetTransfers:output_type -> proto.OrgsTransfers
-	28, // 76: proto.OrgsGetQrService.OrgsGetQr:output_type -> proto.LogoAndQrCode
-	28, // 77: proto.OrgsGetLogoService.OrgsGetLogo:output_type -> proto.LogoAndQrCode
-	0,  // 78: proto.SetOrgService.SetOrg:output_type -> proto.GlobalSuccessReply
-	30, // 79: proto.GetOrgsSearchService.GetOrgsSearch:output_type -> proto.SearchOrgsMsg
-	32, // 80: proto.GetOrgInfoSearchService.GetOrgInfoSearch:output_type -> proto.GetOrgInfoSearchMsg
-	0,  // 81: proto.UpdateOrgInfoService.UpdateOrgInfo:output_type -> proto.GlobalSuccessReply
-	0,  // 82: proto.AddNewCardService.AddNewCard:output_type -> proto.GlobalSuccessReply
-	3,  // 83: proto.CreateCardLinkTokenService.CreateCardLinkToken:output_type -> proto.ResendEmailAuthMsg
-	0,  // 84: proto.CheckCardLinkedService.CheckCardLinked:output_type -> proto.GlobalSuccessReply
-	0,  // 85: proto.HourlyDBCallService.HourlyDBCall:output_type -> proto.GlobalSuccessReply
-	45, // [45:86] is the sub-list for method output_type
-	4,  // [4:45] is the sub-list for method input_type
+	11, // 17: proto.SaveLogoService.SaveLogo:input_type -> proto.SaveLogoMsg
+	12, // 18: proto.GetTransactionsService.GetTransactions:input_type -> proto.GetTransactionsMsg
+	15, // 19: proto.UpdateThresholdService.UpdateThreshold:input_type -> proto.UpdateThresholdMsg
+	15, // 20: proto.UpdateMonthlyLimitService.UpdateMonthlyLimit:input_type -> proto.UpdateThresholdMsg
+	16, // 21: proto.GetUsersOrgInfoService.GetUsersOrgInfo:input_type -> proto.UserToken
+	16, // 22: proto.GetUsersTotalsService.GetUsersTotals:input_type -> proto.UserToken
+	16, // 23: proto.GetUsersProfileService.GetUsersProfile:input_type -> proto.UserToken
+	22, // 24: proto.DeleteUsersBAService.DeleteUsersBA:input_type -> proto.DeleteUsersBAMsg
+	2,  // 25: proto.UpdateUsersBAService.UpdateUsersBA:input_type -> proto.UserSignUp
+	23, // 26: proto.ValidNewAccService.ValidNewAcc:input_type -> proto.ValidNewAccMsg
+	24, // 27: proto.ValidPassService.ValidPass:input_type -> proto.ValidPassMsg
+	24, // 28: proto.ValidKeyService.ValidKey:input_type -> proto.ValidPassMsg
+	5,  // 29: proto.SendForgotPassService.SendForgotPass:input_type -> proto.Login
+	5,  // 30: proto.ForgotPassService.ForgotPass:input_type -> proto.Login
+	17, // 31: proto.CheckOrgTosAcceptedService.CheckOrgTosAccepted:input_type -> proto.OrgToken
+	17, // 32: proto.ResendOrgsTosService.ResendOrgsTos:input_type -> proto.OrgToken
+	17, // 33: proto.GetDashboardService.GetDashboard:input_type -> proto.OrgToken
+	28, // 34: proto.GetTransfersService.GetTransfers:input_type -> proto.GetTransfersMsg
+	17, // 35: proto.OrgsGetQrService.OrgsGetQr:input_type -> proto.OrgToken
+	17, // 36: proto.OrgsGetLogoService.OrgsGetLogo:input_type -> proto.OrgToken
+	30, // 37: proto.SetOrgService.SetOrg:input_type -> proto.TokenAndOrg
+	8,  // 38: proto.GetOrgsSearchService.GetOrgsSearch:input_type -> proto.OrgName
+	30, // 39: proto.GetOrgInfoSearchService.GetOrgInfoSearch:input_type -> proto.TokenAndOrg
+	34, // 40: proto.UpdateOrgInfoService.UpdateOrgInfo:input_type -> proto.UpdateOrgMsg
+	2,  // 41: proto.AddNewCardService.AddNewCard:input_type -> proto.UserSignUp
+	1,  // 42: proto.UpdateRoundUpStatusService.UpdateRoundUpStatus:input_type -> proto.StatusUpdate
+	16, // 43: proto.CreateCardLinkTokenService.CreateCardLinkToken:input_type -> proto.UserToken
+	16, // 44: proto.CheckCardLinkedService.CheckCardLinked:input_type -> proto.UserToken
+	0,  // 45: proto.HourlyDBCallService.HourlyDBCall:input_type -> proto.GlobalSuccessReply
+	0,  // 46: proto.UserSignUpService.SendUserSignUp:output_type -> proto.GlobalSuccessReply
+	0,  // 47: proto.OrgSignUpService.SendOrgSignUp:output_type -> proto.GlobalSuccessReply
+	0,  // 48: proto.CheckUserSignUpService.CheckUserSignUp:output_type -> proto.GlobalSuccessReply
+	0,  // 49: proto.CheckOrgSignUpService.CheckOrgSignUp:output_type -> proto.GlobalSuccessReply
+	3,  // 50: proto.UpdateOrgItemService.UpdateOrgItem:output_type -> proto.OrgSignUp
+	0,  // 51: proto.ManualCompleteOrgSignUpService.ManualCompleteOrgSignUp:output_type -> proto.GlobalSuccessReply
+	0,  // 52: proto.ResendEmailAuthService.ResendEmailAuth:output_type -> proto.GlobalSuccessReply
+	0,  // 53: proto.AuthLoginService.AuthLogin:output_type -> proto.GlobalSuccessReply
+	0,  // 54: proto.BeginTransactionWHService.BeginTransactionWH:output_type -> proto.GlobalSuccessReply
+	0,  // 55: proto.ConfirmTransferService.ConfirmTransfer:output_type -> proto.GlobalSuccessReply
+	9,  // 56: proto.SearchOrgNameService.SearchOrgName:output_type -> proto.OrgNameReply
+	0,  // 57: proto.TransferPDFService.TransferPDF:output_type -> proto.GlobalSuccessReply
+	0,  // 58: proto.EmailAllRecieptsService.EmailAllReciepts:output_type -> proto.GlobalSuccessReply
+	0,  // 59: proto.SaveLogoService.SaveLogo:output_type -> proto.GlobalSuccessReply
+	13, // 60: proto.GetTransactionsService.GetTransactions:output_type -> proto.GetTransactionsMsgReply
+	0,  // 61: proto.UpdateThresholdService.UpdateThreshold:output_type -> proto.GlobalSuccessReply
+	0,  // 62: proto.UpdateMonthlyLimitService.UpdateMonthlyLimit:output_type -> proto.GlobalSuccessReply
+	18, // 63: proto.GetUsersOrgInfoService.GetUsersOrgInfo:output_type -> proto.UsersOrgInfoReply
+	19, // 64: proto.GetUsersTotalsService.GetUsersTotals:output_type -> proto.UsersTotalsReply
+	20, // 65: proto.GetUsersProfileService.GetUsersProfile:output_type -> proto.UsersProfileReply
+	0,  // 66: proto.DeleteUsersBAService.DeleteUsersBA:output_type -> proto.GlobalSuccessReply
+	0,  // 67: proto.UpdateUsersBAService.UpdateUsersBA:output_type -> proto.GlobalSuccessReply
+	0,  // 68: proto.ValidNewAccService.ValidNewAcc:output_type -> proto.GlobalSuccessReply
+	0,  // 69: proto.ValidPassService.ValidPass:output_type -> proto.GlobalSuccessReply
+	0,  // 70: proto.ValidKeyService.ValidKey:output_type -> proto.GlobalSuccessReply
+	0,  // 71: proto.SendForgotPassService.SendForgotPass:output_type -> proto.GlobalSuccessReply
+	0,  // 72: proto.ForgotPassService.ForgotPass:output_type -> proto.GlobalSuccessReply
+	0,  // 73: proto.CheckOrgTosAcceptedService.CheckOrgTosAccepted:output_type -> proto.GlobalSuccessReply
+	0,  // 74: proto.ResendOrgsTosService.ResendOrgsTos:output_type -> proto.GlobalSuccessReply
+	25, // 75: proto.GetDashboardService.GetDashboard:output_type -> proto.Dashboard
+	26, // 76: proto.GetTransfersService.GetTransfers:output_type -> proto.OrgsTransfers
+	29, // 77: proto.OrgsGetQrService.OrgsGetQr:output_type -> proto.LogoAndQrCode
+	29, // 78: proto.OrgsGetLogoService.OrgsGetLogo:output_type -> proto.LogoAndQrCode
+	0,  // 79: proto.SetOrgService.SetOrg:output_type -> proto.GlobalSuccessReply
+	31, // 80: proto.GetOrgsSearchService.GetOrgsSearch:output_type -> proto.SearchOrgsMsg
+	33, // 81: proto.GetOrgInfoSearchService.GetOrgInfoSearch:output_type -> proto.GetOrgInfoSearchMsg
+	0,  // 82: proto.UpdateOrgInfoService.UpdateOrgInfo:output_type -> proto.GlobalSuccessReply
+	0,  // 83: proto.AddNewCardService.AddNewCard:output_type -> proto.GlobalSuccessReply
+	0,  // 84: proto.UpdateRoundUpStatusService.UpdateRoundUpStatus:output_type -> proto.GlobalSuccessReply
+	4,  // 85: proto.CreateCardLinkTokenService.CreateCardLinkToken:output_type -> proto.ResendEmailAuthMsg
+	0,  // 86: proto.CheckCardLinkedService.CheckCardLinked:output_type -> proto.GlobalSuccessReply
+	0,  // 87: proto.HourlyDBCallService.HourlyDBCall:output_type -> proto.GlobalSuccessReply
+	46, // [46:88] is the sub-list for method output_type
+	4,  // [4:46] is the sub-list for method input_type
 	4,  // [4:4] is the sub-list for extension type_name
 	4,  // [4:4] is the sub-list for extension extendee
 	0,  // [0:4] is the sub-list for field type_name
@@ -2761,7 +2831,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UserSignUp); i {
+			switch v := v.(*StatusUpdate); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2773,7 +2843,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*OrgSignUp); i {
+			switch v := v.(*UserSignUp); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2785,7 +2855,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ResendEmailAuthMsg); i {
+			switch v := v.(*OrgSignUp); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2797,7 +2867,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Login); i {
+			switch v := v.(*ResendEmailAuthMsg); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2809,7 +2879,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*TransactionItemID); i {
+			switch v := v.(*Login); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2821,7 +2891,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*StripeChargeID); i {
+			switch v := v.(*TransactionItemID); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2833,7 +2903,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*OrgName); i {
+			switch v := v.(*StripeChargeID); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2845,7 +2915,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*OrgNameReply); i {
+			switch v := v.(*OrgName); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2857,7 +2927,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*TransferPDFParams); i {
+			switch v := v.(*OrgNameReply); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2869,7 +2939,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SaveLogoMsg); i {
+			switch v := v.(*TransferPDFParams); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2881,7 +2951,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetTransactionsMsg); i {
+			switch v := v.(*SaveLogoMsg); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2893,7 +2963,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetTransactionsMsgReply); i {
+			switch v := v.(*GetTransactionsMsg); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2905,7 +2975,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[13].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*TransactionData); i {
+			switch v := v.(*GetTransactionsMsgReply); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2917,7 +2987,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[14].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UpdateThresholdMsg); i {
+			switch v := v.(*TransactionData); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2929,7 +2999,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[15].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UserToken); i {
+			switch v := v.(*UpdateThresholdMsg); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2941,7 +3011,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[16].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*OrgToken); i {
+			switch v := v.(*UserToken); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2953,7 +3023,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[17].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UsersOrgInfoReply); i {
+			switch v := v.(*OrgToken); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2965,7 +3035,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[18].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UsersTotalsReply); i {
+			switch v := v.(*UsersOrgInfoReply); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2977,7 +3047,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[19].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UsersProfileReply); i {
+			switch v := v.(*UsersTotalsReply); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -2989,7 +3059,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[20].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*UserCard); i {
+			switch v := v.(*UsersProfileReply); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3001,7 +3071,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[21].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*DeleteUsersBAMsg); i {
+			switch v := v.(*UserCard); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3013,7 +3083,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[22].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ValidNewAccMsg); i {
+			switch v := v.(*DeleteUsersBAMsg); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3025,7 +3095,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[23].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*ValidPassMsg); i {
+			switch v := v.(*ValidNewAccMsg); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3037,7 +3107,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[24].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*Dashboard); i {
+			switch v := v.(*ValidPassMsg); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3049,7 +3119,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[25].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*OrgsTransfers); i {
+			switch v := v.(*Dashboard); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3061,7 +3131,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[26].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SingleTransfer); i {
+			switch v := v.(*OrgsTransfers); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3073,7 +3143,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[27].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetTransfersMsg); i {
+			switch v := v.(*SingleTransfer); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3085,7 +3155,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[28].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*LogoAndQrCode); i {
+			switch v := v.(*GetTransfersMsg); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3097,7 +3167,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[29].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*TokenAndOrg); i {
+			switch v := v.(*LogoAndQrCode); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3109,7 +3179,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[30].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SearchOrgsMsg); i {
+			switch v := v.(*TokenAndOrg); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3121,7 +3191,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[31].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*SearchOrgResults); i {
+			switch v := v.(*SearchOrgsMsg); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3133,7 +3203,7 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[32].Exporter = func(v interface{}, i int) interface{} {
-			switch v := v.(*GetOrgInfoSearchMsg); i {
+			switch v := v.(*SearchOrgResults); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -3145,6 +3215,18 @@ func file_db_proto_init() {
 			}
 		}
 		file_db_proto_msgTypes[33].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GetOrgInfoSearchMsg); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_db_proto_msgTypes[34].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*UpdateOrgMsg); i {
 			case 0:
 				return &v.state
@@ -3163,9 +3245,9 @@ func file_db_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_db_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   34,
+			NumMessages:   35,
 			NumExtensions: 0,
-			NumServices:   41,
+			NumServices:   42,
 		},
 		GoTypes:           file_db_proto_goTypes,
 		DependencyIndexes: file_db_proto_depIdxs,
@@ -5915,6 +5997,78 @@ var _AddNewCardService_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "AddNewCard",
 			Handler:    _AddNewCardService_AddNewCard_Handler,
+		},
+	},
+	Streams:  []grpc.StreamDesc{},
+	Metadata: "db.proto",
+}
+
+// UpdateRoundUpStatusServiceClient is the client API for UpdateRoundUpStatusService service.
+//
+// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
+type UpdateRoundUpStatusServiceClient interface {
+	UpdateRoundUpStatus(ctx context.Context, in *StatusUpdate, opts ...grpc.CallOption) (*GlobalSuccessReply, error)
+}
+
+type updateRoundUpStatusServiceClient struct {
+	cc grpc.ClientConnInterface
+}
+
+func NewUpdateRoundUpStatusServiceClient(cc grpc.ClientConnInterface) UpdateRoundUpStatusServiceClient {
+	return &updateRoundUpStatusServiceClient{cc}
+}
+
+func (c *updateRoundUpStatusServiceClient) UpdateRoundUpStatus(ctx context.Context, in *StatusUpdate, opts ...grpc.CallOption) (*GlobalSuccessReply, error) {
+	out := new(GlobalSuccessReply)
+	err := c.cc.Invoke(ctx, "/proto.UpdateRoundUpStatusService/UpdateRoundUpStatus", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+// UpdateRoundUpStatusServiceServer is the server API for UpdateRoundUpStatusService service.
+type UpdateRoundUpStatusServiceServer interface {
+	UpdateRoundUpStatus(context.Context, *StatusUpdate) (*GlobalSuccessReply, error)
+}
+
+// UnimplementedUpdateRoundUpStatusServiceServer can be embedded to have forward compatible implementations.
+type UnimplementedUpdateRoundUpStatusServiceServer struct {
+}
+
+func (*UnimplementedUpdateRoundUpStatusServiceServer) UpdateRoundUpStatus(context.Context, *StatusUpdate) (*GlobalSuccessReply, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method UpdateRoundUpStatus not implemented")
+}
+
+func RegisterUpdateRoundUpStatusServiceServer(s *grpc.Server, srv UpdateRoundUpStatusServiceServer) {
+	s.RegisterService(&_UpdateRoundUpStatusService_serviceDesc, srv)
+}
+
+func _UpdateRoundUpStatusService_UpdateRoundUpStatus_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(StatusUpdate)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UpdateRoundUpStatusServiceServer).UpdateRoundUpStatus(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/proto.UpdateRoundUpStatusService/UpdateRoundUpStatus",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UpdateRoundUpStatusServiceServer).UpdateRoundUpStatus(ctx, req.(*StatusUpdate))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+var _UpdateRoundUpStatusService_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "proto.UpdateRoundUpStatusService",
+	HandlerType: (*UpdateRoundUpStatusServiceServer)(nil),
+	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "UpdateRoundUpStatus",
+			Handler:    _UpdateRoundUpStatusService_UpdateRoundUpStatus_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
