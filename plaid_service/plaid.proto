@@ -10,6 +10,8 @@ message CreateLinkTokenMsg {
     string token_type = 1;
     string access_token = 2;
     string device = 3;
+    string user_token = 4;
+    string org_token = 5;
 }
 
 message CreateLinkTokenReply {
