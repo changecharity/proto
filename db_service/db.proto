@@ -10,6 +10,7 @@ message GlobalSuccessReply {
 
 message StatusUpdate {
     bool status = 1;
+    string user_token = 2;
 }
 
 message UserSignUp {
